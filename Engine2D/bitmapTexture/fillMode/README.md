@@ -1,13 +1,14 @@
-## 填充方式
+﻿
+There are two ways to fill the bitmap,
 
-位图的填充方式有两种，
+* Stretch the image to fill the area
 
-* 拉伸图像以填充区域
+* Repeat the image to fill the area 
 
-* 重复图像以填充区域 
+### 1. Stretch the image to fill
+When you create a `Bitmap` object, the first type of fill will be selected by default.
 
-### 拉伸图像填充
-当你创建一个 Bitmap 对象时会默认选择第一种填充方式。我们看下面一个示例代码，这个示例中，我们使用默认的 填充方式，使用的纹理图片为一张100*100的图片。我们将图像宽度设置为2倍，高度设置为3倍。
+In the following example, fill method is used by default.The texture image used is a 100*100 picture.The image width is set to 2 times and the height is set to 3 times.
 
 ```
 class BitmapTest extends egret.DisplayObjectContainer{
@@ -18,13 +19,13 @@ class BitmapTest extends egret.DisplayObjectContainer{
     }
     private onAddToStage(event:egret.Event) {
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComp, this);
-        RES.loadConfig("resource/resource.json", "resource/");
-        RES.loadGroup("preload");
+);
+);
     }
     private onGroupComp()
     {
         var img:egret.Bitmap = new egret.Bitmap();
-        img.texture = RES.getRes("box");
+);
         img.width *= 2;
         img.height *= 3;
         this.addChild(img);
@@ -33,15 +34,20 @@ class BitmapTest extends egret.DisplayObjectContainer{
 ```
 
 
-编译后运行，效果如图：
+Operate after it is compiled, with the effect shown as below:
 
 ![](56614f986ab98.png)
 
 
-### 重复图像填充
-如果我们在游戏中制作一些不停重复排列的地图，那么我们可使用第二种填充方法，依然是这张图片，我们将填充方法设置为重复排列。
+### 2. Repeat the image fill
 
-设置填充方法需要改变 `Bitmap` 中的 `fillMode` 属性。具体示例代码如下：
+Setting the fill method requires changing the `fillMode` attribute in `Bitmap`.
+
+```
+img.fillMode = egret.BitmapFillMode.REPEAT
+```
+
+The specific sample code is as follows:
 
 ```
 class BitmapTest extends egret.DisplayObjectContainer{
@@ -52,13 +58,13 @@ class BitmapTest extends egret.DisplayObjectContainer{
     }
     private onAddToStage(event:egret.Event) {
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onGroupComp, this);
-        RES.loadConfig("resource/resource.json", "resource/");
-        RES.loadGroup("preload");
+        RES.loadConfig("resource/resource.json", "resource/");	);
+        RES.loadGroup("preload");	);
     }
     private onGroupComp()
     {
         var img:egret.Bitmap = new egret.Bitmap();
-        img.texture = RES.getRes("box");
+);
         img.fillMode = egret.BitmapFillMode.REPEAT;
         img.width *= 2;
         img.height *= 3;
@@ -67,9 +73,7 @@ class BitmapTest extends egret.DisplayObjectContainer{
 }
 ```
 
-编译后运行，效果如图：
+Operate after it is compiled, with the effect shown as below:
 
 ![](56614f988d39e.png)
-
-我们可以看到，原来一头被拉伸的猪变成了三行两列共六头猪。
 

@@ -6,11 +6,11 @@ HelloWing插件添加一条`command`，执行命令将会在控制台输出 `Hel
 
 ### 创建插件项目
 
-**1**. 打开Wing `文件` - `新建项目` 菜单选择 `基本Plugin项目`。
+**1**. 打开Wing `文件` - `新建项目` 菜单选择 `extension项目`。
 
-输入项目名称 hellowing，点击完成。
+输入项目名称 HelloWing，点击完成。
 
-**2**. 项目插件过程中会自动安装依赖模块，之后打开一个新窗口编辑显示的项目。对项目模板进行适当改动。
+**2**. 项目插件过程中会自动安装依赖模块，之后打开一个新窗口编辑显示的项目。
 
 **3**. 创建插件入口`extension.ts`和入口方法`activate`。
 
@@ -28,7 +28,7 @@ HelloWing插件添加一条`command`，执行命令将会在控制台输出 `Hel
 			"module": "commonjs",         //定义编译使用的模块规范。'commonjs'或者'amd'
 			"outDir": "out",              //定义js文件输出目录。
 			"sourceMap": true,            //是否生成sourceMap。
-			"watch": true,                //是否开启自动编译
+			"noLib": true,                //是否包含默认库文件
 			"moduleResolution": "node"    //模块解析策略。 node或者classic。
 		},
 		"exclude": [
@@ -38,59 +38,61 @@ HelloWing插件添加一条`command`，执行命令将会在控制台输出 `Hel
 
 > 有关`tsconfig.json`的更多说明参考 [官方文档](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json)
 
-**5**. 在项目根目录下创建`package.json`定义插件的基本信息。基本内容如下：
+**5**. 在项目根目录下修改`package.json`定义插件的基本信息。基本内容如下：
 
-	{
-		"name": "HelloWing",
-		"description": "A Simple Extension For Egret Wing.",
-		"version": "1.0.0",
-		"publisher": "egret",
-		"categories":[
-			"Other"
-		],
-		"icon": "images/icon.png",
-		"engines": {
-			"wing": "^3.0.0"
-		},
-		"main": "./out/extension",
-		"dependencies": {
-		},
-		"devDependencies": {
-		}
+```
+{
+	"name": "hellowing",
+	"description": "A Simple Extension For Egret Wing.",
+	"version": "1.2.0",
+	"publisher": "egret",
+	"categories": [
+		"Other"
+	],
+	"icon": "images/icon.svg",
+	"bugs": {
+		"url": "https://github.com/egret-labs/wing-extensions/issues"
+	},
+	"homepage": "https://github.com/egret-labs/wing-extensions/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/egret-labs/wing-extensions.git"
+	},
+	"license": "MIT",
+	"activationEvents": [
+		"onCommand:extension.helloWing"
+	],
+	"engines": {
+		"wing": "^3.0.4"
+	},
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.helloWing",
+				"title": "Hello Wing"
+			}
+		]
+	},
+	"scripts": {
+		"wing:prepublish": "node ./node_modules/egretwing/bin/compile",
+		"compile": "node ./node_modules/egretwing/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/egretwing/bin/install"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"egretwing": "^3.0.4",
+		"typescript": "^1.7.5"
 	}
+}
+```
 
 > 有关`package.json`的更多说明参考 [插件描述文件](../../../Wing/plugin/configDes/README.md)
-
-以上步骤完成后插件项目的目录结构应该如下：
-
-```
-.
-├── .gitignore
-├── .wingignore                 // 插件发布时要排除的文件列表
-├── .wing
-│   ├── launch.json             // Debug启动配置文件
-│   ├── settings.json           // 项目设置文件
-│   └── tasks.json              // 任务配置文件
-├── images
-│   └── icon.png	            // 插件图标
-├── node_modules                // 依赖模块
-│   ├── egretwing               // 包含插件api，以及安装编译等脚本的模块
-│   └── typescript
-├── out                         // js输出目录
-│   ├── extension.js 					
-│   └── extension.js.map
-├── typings                     // .d.ts目录
-│   └── index.d.ts              // 引用的插件api
-├── extension.ts                // ts源代码
-├── package.json                // 插件描述文件
-├── README.md
-├── tsconfig.json               // ts编译配置
-```
 
 
 ### 编写插件代码
 
-**1**. 在`package.json`中注册[插件扩展点](../../../Wing/plugin/extendPoint/README.md)。这里需要创建一个`extension.helloWing`的命令。在`package.json`添加一下内容：
+**1**. 在`package.json`中注册[插件扩展点](../../../Wing/plugin/extendPoint/README.md)。本例创建了一个`extension.helloWing`的命令。在`package.json`对应的代码如下：
 
 	"contributes": {
 		"commands": [
@@ -101,13 +103,13 @@ HelloWing插件添加一条`command`，执行命令将会在控制台输出 `Hel
 		]
 	}
 
-**2**. 在`package.json`中定义[激活事件](../../../Wing/plugin/activation/README.md)。当执行`extension.hellowing`命令时激活插件。在`package.json`添加一下内容：
+**2**. 在`package.json`中定义[激活事件](../../../Wing/plugin/activation/README.md)。当执行`extension.hellowing`命令时激活插件。在`package.json`对应的代码如下：
 
 	"activationEvents": [
 		"onCommand:extension.helloWing"
 	]
 
-**3**. 接下来就可以开始代码的编写了。在激活方法`activate`中注册`extension.hellowing`命令的实现方法。在控制台输出 `Hello Wing` 的消息。代码如下：
+**3**. 接下来开始代码的编写。在激活方法`activate`中注册`extension.hellowing`命令的实现方法。在控制台输出 `Hello Wing` 的消息。代码如下：
 
 	import * as wing from 'wing';
 
@@ -128,25 +130,31 @@ HelloWing插件添加一条`command`，执行命令将会在控制台输出 `Hel
 
 ### 编译项目
 
-在Wing中使用**Ctrl/Cmd + Shift + B**编译项目。编译后的js代码将输出到 `out` 文件夹中。
+在Wing中使用**Ctrl/Cmd + Shift + B**编译项目。编译后的js代码将输出到项目根目录下的 `out` 文件夹中。
 
 ### 测试插件
 
 Wing提供方便的[调试插件](../../../Wing/plugin/debug/README.md)支持插件的测试和调试。
 
-如果启动成功，控制台会输出
+如果启动成功，下方的`调试`面板会输出：
 
-	Loading development extension at C:/Users/xzper/Documents/EgretProjects/hellowing
+	'C:\Program Files (x86)\Egret\Egret Wing 3\EgretWing.exe' --debugBrkPluginHost=46412 --extensionDevelopmentPath=e:\egret\HelloWing 
+
+并打开一个新的Wing窗口。
 
 表示Wing已经识别并正在加载`hellowing`插件。
 
-使用 `Ctrl/Cmd+Shift+P` 快捷键打开命令面板，执行 `hellowing` 命令。便可在控制台看到 `Hello Wing` 的输出。
+在新的窗口中使用 `Ctrl/Cmd+Shift+P` 快捷键打开命令面板，执行 `hellowing` 命令。便可在`调试`面板中看到如下的输出：
 
 ![hellowing](568686757c4ac.png)
 
+同时在新窗口的顶部弹出信息提示栏，如下图：
 
+![](20170906105814.png)
 ### 发布插件
 
-使用 `Ctrl/Cmd+Shift+P` 快捷键打开命令面板，执行 `ExtensionsManage: Package` 命令。将生成的`.wext`文件分享到[Egret论坛](http://bbs.egret.com)](https://github.com/egret-labs/wing-extensions)。
+点击菜单栏`插件` - `插件管理` - `发布插件`，在项目根目录下生成`hellowing-1.2.0.wext`文件
 
-> 发布时可以在 `.wingignore` 项目中的文件中定义排除文件。
+将生成的`.wext`文件分享到[Egret论坛](http://bbs.egret.com)](https://github.com/egret-labs/wing-extensions)。
+
+> 发布时可以在项目中的 `.wingignore` 文件中定义排除文件。

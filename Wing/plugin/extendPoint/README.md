@@ -1,9 +1,16 @@
 扩展点允许开发者在wing中自定义一些扩展功能。 通过插件的 [`package.json`](../../../Wing/plugin/configDes/README.md) 的 `contributes` 字段定义扩展点。目前支持下列扩展点
 
 
-* [`commands`](#contributes.commands)
-* [`keybindings`](#contributes.keybindings)
+* [`commands`](#contributescommands)
+* [`keybindings`](#contributeskeybindings)
 * [`configuration`](#contributesconfiguration)
+* [`languages`](#contributeslanguages)
+* [`cdebuggers`](#contributesdebuggers)
+* [`grammars`](#contributesgrammars)
+* [`themes`](#contributesthemes)
+* [`snippets`](#contributessnippets)
+* [`jsonValidation`](#contributesjsonvalidation)
+* [`views`](#contributesviews)
 
 ## contributes.commands
 

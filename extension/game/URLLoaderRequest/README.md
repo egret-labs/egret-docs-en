@@ -1,14 +1,14 @@
-如果在网络请求的同时还需要提交数据，那么可以使用 `URLVariables`。
+If you need to submit data at the time of network request, you need to use `URLVariables`.
 
-使用 `URLVariables` 类可以在应用程序和服务器之间传输变量。将 `URLVariables` 对象与 `URLLoader` 类的方法、 `URLRequest` 类的  `data` 属性一起使用。
+With the `URLVariables` class, variables can be transferred between the application and the server. Use the `URLVariables` object, together with the `URLLoader` class method, the `data` attribute of the `URLRequest` class.
 
-一般来说，向服务器提交数据实际上总是包含两个步骤，提交数据与读取返回信息。
+In general, submitting data to the server actually contains two steps, namely, submitting data and reading the returned information.
 
-1. 提交的数据放入 `URLRequest` 对象的 `data` 属性值，并通过 `URLRequest` 对象提交。
+1. The submitted data is placed in the `data` attribute value of the `URLRequest` object and submitted via the `URLRequest` object.
 
-1. 读取服务器端脚本返回的数据
+2. Read the data returned by the server-side script.
 
-具体示例代码如下：
+The specific sample code is as follows:
 
 ```
 class NetDemo extends egret.DisplayObjectContainer
@@ -37,6 +37,6 @@ class NetDemo extends egret.DisplayObjectContainer
 }
 ```
 
-编译后运行，效果如图
+Run after compilation, with the effect shown as below:
 
 ![](568b435b6fb06.png)

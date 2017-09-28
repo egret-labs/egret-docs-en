@@ -8,7 +8,7 @@ EgretWing插件项目基于`NodeJS`，可以使用 `TypeScript` 语言编写。E
 
 ## 新建插件项目
 
-打开菜单，选择 `文件--新建项目--基本Plugin项目`， 创建一个插件项目。
+打开菜单，选择 `文件--新建项目--extension项目`， 创建一个插件项目。
 新建项目也提供了几个示例项目展示一些基本API的用法。
 - WebView 创建带有自定义UI插件。当需要大量用户交互的场景时，可以使用WebView创建灵活的交互界面。
 - TextTools 获取文本编辑器相关信息，操作文本编辑器内容。
@@ -45,15 +45,12 @@ EgretWing插件项目基于`NodeJS`，可以使用 `TypeScript` 语言编写。E
 │   ├── settings.json           // 项目设置文件
 │   └── tasks.json              // 任务配置文件
 ├── images
-│   └── icon.png	            // 插件图标
+│   └── icon.svg	            // 插件图标
 ├── node_modules                // 依赖模块
+│   ├── .bin 
 │   ├── egretwing               // 包含插件api，以及安装编译等脚本的模块
 │   ├── typescript
-│   ├── figlet
-│   └── underscore.string
-├── out                         // js输出目录
-│   ├── extension.js 					
-│   └── extension.js.map
+│   └── semver
 ├── typings                     // .d.ts目录
 │   └── index.d.ts              // 引用的插件api
 ├── extension.ts                // ts源代码

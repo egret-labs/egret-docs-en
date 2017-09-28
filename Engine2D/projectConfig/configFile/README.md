@@ -1,105 +1,109 @@
 
+The configuration file named ```egretProperties.json``` is included in the root folder of the project, and the configuration involved in the engine is stored here.
 
-每一个 egret 项目的根文件夹中均包含名为 ```egretProperties.json``` 配置文件，所有引擎所涉及的配置均存储在这个文件中。
-
-
-
-
-## 整体结构
+### The whole frame
 
 ![image](5604f755ba98b.png)
 
+### egret_version field
 
-## 字段描述
+The version of the egret command line currently used by the project.
 
-### egret_version 字段
+### modules field
 
-项目当前的使用的 egret 命令行的版本。
+Define all library files referenced in the project.
+Each library is the configuration information in the form of ```{ "name":"moduleName" , "path":"modulePath"}```.	
+```name``` field is the library name.```path``` field is the library file storage path. If this field isn't available, take the default value ```$ {EGRET_DEFAULT}```
 
-在白鹭引擎 4.1 版之前，egret 命令行版本与 egret 的内置类库版本是统一的，从 4.1 版本开始，这两者的概念进行了分离，这意味着开发者可以使用 4.1 版的命令行，但是继续使用老版本的内置类库。
-
-白鹭引擎的设计目标是，所有的开发者均使用命令行的最新版本，而内置类库则使用开发者认为最稳定的版本。更多详情，请参加下一小节 ```modules 字段```
-
-### modules 字段
-
-定义项目中引用的所有库文件。每一个库都是形如 ```{ "name":"moduleName" , "path":"modulePath"}``` 这样的配置信息。
-
-在白鹭引擎4.1版本之前，白鹭引擎内置库不包含 ```path``` 字段，从白鹭引擎4.1版本开始，包括引擎内置库在内的所有库均包含```path```字段，如果没有此字段，编译器内部会为其添加一个名为```${EGRET_DEFAULT}```的默认值。
-
-4.1 版本的白鹭引擎引入了模块化更新机制，这使得开发者可以更自由的升级引擎的特定模块，而非每次升级就会更新项目中的全部引擎内置库。如下所示：
-
-```json
+``` json
 {
-	"egret_version":"4.1.0",
+	"egret_version":"5.0.6",
 	"modules":[
 		{
 			"name":"egret",
-			"path":"${EGRET_DEFAULT}"
 		},
 		{
 			"name":"tween",
 			"path":"${EGRET_APP_DATA}/4.0.3"
+		},
+		{
+			"name": "particle",
+			"path": "../libsrc"
+		},
+		{
+			"name": "promise",
+			"path": "./promise"
 		}
 	]
 }
 ```
 
+`` `` path``` field can include library file version number
 
-白鹭引擎4.1版本引入了两个环境变量
-
-* ```EGRET_DEFAULT```，表示当前引擎的路径，即执行 ```egret info```命令后输出的路径。
-* ```EGRET_APP_DATA```，表示引擎启动器中的缓存文件夹中的路径，引擎的历史版本会储存在此处。
-
-在上述配置文件中，引擎的 ```egret```模块会使用 ```egret_version```中配置的版本所对应的路径，```tween```模块会使用引擎启动器中下载的 4.0.3 版本所对应的路径。通过这种方式，开发者可以选择性的升级引擎的特定模块，而非一次性全部升级，从而降低因为版本升级带来的稳定性隐患。
-
-
-每个模块的 path 字段所对应的路径可能在项目中，也可能在项目外。
-
-* 如果在项目中，项目运行就会直接加载此路径所对应的库。
-* 如果在项目外，引擎编译时会首先将此路径所对应的库拷贝至项目中的 ```libs/modules``` 文件夹中，然后加载该文件夹中的库。
-
-修改该配置中的内容后，需要执行 ```egret clean``` 命令进行一次重新构建以保证改动生效
-
-### publish 字段
-发布项目所需要的一些配置文件。
-
-* path。发布文件所在的目录，默认创建的为 "bin-release"。 通过 ```egret publish [projectName] [--runtime native] [--version yourVersion]``` 发布后的文件所在的目录。其中，不加 ```--runtime native``` 即发布 web 项目，文件会被发布在 path/web/版本号下，不加 ```--version yourVersion```，即会生成一个当前时间点的文件夹，分别为 年后2位+月2位+日2位+时2位+分2位+秒2位。 Native 发布和 Web 类似。
+	There are two environmental variables in the Egret Engine:
+	`` `EGRET_DEFAULT``` represents the path of the current engine.
+	`` `EGRET_APP_DATA``` represents the path in the cache folder in the engine launcher.
+	In the above configuration file, the ```egret``` module of the engine will use the path corresponding to the version configured in ```egret_version```, and the ```tween``` module will use the path corresponding to the 4.0.3 version downloaded in the engine launcher.
+	In this way, developers can selectively upgrade the specific module of the engine, thereby reducing the potential stability risk resulting from the version upgrade.
 
 
-* web。发布 Web 项目资源文件发布的方式。0，按照原素材路径名称发布；1，会将资源发布成以 crc32 命名方式重新命名。默认为 0。
+The path corresponding to the ```path``` field may be inside or outside of the project. 
 
-![image](5604f7569e89a.png)
+* If it is inside the project, the library corresponding to this path is loaded directly when running the project.
+* If it is outside of the project, the library corresponding to this path will first be copied to the ```libs/modules``` folder inside the project when compiling the engine. Then, the library inside the folder will be loaded.
 
-* native。发布 Native 项目资源文件发布的方式。0，按照原素材路径名称发布；1，会将资源发布成以 crc32 命名方式重新命名。默认为 1。
+After modifying the contents of the configuration, you need to execute the ```egret clean``` command for reconstruction, so as to ensure the changes take effect.
 
-![image](5604f7562d513.png)
+### Publish field
+The configuration file required to publish the project.
 
-目前 Egret 提供的 RES 模块中，支持发布方式为 web = 0、native= 1，如果大家需要自定义版本控制，请修改对应的发布方式。
+* path: the directory where the published file is located. The default value is "bin-release".
 
-### native 字段
-native 相关配置，只对 native 项目有用，在发布 Web 项目时，不会使用此字段相关参数。
+* web: The method for publishing Web project resource file.0, publish according to the name of the original material path; 1. The resources will be published after it is renamed after crc32 naming method.The default is 0.
 
-* path_ignore。拷贝项目素材到发布目录时所需要忽略的列表，这个里面的字符串会当做一个正则表达式，如果 "anim.*ons"。
+* native: The method for publishing Native project resource file.0, publish according to the name of the original material path; 1. The resources will be published after it is renamed after crc32 naming method.The default is 1.
 
+In RES module provided by Egret, the supported publishing method is web = 0, native = 1. If you need to customize the version control, please modify the corresponding publishing method.
+
+### template field
+If : {} ``` field is available, use the template, otherwise the template needn't be used
+
+### eui field
+eui project related configuration
+
+* exmlRoot:  Specify the root directory for exml file storage, which must be a relative path.It would be best if the directory only includes exml file. If other files are also included, the compilation speed will be affected.
+
+* themes: The theme file array, which configures all the theme file paths that must be relative paths.
+
+* exmlPublishPolicy: the strategy used by the theme file for storing exml when publishing, including path, content and gjs
+
+
+	path: the theme file only stores the path and will load different exml files. It is not recommended when it is the same as debug
+	content: the theme file stores exml content and won’t load different exml files. The advantage is that the whole file is smaller
+	gjs: the theme file stores the js content that has been compiled by exml, and won’t load different exml file. The advantage is fast resolution
+
+
+### native field
+native-related configuration, which is only useful for native projects. This field can be ignored when the Web project is published.
+
+* path_ignore: the list that shall be ignored when the project material is copied to the publishing directory, the string value of which will be parsed into a regular expression.
+For example, set the value of this field to "anim.* ons".
+The project resource file directory is as follows:
 ![image](5604f756594ae.png) 
+The published resource file directory is as follows:
 ![image](5604f7562d513.png)
 
-		每个字符串都是一个正则表达式，并非简单的一个文件（夹）名。这样大家可以根据自己的需求，去写对应的正则表达式。
-		
-* android_path（可省字段）。创建的android工程的目录，这个是在创建android项目时自动创建的。
+* android_path (the field that can be ignored): the directory of the created android project will be automatically created when android project is created.
 
-* ios_path（可省字段）。创建的ios工程的目录，这个是在创建ios项目时自动创建的。
+* ios_path (the field that can be ignored): the directory of the created ios project will be automatically created when ios project is created.
 
-### web 字段
-web 相关配置，只对 web 项目有用，在发布 Native 项目时，不会使用此字段相关参数。
-* path_ignore。(4.0.0 以上支持)拷贝项目素材到发布目录时所需要忽略的列表
+### web field
+web configuration, which is only useful for web projects. This field can be ignored when the Native project is published.
+* path_ignore: (4.0.0 or above is supported) the list that shall be ignored when the project material is copied to the publishing directory.
 
 
+### urlParams field (3.1.6 or above is supported)
 
-### urlParams 字段 (3.1.6 以上支持)
+* As for the ```egret run``` command, add URL parameters. For example, open the address after implementing ```egret run```:
 
-* 针对```egret run```命令添加URL参数，比如执行```egret run```后打开的地址：
-
-	```http://10.0.4.63:3001/index.html?okok=12&id=455464564```
-
-
+```http://10.0.4.63:3001/index.html?okok=12&id=455464564```

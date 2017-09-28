@@ -1,152 +1,152 @@
-通过使用[鼠标支持库](https://github.com/egret-labs/egret-game-library/tree/master/mouse)可以监听 PC 上的鼠标事件。
+You can monitor the mouse events on a PC by using the [mouse support library] (https://github.com/egret-labs/egret-game-library/tree/master/mouse).
 
-## 引入鼠标库
+## 1. Introduce the mouse library
 
-引入鼠标支持库与引入其他第三方库过程相同，首先[下载](https://github.com/egret-labs/egret-game-library/tree/master/mouse)该库，在 egretProperties.json 中引入该库并编译引擎。需要注意库的位置应放在项目外。
+Introducing the mouse support library is the same as the introduction of other third-party libraries. First, [download] (https://github.com/egret-labs/egret-game-library/tree/master/mouse) library, then introduce the library in the egretProperties.json Introduce the library and compile the engine.Note that the location of the library should be placed outside the project.
 
 ```
 {
-    "name": "mouse",
-    "path": "../libsrc"
+    "name": "mouse",	,
+    "path": "../libsrc"	../libsrc
 }
 ```
 
-引入到项目中之后编译引擎即可使用鼠标库。
+After it is introduced into the project, the compiler engine can use the mouse library.
 
-## 支持事件
+## 2. Support events
 
-在鼠标支持库中支持以下事件。
+The following events are supported in the mouse support library.
 
-| 名称 | 说明 |
+| Name | description |
 |---|---|
-| MOUSE_MOVE | 当用户鼠标移动时被调用。|
-| MOUSE_OVER | 当鼠标正在对象所在区域内（没有被其他对象覆盖）时调用。|
-| MOUSE_OUT | 当鼠标移出对象所在区域内（没有被其他对象覆盖）时调用。|
-| ROLL_OVER | 当鼠标进入对象所在区域内调用。|
-| ROLL_OUT | 当鼠标移出对象所在区域内时调用。|
+| MOUSE_MOVE | Called when the user moves the mouse.|
+| MOUSE_OVER | Called when the mouse is within the object's area (not covered by other objects).|
+| MOUSE_OUT | Called when the mouse is moved out of the object's area (not covered by other objects).|
+| ROLL_OVER | Called when the mouse is moved into the area where the object is.|
+| ROLL_OUT | Called when the mouse is moved out of the object's area.|
 
-## 使用方法
+## 3. Usage
 
-使用鼠标支持库时需要开启鼠标支持。
+Mouse support needs to be enabled when mouse support library is used.
 
 ```
-//启用舞台的鼠标支持
+// Enable the mouse support for the stage
 mouse.enable(this.stage);
 ```
 
-调用 enable 方法开启舞台对鼠标事件的支持。开启支持之后即可监听鼠标事件了。使用鼠标事件的方法与其他触摸事件是相同的，下面是基本的调用方法：
+Enable the stage's support for the mouse events by calling the enable method. You can monitor the mouse events after enabling support.The method of using mouse events is the same as that of other touch events. The basic call method is as follows:
 
 ```
 mouse.enable(this.stage);
-//绘制外层容器
+// Draw the outer container
 this.outContainer = new egret.Sprite();
-this.outContainer.name = "outContainer";
+this.outContainer.name = "outContainer";	;
 this.outContainer.graphics.beginFill(0x00ff00);
 this.outContainer.graphics.drawRect(0, 0, 300, 300);
 this.outContainer.graphics.endFill();
 this.addChild(this.outContainer);
 this.outContainer.x = (this.stage.stageWidth - this.outContainer.width) / 2;
 this.outContainer.y = (this.stage.stageHeight - this.outContainer.height) / 2;
-//绘制里层显示对象
+// Draw the inner layer display object
 this.inShape = new egret.Sprite();
-this.inShape.name = "inShape";
+this.inShape.name = "inShape";	;
 this.inShape.graphics.beginFill(0xff0000);
 this.inShape.graphics.drawCircle(0, 0, 50);
 this.inShape.graphics.endFill();
 this.inShape.x = this.outContainer.width / 2;
 this.inShape.y = this.outContainer.height / 2;
 this.outContainer.addChild(this.inShape);
-//开启显示对象的触摸
+// Turn on the display object's touch
 this.outContainer.touchEnabled = true;
 this.inShape.touchEnabled = true;
-//分别监听外层容器的 MouseEvent
+// Monitor the MouseEvent of the outer container separately
 this.outContainer.addEventListener(mouse.MouseEvent.ROLL_OVER, this.onRollOver, this);
 this.outContainer.addEventListener(mouse.MouseEvent.ROLL_OUT, this.onRollOut, this);
 this.outContainer.addEventListener(mouse.MouseEvent.MOUSE_OVER, this.onMouseOver, this);
 this.outContainer.addEventListener(mouse.MouseEvent.MOUSE_OUT, this.onMouseOut, this);
-//分监听内层显示对象的 MouseEvent
+//Display the MouseEvent of the displayed object by the monitored content
 this.inShape.addEventListener(mouse.MouseEvent.ROLL_OVER, this.onRollOver2, this);
 this.inShape.addEventListener(mouse.MouseEvent.ROLL_OUT, this.onRollOut2, this);
 this.inShape.addEventListener(mouse.MouseEvent.MOUSE_OVER, this.onMouseOver2, this);
 this.inShape.addEventListener(mouse.MouseEvent.MOUSE_OUT, this.onMouseOut2, this);
 ```
 
-其中回调函数如下：
+Where the callback function is as follows:
 
 ```
 private onRollOver(e: egret.TouchEvent): void {
-    console.log("roll over " + e.target.name + "  " + e.bubbles);
+    console.log("roll over " + e.target.name + "  " + e.bubbles);	 + e.bubbles);
 }
 
 private onRollOut(e: egret.TouchEvent): void {
-    console.log("roll out " + e.target.name + "  " + e.bubbles);
+    console.log("roll out " + e.target.name + "  " + e.bubbles);	 + e.bubbles);
 }
 
 private onMouseOver(e: egret.TouchEvent): void {
-    console.log("mouse over " + e.target.name + "  " + e.bubbles);
+    console.log("mouse over " + e.target.name + "  " + e.bubbles);	 + e.bubbles);
 }
 
 private onMouseOut(e: egret.TouchEvent): void {
-    console.log("mouse out " + e.target.name + "  " + e.bubbles);
+    console.log("mouse out " + e.target.name + "  " + e.bubbles);	 + e.bubbles);
 }
 
 private onRollOver2(e: egret.TouchEvent): void {
-    console.log("roll over2 " + e.target.name + "  " + e.bubbles);
+    console.log("roll over2 " + e.target.name + "  " + e.bubbles);	 + e.bubbles);
 }
 
 private onRollOut2(e: egret.TouchEvent): void {
-    console.log("roll out2 " + e.target.name + "  " + e.bubbles);
+    console.log("roll out2 " + e.target.name + "  " + e.bubbles);	 + e.bubbles);
 }
 
 private onMouseOver2(e: egret.TouchEvent): void {
-    console.log("mouse over2 " + e.target.name + "  " + e.bubbles);
+    console.log("mouse over2 " + e.target.name + "  " + e.bubbles);	 + e.bubbles);
 }
 
 private onMouseOut2(e: egret.TouchEvent): void {
-    console.log("mouse out2 " + e.target.name + "  " + e.bubbles);
+    console.log("mouse out2 " + e.target.name + "  " + e.bubbles);	 + e.bubbles);
 }
 ```
 
-上面代码中我们绘制了两个 Sprite ，一个当做外层的容器，一个当做内部的显示对象。编译运行观察输出的结果：
+In the above code, two Sprites are drawn, one of which is used as the outer container, while the other as the internal display object. Compile, operate and observe the output results:
 
-* 鼠标移入容器和内层显示对象时都会抛出 MOUSE_OVER 和 ROLL_OVER。
-* 鼠标在容器移动到内层显示对象时容器会抛出 MOUSE_OUT 但不会抛出 ROLL_OUT。
-* 鼠标从内层显示对象移动到容器时容器会抛出 MOUSE_OVER ，内层会抛出 ROLL_OUT 和 MOUSE_OUT。
-* 鼠标完全移动到容器外面时容器才会抛出 ROLL_OUT。 
+* MOUSE_OVER and ROLL_OVER will be thrown when the mouse is moved into the container and the inner display object.
+* When the mouse is moved to the inner display object inside the container, the container will throw MOUSE_OUT rather than ROLL_OUT.
+* When the mouse moves from the inner display object to the container, the container will throw MOUSE_OVER and the inner layer will throw ROLL_OUT and MOUSE_OUT.
+* The container will throw ROLL_OUT when only the mouse is moved completely out of the container. 
 
-简单比较可以看出 MOUSE 和 ROLL 的区别，MOUSE_OVER 和 MOUSE_OUT 在显示对象的可见区域上触发，而 ROLL_OUT 和 ROLL_OUT 在显示对象的整体上触发。
+Simple comparison shows the difference between MOUSE and ROLL: MOUSE_OVER and MOUSE_OUT are triggered on the visible area of the display object, while ROLL_OUT and ROLL_OUT are triggered on the display object as a whole.
 
 
-### 设置鼠标手型
+### Set the mouse as hand shape
 
-一般我们希望鼠标移动到可点击区域上时改变鼠标的形状为手型，我们可以通过 setButtonMode 来设置。
+If you want to change the shape of the mouse as the shape of hand when the mouse is moved above the clickable area, you can set by `setButtonMode`.
 
 ```
-//设置内层显示对象为鼠标手型
+// set the inner display object as hand-shape mouse
 mouse.setButtonMode(this.inShape, true);
 ```
 
-setButtonMode 接收两个参数，分别是显示对象和是否开启手型显示。开启之后当鼠标移动到该显示对象上时即可显示为手的形状。
+`setButtonMode` receives two parameters, the display object and whether to enable the hand-shape display.Once enabled, the mouse can be displayed as the shape of the hand when the mouse is moved above the display object.
 
 
-### 监听鼠标移动事件
+### Monitor the mouse movement events
 
-监听鼠标的移动事件需要单独开启，调用 setMouseMoveEnabled() 方法即可。
+Monitoring the mouse movement events need to be enabled separately just by calling the `setMouseMoveEnabled ()` method.
 
 ```
-//设置开启鼠标移动事件
+//set to enable the mouse movement events
 mouse.setMouseMoveEnabled(true);
 ```
 
-开启鼠标移动事件的监听之后接口监听该事件:
+Monitor this event after enabling the monitoring interface of the mouse movement event:
 
 ```
 this.outContainer.addEventListener(mouse.MouseEvent.MOUSE_MOVE, function () { 
-    console.log("mouse move"); 
+    console.log("mouse move"); 	); 
 }, this);
 ```
 
-> 需要注意的是监听鼠标移动事件会消耗更多的性能。
+> It should be noted that monitoring the mouse movement event will consume more performance.
 
 
 

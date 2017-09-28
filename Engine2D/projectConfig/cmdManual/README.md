@@ -1,240 +1,199 @@
-用法:egret `command` [-v]
+Usage: egret `command` [-v]
 
-command列表:
+command list:
 
 ## create
-创建新项目
+Create a new project
 
-### 用法:
+### Usage:
 
     egret create project_name [--type empty|game|gui|eui]
-### 描述:
+### Parameter Description:
 
-    创建新项目
-### 参数说明:
-
-| 关键字 | 描述
+| Keywords | description
 | ------------ | ------------ 
-| `project_name` |    项目名称，按照操作系统的命名规范命名
-| `--type` |          要创建的项目类型 empty、game、gui、eui，默认值为game
+| `project_name` | The project name, which is named according to the naming convention of the operating system
+| `- type` | The type of project to be created: empty, game, gui and eui. The default is game
 
 
-### 举例:
+### example:
 
-    1、创建名为【HelloWorld】的一个eui项目
+    1. Create an eui project named [HelloWorld]
     egret create HelloWorld --type eui
-    2、创建名为【HelloWorld】的一个空项目
-    egret create HelloWorld
-
-
+    2. Create an empty project named [HelloWorld]
+    egret create HelloWorld --type empty
 
 ## create_lib
-创建新第三方库项目
+Create a new third-party library project
 
-### 用法:
+### Usage:
 
     egret create_lib lib_name
-### 描述:
+### Parameter Description:
 
-    创建第三方库
-### 参数说明:
-
-| 关键字 | 描述
+| Keywords | description
 | ------------ | ------------ 
-| `lib_name` |    第三方库名称，按照操作系统的命名规范命名
+| `lib_name` |    third-party library name, which is named according to the naming convention of the operating system
 
 
 
 
 ## create_app
-从h5游戏生成app
+Generate app from h5 game
 
-### 用法:
+### Usage:
 
     egret create_app app_name -f h5_game_path -t template_path
-### 描述:
 
-    构建指定项目,如果是在项目文件夹下编译，就不要加项目名称.
-    注意：路径最好加引号，防止路径中有空格报错
-### 参数说明:
+### Parameter Description:
 
-| 关键字 | 描述
+| Keywords | description
 | ------------ | ------------ 
-| `app_name` |    移动应用项目名称，按照操作系统的命名规范命名
-| `-f` |          app项目所对应h5项目的路径
-| `-t` |          对应 Native Support 路径
+| `app_name` |    Mobile app project name, which is named according to the operating system naming convention
+| `-f` |          app project corresponds to the path to h5 project
+| `-t` |          corresponds to the Native Support path
 
-
-
+    If it is compiled under the project folder, do not add the project name
+    Note: it's better to add quotation marks to the path, thus preventing blank error in the path
 
 ## build
-构建指定项目
+Build the specified project
 
-### 用法:
+### Usage:
 
     egret build [project_name] [-e] [--runtime native]
-### 描述:
+### Parameter Description:
 
-    构建指定项目,如果是在项目文件夹下编译，就不要加项目名称
-### 参数说明:
-
-| 关键字 | 描述
+| Keywords | description
 | ------------ | ------------ 
-| `project_name` |    项目名称，按照操作系统的命名规范命名
-| `-e` |              编译指定项目的同时编译引擎目录
-| `--runtime` |       如果有native工程，则会将文件拷贝到工程里
+| `project_name` | The project name, which is named according to the naming convention of the operating system
+| `-e` |              compile the specified project while compiling the engine directory
+| `--runtime` |       If there is a native project, the file will be copied to the project
+
+    If it is compiled under the project folder, do not add the project name
 
 
-### 举例:
+### example:
 
-    1、编译【HelloWorld】
+    1. compile【HelloWorld】
     egret build HelloWorld
-    2、编译【HelloWorld】的同时编译引擎
+    2. compile [HelloWorld] while compiling engine
     egret build HelloWorld -e
-    3、编译【HelloWorld】的同时编译native项目
+    3. compile [HelloWorld] whiling compiling the native project
     egret build HelloWorld --runtime native
 
-
-
 ## publish
-发布项目
+Publish the project
 
-### 用法:
+### Usage:
 
     egret publish [project_name] [--version [version]] [--runtime html5|native] [--passWorld]
-### 描述:
 
-    发布项目,如果是在项目文件夹下编译，就不要加项目名称
-### 参数说明:
+### Parameter Description:
 
-| 关键字 | 描述
+| Keywords | description
 | ------------ | ------------ 
-| `project_name` |    项目名称，按照操作系统的命名规范命名
-| `--version` |       设置发布之后的版本号，可以不设置
-| `--runtime` |       设置发布方式为 html5 或者是 native方式，默认值为html5
-| `--password` |     设置发布zip文件的解压密码
+| `project_name` |       The project name, which is named according to the naming convention of the operating system
+| `--version` |       Set the version number after publishing. It's fine not to set
+| `- runtime` |       Set the publishing method as html5 or native, and the default value is html5
+| `--password` |     Set the decompression password for publishing zip file
 
+    If it is compiled under the project folder, do not add the project name
 
-### 举例:
+### example:
 
-    发布【HelloWorld】
+    Publish【HelloWorld】
     egret publish HelloWorld --version 0.03 --passWorld 88888888
 
-
-
 ## startserver
-启动HttpServer,并在默认浏览器中打开指定项目
+Start HttpServer and run the specified project in the default browser
 
-### 用法:
+### Usage:
 
     egret startserver [project_name] [--port 3000] [-ip] [-serveronly]
-### 描述:
+### Parameter Description:
 
-    启动Egret内置的服务器，并可立即在浏览器中运行项目,如果是在项目文件夹下编译，就不要加项目名称
-### 参数说明:
-
-| 关键字 | 描述
+| Keywords | description
 | ------------ | ------------ 
-| `project_name` |    项目名称，按照操作系统的命名规范命名
-| `--port` |          指定端口号
-| `-ip` |             是否使用本机IP
-| `-serveronly` |     是否只运行服务器
+| `project_name` |       The project name, which is named according to the naming convention of the operating system
+| `--port` |          Specify the port number
+| `-ip` |             Whether to use native IP
+| `-serveronly` |     Whether to run only the server
 
+    If it is compiled under the project folder, do not add the project name
 
-### 举例:
+### example:
 
-    运行【HelloWorld】项目
+    Run the [HelloWorld] project
     egret startserver HelloWorld --port 3000
 
-
-
 ## clean
-重置项目中的引擎代码
+Reset the engine code in the project
 
-### 用法:
+### Usage:
 
     egret clean [project_name]
-### 描述:
+### Parameter Description:
 
-    重置项目中的引擎代码,如果是在项目文件夹下编译，就不要加项目名称
-### 参数说明:
-
-| 关键字 | 描述
+| Keywords | description
 | ------------ | ------------ 
-| `project_name` |    项目名称，按照操作系统的命名规范命名
+| `project_name` |       The project name, which is named according to the naming convention of the operating system
 
-
-
+    If it is compiled under the project folder, do not add the project name
 
 ## upgrade
-升级项目代码
+Upgrade the project code along with the upgrade of the Egret engine 
 
-### 用法:
+### Usage:
 
     egret upgrade [project_name]
-### 描述:
+### Parameter Description:
 
-    跟随Egret引擎的升级，对项目进行升级,如果是在项目文件夹下编译，就不要加项目名称
-### 参数说明:
-
-| 关键字 | 描述
+| Keywords | description
 | ------------ | ------------ 
-| `project_name` |    项目名称，按照操作系统的命名规范命名
+| `project_name` |       The project name, which is named according to the naming convention of the operating system
 
+    If it is compiled under the project folder, do not add the project name
 
-### 举例:
+### example:
 
-    升级【HelloWorld】项目
+    Upgrade the【HelloWorld】project
     egret upgrade HelloWorld
 
-
-
 ## make
-编译引擎源码
+After modifying the engine source code, compile the engine source
 
-### 用法:
-
+### Usage:
     egret make
-### 描述:
-
-    修改引擎源码后，编译引擎源码
-
-
 
 ## apitest
- 版本升级后检测api是否已经替换完成。限于2.4之前版本升级到2.5（及以上）版本的检测，需要在2.5（及以上）版本项目中输入
+After the version is upgraded, detect whether the api has been replaced or not.It is limited to the detect of upgrade from pre-2.4 version 2.5 (and above), and you need to enter in version 2.5 (and above)
 
-### 用法:
+### Usage:
 
     egret apitest [project_name]
-### 描述:
 
-    检测项目中的api是否存在冲突
-### 参数说明:
+### Parameter Description:
 
-| 关键字 | 描述
+| Keywords | description
 | ------------ | ------------ 
-| `project_name` |    项目名称，按照操作系统的命名规范命名
+| `project_name` |       The project name, which is named according to the naming convention of the operating system
 
 
-### 举例:
+### example:
 
-    检测【HelloWorld】项目api是否存在冲突
+    Detect whether there is a conflict with the [HelloWorld] project api
     egret apitest HelloWorld
 
-
-
 ## info
-获得Egret信息
+Get Egret information, such as the current Egret version and the installation path
 
-### 用法:
+### Usage:
 
     egret info
-### 描述:
 
-    当前Egret版本，以及安装路径
+## help
+Understand the details of each command
 
-
-
-使用 egret help  `command` 了解各个 command 的细节
-
+### usage
+    egret help `command`

@@ -1,28 +1,28 @@
-## 说明
-通常情况下为了游戏画面中的美观程度，我们或多或少都会使用一些圆角矩形或者边缘不规则的矩形。 在游戏中，我们经常会对这些图形进行拉伸。那么拉伸后的图形会发生变形。为了让边缘不会因为拉伸而变形，我们需要一个解决办法。 这个办法就是“九宫格”。
 
-先来看一下一个圆角矩形的样子。
+c## Use
+Normally, for the aesthetic degree of the game screen, some rounded rectangles or irregular edges will be used. In the game, these graphics are often stretched, then the stretched graphics will be deformed. In order to make the edge not be deformed because of stretching, you can use the "Sudoku (Jiugongge)".
+
+The following figure is a rounded rectangle
 
 ![](556564e1ddd8d.png)
 
-上图中我们绘制了一个简单的圆角矩形，如果此时我们将这个圆角矩形横向拉伸，那么我们可以看到，边缘的拉伸变化如下图：
+The rounded rectangle is stretched in the transverse direction, and the stretching of the edge is changed as follows:
 
 ![](556564e1e524c.png)
 
-上面的效果是我们不希望看到的，我们希望能够最终效果像下图一样。无论我的图片如何拉伸，他的圆角始终不会变形。
+The above effects do not meet the requirements, which will affect the artistic effect. Hope that no matter how the image is stretched, rounded corners will never be deformed, as shown below.
 
 ![](556564e1e5d41.png)
 
-有了这个思路，我们就可以使用九宫格系统了，我们来看一下，九宫格到底包含哪些东西。
+Jiugongge system can achieve the above effects.
 
 ![](556564e1e68d5.png)
 
-上图中，我们用四条虚线将圆角矩形分割为9个区域，其中四个区域(图中区域编号1，3，7，9)包含了我们圆角矩形的四个圆角。 那么在设置这样的九宫格参数后，我们再次拉伸我们的图像就不会发生变形的现象。
+In the above figure, the rounded rectangle is divided into nine zones with four dashed lines, of which four zones (zone is numbered 1, 3, 7, and 9 in the figure) contain four rounded corners of the rounded rectangle. When the image is stretched, the zones 1, 3, 7 and 9 won't be stretched, the zones 2 and 8 will be stretched only horizontally, and the zones 4 and 6 are stretched only in the longitudinal direction, and zone 5 is stretched both in longitudinal and horizontal directions.
 
-设置九宫格的属性是 Bitmap 类中的 `scale9Grid` 属性。
+Setting the attributes of the Jiugongge is the `scale9Grid` attribute in the `Bitmap` class.
 
-## 示例
-我们来看一个完整的示例，这个示例中，我们显示一个圆角矩形，同时放置两个Bitmap对象，两个Bitmap对象都将 width 设置 为原来的2倍。 但其中一个添加九宫格数据，另外一个不添加九宫格数据。具体代码如下：
+The following is a complete example code. In this example, two `Bitmap` objects are placed and the two `Bitmap` objects will set the setting of width to two times of the original one. One of them adds Jiugongge data, while the other one does not add Jiugongge data.
 
 ```
 class BitmapTest extends egret.DisplayObjectContainer{
@@ -52,38 +52,33 @@ class BitmapTest extends egret.DisplayObjectContainer{
 }
 ```
 
-编译后运行，效果如图：
+In the above code, an object of type `Rectangle` is created. The object is used to store Jiugongge data. Fill in four parameters when Initializing.
 
-![](556564e1e68d5.png)
+* 30: width of zone 1.
 
-大家注意，我们上面的代码中创建了一个类型为 Rectangle 的对象。该对象就是用来存放九宫格数据的。 初始化时候我们填入了四个参数。
+* 31: height value of zone 1
 
-* 30：区域1 的宽度值。
+* 40: width value of zone 2
 
-* 31：区域1 的高度值
+* 41: height value of zone 4
 
-* 40：区域2 的宽度值
+> Note: when setting the Jiugong width, please use integer as much as possible, otherwise "black line" may appear in some browsers. 
 
-* 41：区域4 的高度值
+For more examples of Jiugongge, refer to [Teaching Examples] (http://developer.egret.com/cn/example/egret2d/index.html#050-bitmap-prac-9grid)
 
-> 注意：设置九宫宽高的时候尽量使用整数，否则有些浏览器可能会出现“黑线”。
+## Error handling
 
-
-## 错误处理
-
-设置图片的九宫格是个常用的功能，不过如果不小心设置错了，很容易导致显示的异常。 在 Egret 2.5.5 中对这一异常进行了控制，当九宫格设置参数错误的情况下，会发出警告并且不显示这个错误的九宫格图片。并且以前的移动端浏览器是不会显示错误的九宫格设置的，这样可以统一移动端和PC端的表现。
-
-在正常情况下，九宫格的区域的宽度和高度要小于图片的宽度和高度，位置在图片内部。如果设置的九宫格位置或者宽度和高度异常的情况下会报如下错误：
+Under normal circumstances, the width and height of the Jiugongge zone must be less than the width and height of the image, the location of which is within the image. If the position or width and height of the set Jiugongge is abnormal,  the following error will be reported:
 
 ```
-Warning #1018: 9宫格设置错误
+Warning #1018: The setting error of Jiugongge
 ```
 
-具体来讲正确的九宫格设置为:
+Specifically, the correct Jiugongge is set to:
 ```
-x + w < 图片宽度;
-y + h < 图片高度;
+x + w <image width;
+y + h <image height;
 ```
-其中`x`和`y`是设置九宫格的位置，w和h为设置九宫格的宽和高。其中 x,y,w,h 应大于等于 0。
+Where `x` and` y` are to set the position of the Jiugongge, while w and h are to set the width and height of the Jiugongge. Where x, y, w, h should be greater than or equal to 0.
 
-> 在 Egret 3.0.3 之前的版本中 x,y,w,h 是不能设置为 0 的。
+> In the previous versions of Egret 3.0.3, x, y, w, h can not be set to 0.

@@ -6,36 +6,39 @@
 
 对于一般的Egret项目，在创建项目的时候已经自动生成了与Egret命令行匹配的任务： **构建(Ctrl+Shift+B)，清理，发布**。`tasks.json` 如下：
 
-	{
-	    "version": "0.1.0",
-	    "command": "egret",
-	    "isShellCommand": true,
-	    "tasks": [
-	        {
-	            "taskName": "build",
-	            "showOutput": "always",
-	            "args": [
-	                "build",
-	                "-sourcemap"
-	            ],
-	            "problemMatcher": "$tsc"
-	        },
-	        {
-	            "taskName": "clean",
-	            "showOutput": "always",
-	            "args": [
-	                "build",
-	                "-e"
-	            ],
-	            "problemMatcher": "$tsc"
-	        },
-	        {
-	            "taskName": "publish",
-	            "showOutput": "always",
-	            "args": [
-	                "publish"
-	            ],
-	            "problemMatcher": "$tsc"
-	        }
-	    ]
-	}
+```
+{
+    "version": "0.1.0",
+    "command": "egret",
+    "isShellCommand": true,
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "build",
+            "showOutput": "always",
+            "args": [
+                "build",
+                "-sourcemap"
+            ],
+            "problemMatcher": "$tsc"
+        },
+        {
+            "taskName": "clean",
+            "showOutput": "always",
+            "args": [
+                "build",
+                "-e"
+            ],
+            "problemMatcher": "$tsc"
+        },
+        {
+            "taskName": "publish",
+            "showOutput": "always",
+            "args": [
+                "publish"
+            ],
+            "problemMatcher": "$tsc"
+        }
+    ]
+}
+```

@@ -307,7 +307,7 @@
     "isFolder": true,
     "text": "更新详情",
     "des": "更新详情",
-    "in_use": true
+    "in_use": false
   },
   {
     "children": [
@@ -325,8 +325,8 @@
       },
       {
         "filename": "/Engine2D/lifecycle/",
-        "text": "生命周期",
-        "des": "生命周期",
+        "text": "lifecycle",
+        "des": "lifecycle",
         "in_use": true
       }
     ],
@@ -339,80 +339,80 @@
     "children": [
       {
         "filename": "/Engine2D/projectConfig/installation/",
-        "text": "安装与部署",
-        "des": "安装与部署",
+        "text": "Installation",
+        "des": "Installation",
         "in_use": true
       },
       {
         "filename": "/Engine2D/projectConfig/launcherManager/",
         "text": "启动器",
         "des": "引擎和工具的管理",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/projectConfig/cmdManual/",
-        "text": "命令行手册",
-        "des": "命令行手册",
+        "text": "Command Manual",
+        "des": "Command Manual",
         "in_use": true
       },
       {
         "filename": "/Engine2D/projectConfig/indexFile/",
-        "text": "入口文件说明",
-        "des": "入口文件说明",
+        "text": "Index File",
+        "des": "Index File",
         "in_use": true
       },
       {
         "filename": "/Engine2D/projectConfig/tempfile/",
         "text": "入口文件模板",
         "des": "入口文件模板",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/projectConfig/configFile/",
-        "text": "项目配置文件说明",
-        "des": "项目配置文件说明",
+        "text": "Project Config",
+        "des": "Project Config",
         "in_use": true
       },
       {
         "filename": "/Engine2D/projectConfig/modelconfig/",
         "text": "模块版本配置",
         "des": "模块版本配置",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/projectConfig/tsconfig/",
         "text": "tsconfig 配置文件",
         "des": "tsconfig 配置文件",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/projectConfig/libraryProject/",
-        "text": "库项目配置",
-        "des": "库项目配置",
+        "text": "Library Project",
+        "des": "Library Project",
         "in_use": true
       },
       {
         "filename": "/Engine2D/projectConfig/compileOrder/",
         "text": "编译顺序说明",
         "des": "编译顺序说明",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/webassembly/",
         "text": "webassembly 概述",
         "des": "webassembly 概述",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/projectConfig/wasmconfig/",
         "text": "WebAssembly 项目配置",
         "des": "WebAssembly 项目配置",
-        "in_use": true
+        "in_use": false
       }
     ],
     "isFolder": true,
-    "text": "项目配置",
-    "des": "项目配置相关文档",
+    "text": "Project Config",
+    "des": "Project Config",
     "in_use": true
   },
   {
@@ -421,66 +421,78 @@
         "filename": "/Engine2D/displayObject/visualProgram/",
         "text": "视觉编程",
         "des": "视觉编程",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/displayObject/basicConcept/",
-        "text": "显示对象的基本概念",
-        "des": "显示对象的基本概念",
+        "text": "DisplayObject",
+        "des": "DisplayObject",
         "in_use": true
       },
       {
         "filename": "/Engine2D/displayObject/classes/",
         "text": "创建自己的显示对象类",
         "des": "创建自己的显示对象类",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/displayObject/anchor/",
         "text": "锚点的操作",
         "des": "锚点的操作",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/displayObject/position/",
         "text": "位置",
         "des": "位置",
-        "in_use": true
+        "in_use": false
       },
       {
-        "filename": "/Engine2D/displayObject/translation/",
-        "text": "平移",
-        "des": "平移",
+        "filename": "/Engine2D/displayObject/transform/",
+        "text": "Transform",
+        "des": "transform",
         "in_use": true
       },
       {
         "filename": "/Engine2D/displayObject/size/",
         "text": "尺寸",
         "des": "尺寸",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/displayObject/scale/",
         "text": "缩放",
         "des": "缩放",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/displayObject/rotation/",
         "text": "旋转",
         "des": "旋转",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/displayObject/skew/",
         "text": "斜切",
         "des": "斜切",
+        "in_use": false
+      },
+      {
+        "filename": "/Engine2D/displayObject/addAndRemove/",
+        "text": "Add And Remove",
+        "des": "add And Remove",
+        "in_use": true
+      },
+      {
+        "filename": "/Engine2D/displayObject/depthManagement/",
+        "text": "Depth",
+        "des": "Depth",
         "in_use": true
       }
     ],
     "isFolder": true,
-    "text": "显示对象",
-    "des": "显示对象",
+    "text": "DisplayObject",
+    "des": "DisplayObject",
     "in_use": true
   },
   {
@@ -513,90 +525,90 @@
     "isFolder": true,
     "text": "显示容器",
     "des": "显示容器",
-    "in_use": true
+    "in_use": false
   },
   {
     "children": [
       {
-        "filename": "/Engine2D/vectorDrawing/useVectorDrawing/",
-        "text": "使用矢量绘图",
-        "des": "使用矢量绘图",
+        "filename": "/Engine2D/vectorDrawing/vectorDrawing/",
+        "text": "Graphics",
+        "des": "Graphics",
         "in_use": true
       },
       {
         "filename": "/Engine2D/vectorDrawing/drawCircle/",
         "text": "绘制圆形",
         "des": "绘制圆形",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/vectorDrawing/drawLine/",
         "text": "绘制直线",
         "des": "绘制直线",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/vectorDrawing/drawCurves/",
         "text": "绘制曲线",
         "des": "绘制曲线",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/vectorDrawing/drawArc/",
         "text": "绘制圆弧",
         "des": "绘制圆弧",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/vectorDrawing/useDrawCurves/",
         "text": "Graphics Arc 高级使用",
         "des": "Graphics Arc 高级使用",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/vectorDrawing/drawShapes/",
         "text": "多个形状的绘制",
         "des": "多个形状的绘制",
-        "in_use": true
+        "in_use": false
       }
     ],
     "isFolder": true,
-    "text": "矢量绘图",
-    "des": "矢量绘图",
+    "text": "Graphics",
+    "des": "Graphics",
     "in_use": true
   },
   {
     "children": [
       {
-        "filename": "/Engine2D/mask/rectangleMask/",
-        "text": "矩形遮罩",
-        "des": "矩形遮罩",
+        "filename": "/Engine2D/mask/maks/",
+        "text": "Mask",
+        "des": "Mask",
         "in_use": true
       },
       {
         "filename": "/Engine2D/mask/displayMask/",
         "text": "显示对象遮罩",
         "des": "显示对象遮罩",
-        "in_use": true
+        "in_use": false
       }
     ],
     "isFolder": true,
-    "text": "遮罩",
-    "des": "遮罩",
+    "text": "Mask",
+    "des": "Mask",
     "in_use": true
   },
   {
     "children": [
       {
-        "filename": "/Engine2D/hit/inexactHit/",
-        "text": "非精确碰撞检测",
-        "des": "非精确碰撞检测",
+        "filename": "/Engine2D/hit/pixelHit/",
+        "text": "Pixel Hit",
+        "des": "pixelHit",
         "in_use": true
       },
       {
-        "filename": "/Engine2D/hit/accurateHit/",
-        "text": "精确碰撞检测",
-        "des": "精确碰撞检测",
+        "filename": "/Engine2D/hit/rectangleHit/",
+        "text": "Rectangle Hit",
+        "des": "rectangleHit",
         "in_use": true
       },
       {
@@ -614,52 +626,52 @@
   {
     "children": [
       {
-        "filename": "/Engine2D/textField/createText/",
-        "text": "使用文本",
-        "des": "使用文本",
+        "filename": "/Engine2D/textField/text/",
+        "text": "Text",
+        "des": "Text",
         "in_use": true
       },
       {
-        "filename": "/Engine2D/textField/textColor/",
-        "text": "文本颜色",
-        "des": "文本颜色",
+        "filename": "/Engine2D/textField/textStyle/",
+        "text": "Text Style",
+        "des": "textStyle",
         "in_use": true
       },
       {
         "filename": "/Engine2D/textField/textFonts/",
         "text": "文本字体",
         "des": "文本字体",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/textField/textLayout/",
         "text": "文本布局",
         "des": "文本布局",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/textField/textStyle/",
         "text": "文本样式",
         "des": "文本样式",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/textField/textMixed/",
         "text": "多种样式文本混合",
         "des": "多种样式文本混合",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/textField/textLinkEvent/",
         "text": "文本超链接事件",
         "des": "文本超链接事件",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/textField/textInput/",
         "text": "输入文本",
         "des": "输入文本",
-        "in_use": true
+        "in_use": false
       }
     ],
     "isFolder": true,
@@ -715,26 +727,26 @@
     "isFolder": true,
     "text": "事件机制",
     "des": "事件机制",
-    "in_use": true
+    "in_use": false
   },
   {
     "children": [
       {
         "filename": "/Engine2D/net/sendHTTP/",
-        "text": "发送HTTP请求",
-        "des": "发送HTTP请求",
+        "text": "Send HTTP",
+        "des": "Send HTTP",
         "in_use": true
       },
       {
         "filename": "/Engine2D/net/loadBitmap/",
-        "text": "加载位图文件",
-        "des": "加载位图文件",
+        "text": "Load Image",
+        "des": "Load Image",
         "in_use": true
       },
       {
         "filename": "/Engine2D/net/loadText/",
-        "text": "加载文本和二进制文件",
-        "des": "加载文本和二进制文件",
+        "text": "Load Text And Binary",
+        "des": "Load Text And Binary",
         "in_use": true
       }
     ],
@@ -746,39 +758,39 @@
   {
     "children": [
       {
-        "filename": "/Engine2D/bitmapTexture/creatBitmap/",
-        "text": "创建位图",
-        "des": "创建位图",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/bitmapTexture/scale9Grid/",
-        "text": "九宫格",
-        "des": "九宫格",
+        "filename": "/Engine2D/bitmapTexture/useTexture/",
+        "text": "Use Texture",
+        "des": "Use Texture",
         "in_use": true
       },
       {
         "filename": "/Engine2D/bitmapTexture/fillMode/",
-        "text": "纹理的填充方式",
-        "des": "纹理的填充方式",
+        "text": "Fill Mode",
+        "des": "fillMode",
         "in_use": true
       },
       {
-        "filename": "/Engine2D/bitmapTexture/useTexture/",
-        "text": "纹理集的使用",
-        "des": "纹理集的使用",
+        "filename": "/Engine2D/bitmapTexture/scale9Grid/",
+        "text": "Scale9Grid",
+        "des": "scale9Grid",
+        "in_use": true
+      },
+      {
+        "filename": "/Engine2D/bitmapTexture/bitmapTexture/",
+        "text": "Bitmap Texture",
+        "des": "bitmapTexture",
         "in_use": true
       },
       {
         "filename": "/Engine2D/bitmapTexture/screenshots/",
         "text": "截屏功能",
         "des": "截屏功能",
-        "in_use": true
+        "in_use": false
       }
     ],
     "isFolder": true,
-    "text": "位图纹理",
-    "des": "位图纹理",
+    "text": "Texture",
+    "des": "Texture",
     "in_use": true
   },
   {
@@ -805,7 +817,7 @@
     "isFolder": true,
     "text": "混合模式",
     "des": "混合模式",
-    "in_use": true
+    "in_use": false
   },
   {
     "children": [
@@ -843,70 +855,70 @@
     "isFolder": true,
     "text": "滤镜",
     "des": "滤镜",
-    "in_use": true
+    "in_use": false
   },
   {
     "children": [
       {
-        "filename": "/Engine2D/timeControl/timer/",
-        "text": "Timer 计时器",
-        "des": "Timer 计时器",
+        "filename": "/Engine2D/timeControl/timeControl/",
+        "text": "Timer",
+        "des": "Timer",
         "in_use": true
       },
       {
         "filename": "/Engine2D/timeControl/ticker/",
         "text": "Ticker 心跳",
         "des": "Ticker 心跳",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/timeControl/enterFrame/",
         "text": "帧事件",
         "des": "帧事件",
-        "in_use": true
+        "in_use": false
       }
     ],
     "isFolder": true,
-    "text": "时间控制",
-    "des": "时间控制",
+    "text": "Time Control",
+    "des": "Time Control",
     "in_use": true
   },
   {
     "children": [
       {
         "filename": "/Engine2D/multimedia/audio/",
-        "text": "音频",
-        "des": "音频",
+        "text": "Audio",
+        "des": "audio",
         "in_use": true
       },
       {
         "filename": "/Engine2D/multimedia/video/",
         "text": "视频",
         "des": "视频",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/multimedia/system/",
         "text": "系统信息",
         "des": "系统信息",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/multimedia/gyro/",
         "text": "陀螺仪",
         "des": "陀螺仪",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/multimedia/location/",
         "text": "地理位置",
         "des": "地理位置",
-        "in_use": true
+        "in_use": false
       }
     ],
     "isFolder": true,
-    "text": "多媒体",
-    "des": "多媒体",
+    "text": "Media",
+    "des": "Media",
     "in_use": true
   },
   {
@@ -921,7 +933,7 @@
     "isFolder": true,
     "text": "渲染模式",
     "des": "渲染模式",
-    "in_use": true
+    "in_use": false
   },
   {
     "children": [
@@ -929,57 +941,57 @@
         "filename": "/Engine2D/screenAdaptation/explanation/",
         "text": "缩放模式和旋转模式说明",
         "des": "缩放模式和旋转模式说明",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/screenAdaptation/insight/",
-        "text": "深入了解屏幕适配",
-        "des": "深入了解屏幕适配",
+        "text": "Insight",
+        "des": "Insight",
         "in_use": false
       }
     ],
     "isFolder": true,
-    "text": "屏幕适配",
-    "des": "屏幕适配",
+    "text": "Insight",
+    "des": "Insight",
     "in_use": true
   },
   {
     "children": [
       {
-        "filename": "/Engine2D/debug/useDebug/",
-        "text": "使用 DEBUG 编译参数",
-        "des": "使用 DEBUG 编译参数",
+        "filename": "/Engine2D/debug/debug/",
+        "text": "Debug",
+        "des": "Debug",
         "in_use": true
       },
       {
         "filename": "/Engine2D/debug/consolePanel/",
         "text": "使用内置日志输出面板",
         "des": "使用内置日志输出面板",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/debug/showDebug/",
         "text": "显示脏矩形和帧频信息",
         "des": "显示脏矩形和帧频信息",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/debug/fpsPanel/",
         "text": "FPS 面板",
         "des": "FPS 面板",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/debug/performanceOptimization/",
         "text": "最佳实践",
         "des": "最佳实践",
-        "in_use": true
+        "in_use": false
       }
     ],
     "isFolder": true,
-    "text": "调试",
-    "des": "调试",
-    "in_use": true
+    "text": "Debug",
+    "des": "Debug",
+    "in_use": false
   },
   {
     "children": [
@@ -993,7 +1005,7 @@
     "isFolder": true,
     "text": "调用原生JS",
     "des": "调用原生JS",
-    "in_use": true
+    "in_use": false
   },
   {
     "children": [
@@ -1037,12 +1049,12 @@
     "isFolder": true,
     "text": "原生支持",
     "des": "原生支持",
-    "in_use": true
+    "in_use": false
   },
   {
     "children": [
       {
-        "filename": "/Engine2D/publish/publishHTML5/",
+        "filename": "/Engine2D/publish/publish/",
         "text": "打包 HTML5",
         "des": "打包 HTML5",
         "in_use": true
@@ -1051,30 +1063,30 @@
         "filename": "/Engine2D/publish/publishRuntime/",
         "text": "打包 Runtime",
         "des": "打包 Runtime",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/publish/publishAndroid/",
         "text": "打包 Android app",
         "des": "打包 Android app",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/publish/publishIOS/",
         "text": "打包 iOS app",
         "des": "打包 iOS app",
-        "in_use": true
+        "in_use": false
       },
       {
         "filename": "/Engine2D/publish/publishWinPhone/",
         "text": "打包 WinPhone app",
         "des": "打包 WinPhone app",
-        "in_use": true
+        "in_use": false
       }
     ],
     "isFolder": true,
-    "text": "打包发布",
-    "des": "打包发布",
+    "text": "Publish",
+    "des": "Publish",
     "in_use": true
   },
   {
@@ -1113,6 +1125,6 @@
     "isFolder": true,
     "text": "3D游戏教程",
     "des": "3D游戏教程",
-    "in_use": true
+    "in_use": false
   }
 ]

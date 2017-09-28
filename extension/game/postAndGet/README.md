@@ -1,14 +1,14 @@
-网络传输协议中存在多种请求方法，在HTTP/1.1协议中共定义了八种方法（也叫“动作”）来以不同的方式操作指定的资源。
+There are various request methods in the network transport protocol. In the HTTP / 1.1 protocol, eight methods (also called ""actions"") are defined to operate the specified resources in different ways.
 
-Egret提供的网络操作中，封装了其中两种方法，这两种方法也是我们最常见最常用的方法。
+Among the network operation provided by Egret, two ways are encapsulated.
 
-1. POST：向指定资源提交数据，请求服务器进行处理（例如提交表单或者上传文件）。数据被包含在请求本文中。这个请求可能会创建新的资源或修改现有资源，或二者皆有。
+1. POST: Submit data to the specified resource, request the server to process (such as submitting a form or uploading a file).The data is included in the request for this article.This request may create new resources or modify existing resources, or both.
 
-1. GET：向指定的资源发出“显示”请求。使用GET方法应该只用在读取数据，而不应当被用于产生“副作用”的操作中。
+2. GET: A "display" request is issued to the specified resource. The GET method should only be used in reading data, and should not be used in the operation that will produce "side effects".
 
-所有的“动作”都被封装到了 `URLRequestMethod` 这个类中。默认使用的“动作”是GET。如果我们修改“动作”，可以设置 `URLRequest` 中的 `method` 属性。
+All "actions" are encapsulated in the `URLRequestMethod` class. The default "action" is GET. If we modify the "action", you can set the `method` property in` URLRequest`
 
-具体代码如下：
+The specific code is as follows:
 ```
 var urlreq:egret.URLRequest = new egret.URLRequest();
 

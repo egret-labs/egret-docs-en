@@ -1,41 +1,44 @@
-## 启动超时触发器
+## 1. Start the timeout trigger
 
-有一种场景，那就是在运行一定时间后，需要触发一个事件。比如某个对话框提示呈现后，需要在几秒钟之后自动消失。
+There is a need to run an event after running for a certain period of time.For example, a dialog box needs to automatically disappear a few seconds after certain prompt is displayed.
 
-这种情况可以使用Egret提供的`egret.setTimeout`来实现。该函数原型为：
+`egret.setTimeout` provided by Egret can achieve the above functions.The prototype of the function is:
 
 ```
 function setTimeout(listener: Function, thisObject: any, delay: number, ...args: any[]): number;
 ```
 
-其中`delay`设定超时等待的毫秒数，`...args`为随意个数的参数，也可以没有任何参数。
+* `listener` is the callback function to be executed
+* `thisObject` is set to` this`
+* `delay` sets the number of milliseconds for timeout waiting,
+* `... args` is the parameter of random number, or you can also have no parameter.
 
-接下来通过一个简单的例子来学习如何使用超时触发器：
+The following example demonstrates how to use the timeout trigger:
 
 ```
 var idTimeout:number = egret.setTimeout( function( arg ){
 
-        console.log( "timeout:", arg );
+        console.log( "timeout:", arg );	, arg );
 
-    }, this, 3000, "egret"
+    }, this, 3000, "egret"	egret
 
 );
 
-console.log( "start setTimeout" );
+console.log( "start setTimeout" );	 );
 ```
 
-编译运行，首先输出"start setTimeout"，等待3秒后，将会出现"timeout: egret"，证实触发器准确运行。
+Compile and run. First, output "start setTimeout". There will be "timeout: egret" after three seconds, which indicates that the trigger is running accurately.
 
-## 停止超时触发器
+## 2. Stop the timeout trigger
 
-超时等待阶段，可能会有需求，停止超时触发器，接着开始说的例子，如果在超时结束前用户触摸对话框的关闭或确定按钮，就需要取消超时触发器了。可以使用egret.clearTimeout来取消超时触发器。在egret.setTimeout执行时返回一个id：idTimeout，这个id就是用来取消超时触发器的：
+In the case of a timeout, there may be a need to stop the timeout trigger. Then, as shown in the above example, the timeout trigger needs to be canceled if the user touches the dialog box's Close or OK button before the timeout expires. Egret provides `egret.clearTimeout` to cancel the timeout trigger.A `id: idTimeout` is returned when `egret.setTimeout` is implemented and the id is used to cancel the timeout trigger:
 
 ```
 egret.clearTimeout( idTimeout );
 ```
 
-在超时等待结束前，执行该语句，将会停止超时触发器，回调函数将不再会执行。
+The timeout trigger will be stopped if the statement is executed before timeout waiting ends. The callback function will no longer be executed.
 
-超时等待结束时，将立即执行回调函数，此后执行`egret.clearTimeout`将不再有意义。
+When the timeout waiting is over, the callback function will be executed immediately, and subsequent execution of `egret.clearTimeout` will no longer make sense.
 
-注意，本教程所用的`egret.setTimeout`和`egret.clearTimeout`均在`egret`包下，这是 Egret 引擎实现的超时触发器，跟javascript本身的`setTimeout`和`clearTimeout`不可混用。即执行`egret.setTimeout`返回的超时`id`，无法用javascript本身的`clearTimeout`来停止，反之亦然。
+Note: The `egret.setTimeout` and `egret.clearTimeout` used in this tutorial are under the `egret` package, which is the timeout trigger achieved by Egret engine and shall not mix with javascript's own `setTimeout` and `clearTimeout`. That is, the implementation of timeout `id` returned by `egret.setTimeout` can not be stopped with javascript's own `clearTimeout`, and vice versa.

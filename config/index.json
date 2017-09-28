@@ -3,7 +3,7 @@
     "children": [
       {
         "filename": "Engine2D.json",
-        "des": "2D引擎相关文档",
+        "des": "Egret Engine 2D",
         "text": "Egret Engine 2D",
         "in_use": "true"
       },
@@ -11,23 +11,23 @@
         "filename": "Engine3D.json",
         "des": "3D引擎相关文档",
         "text": "Egret Engine 3D",
-        "in_use": "true"
+        "in_use": "false"
       },
       {
         "filename": "extension.json",
-        "des": "Egret 扩展库相关文档",
-        "text": "Egret 扩展库",
+        "des": "Egret Extensions",
+        "text": "Egret Extensions",
         "in_use": "true"
       },
       {
         "filename": "Native.json",
         "des": "Egret Native相关文档",
         "text": "Egret Native",
-        "in_use": "true"
+        "in_use": "false"
       }
     ],
     "isFolder": true,
-    "text": "引擎",
+    "text": "Engine",
     "des": "引擎分类",
     "in_use": true
   },
@@ -35,7 +35,7 @@
     "children": [
       {
         "filename": "Wing.json",
-        "des": "Egret Wing说明文档",
+        "des": "Egret Wing",
         "text": "Egret Wing",
         "in_use": "true"
       },
@@ -43,29 +43,29 @@
         "filename": "DB.json",
         "des": "DragonBones相关文档",
         "text": "DragonBones",
-        "in_use": "true"
+        "in_use": "false"
       },
       {
         "filename": "Lakeshore.json",
         "des": "Lakeshore相关文档",
         "text": "Lakeshore",
-        "in_use": "true"
+        "in_use": "false"
       },
       {
         "filename": "Depot.json",
-        "des": "Res Depot说明文档",
+        "des": "Res Depot",
         "text": "Res Depot",
         "in_use": "true"
       },
       {
         "filename": "Merger.json",
-        "des": "Texture Merger说明文档",
+        "des": "Texture Merger",
         "text": "Texture Merger",
         "in_use": "true"
       },
       {
         "filename": "Inspector.json",
-        "des": "Egret Inspector说明文档",
+        "des": "Egret Inspector",
         "text": "Egret Inspector",
         "in_use": "true"
       },
@@ -73,13 +73,13 @@
         "filename": "Conversion.json",
         "des": "Egret Conversion说明文档",
         "text": "Egret Conversion",
-        "in_use": "true"
+        "in_use": "false"
       },
       {
         "filename": "Feather.json",
         "des": "Egret Feather说明文档",
         "text": "Egret Feather",
-        "in_use": "true"
+        "in_use": "false"
       },
       {
         "filename": "EgretVS.json",
@@ -89,7 +89,7 @@
       }
     ],
     "isFolder": true,
-    "text": "工具",
+    "text": "Tools",
     "des": "工具分类",
     "in_use": true
   },
@@ -99,7 +99,7 @@
         "filename": "platform.json",
         "des": "平台接入相关文档",
         "text": "平台接入",
-        "in_use": "true"
+        "in_use": "false"
       },
       {
         "filename": "Developer.json",
@@ -111,12 +111,12 @@
         "filename": "microclient.json",
         "des": "微端解决方案",
         "text": "微端解决方案",
-        "in_use": "true"
+        "in_use": "false"
       }
     ],
     "isFolder": true,
-    "text": "其他",
+    "text": "Other",
     "des": "平台分类",
-    "in_use": true
+    "in_use": false
   }
 ]

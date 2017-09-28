@@ -1,198 +1,206 @@
-## 概述
-测试Egret环境： Egret 1.5.0，Firefox浏览器。
+Screen adaptation includes scaling adaptation and rotation adaptation.
 
->本文适用于 Egret 2.5 之前的引擎版本。
+## 1. Zoom mode
 
-根据不同的项目需求，可能需要不同的屏幕适配策略。本文将用一个简单的例子对不同的适配模式进行逐一测试。
+Different scaling modes may be required. depending on the specific project requirements. 
 
-为了简化问题，并且便于理解，我们用一个简单的用例来测试： 载入一张560*560的图片castle-560.jpg。该图原始显示效果：
+Egret currently supports the following modes: `showAll`, `noScale`, `noBorder`, `exactFit`, `fixedWidth`, `fixedHeight`, `fixedNarrow` and `fixedWide`.
 
-![](5566955f18e8d.jpg)
+There are two ways to set the zoom mode:
 
-图1 测试原图
+1. Modify the `data-scale-mode` attribute in the index.html file.
 
-其中加入正方形网格，是为了便于检查其在不同适配模式的宽高比例是否能保持，或者说比例失真。
-
-## 测试准备工作
-新建Egret项目，在其launcher/egret_loader.js中，我们修改设计尺寸为560*560：
+2. Modify in the project code at any time, with the modification method as follows:
 
 ```
-egret.StageDelegate.getInstance().setDesignSize( 560, 560 );
+this.stage.scaleMode = egret.StageScaleMode.SHOW_ALL;
 ```
 
-写简单的程序，载入castle-560.jpg，并以原始大小直接显示。最下边铺一个纯色背景，用以在图片未达到的区域显示舞台区域：
+As shown below, the meaning of various zoom modes is illustrated with the following figure.
+
+This example uses a 600 * 600 image emmad.jpg.The original image shows:
+
+![](emmad.jpg)
+
+In the index.html file, modify the default stage size to 600 * 600:
 
 ```
-var shp:egret.Shape = new egret.Shape;
-shp.graphics.lineStyle( 0, 0x00ffff );
-shp.graphics.beginFill( 0x336699 );
-shp.graphics.drawRoundRect( 0, 0, this.stage.stageWidth, this.stage.stageHeight, 3, 3 );
-shp.graphics.endFill();
-this.addChild( shp );
-
-var bg:egret.Bitmap = new egret.Bitmap( Res.getRes( "castle" ) );
-this.addChild( bg );
+data-content-width="600"	600
+data-content-height="600"	600
 ```
 
-这些都准备好，测试能够正常显示后，进行不同适配模式的测试。为测试不同适配模式，在launcher/egret_loader.js中，调整context.stage.scaleMode即可。
+### 1.1 showAll mode
+In the index.html file, set ```data-scale-mode =" showAll "```
+Or write in the project code
+```
+this.stage.scaleMode = egret.StageScaleMode.SHOW_ALL;
 
 ```
-//var scaleMode =  egret.MainContext.deviceType == egret.MainContext.DEVICE_MOBILE ? egret.StageScaleMode.SHOW_ALL : egret.StageScaleMode.NO_SCALE;
-var scaleMode = egret.StageScaleMode.EXACT_FIT;
-context.stage.scaleMode = scaleMode;
-```
 
-为了对比不同适配模式下的Egret舞台区域和浏览器内的显示区域，我们加入一些调试代码。在index.html中的Egret元素div后边，增加一个用于调试的显示元素#info。
-
-
-	<div style="position:relative;" id="gameDiv"></div>
-	<div>
-	    <span id="info"></span>
-	</div>
-
-
-在index.html的head内增加代码，在该div内显示浏览器的显示区域：
-
-
-	<script type="application/javascript">
-     window.onload = function(){
-         document.getElementById("info").innerHTML = "浏览器可视区域：" + document.body.clientWidth + "," + document.body.clientHeight; 
-     }
-	</script>
-
-为了正确显示#info，可能需要设置一些CSS样式，由于这不是本文重点，就不详述了。
-
-在Egret程序里也要增加调试代码，显示实际的舞台尺寸，以及当前缩放模型：
-
-```
-var tx:egret.TextField = new egret.TextField;
-tx.x = 20;
-tx.y = 80;
-tx.fontFamily = "微软雅黑";
-tx.textColor = 0;
-tx.text = "舞台宽高：" + this.stage.stageWidth + "," + this.stage.stageHeight
-    +"n缩放模型：" + this.stage.scaleMode;
-this.addChild( tx );
-```
-
-代码方面准备工作完成后，测试项目可以正常编译，并运行显示。然后我们在作为测试运行的Firefox中，打开响应式设计模式：
-
-![](5566955f20766.jpg)
-
-设置自定义分辨率为320 * 504，这是由于iPhone5的默认浏览器显示区域为320 *504：
-
-![](5566955f21453.jpg)
-
-注意，移动设备浏览器窗口内的显示区域像素，不同于实际的设备像素概念，我们称为响应像素。
-
-基本都准备好了，然后我们对几种适配模式逐一测试。
-
-## EXACT_FIT适配模式
-在launcher/egret_loader.js中，修改context.stage.scaleMode为EXACT_FIT：
-
-```
-var scaleMode = egret.StageScaleMode.EXACT_FIT;
-context.stage.scaleMode = scaleMode;
-```
-
-EXACT_FIT适配模式效果：
-
-![](5566955f23279.png)
-
-这种适配模式的自解释已经比较清楚了：精确适应，就是宽高尺寸精确适应浏览器可视区域。
-
-该适配模式原理图解：
-
-![](5566955f24d39.jpg)
-
-舞台本身的大小(即Egret Canvas)是我们的设计尺寸，然后，EXACT_FIT适配模式会把舞台按照浏览器可视区域来进行缩放。即把宽度缩放到320响应像素。高度缩放到504响应像素。
-
-很显然，这种适配模式完全没有可控性，大部分实际的成品游戏，或动态宣传海报，为了完整的视觉体验。都不会允许宽高比例失真的情况。所以，这种适配模式实际采用很少。
-
-从易用性来看，EXACT_FIT适配模式也许可以得到较高星，但我们做项目始终要以产品为导向。那么，从产品角度来看EXACT_FIT适配模式推荐指数：★☆☆☆☆。
-如果产品阶段不需要该模式，那么调试阶段也同样不需要。
-
-## NO_SCALE适配模式：
-在launcher/egret_loader.js中，修改context.stage.scaleMode为NO_SCALE：
-
-```
-var scaleMode = egret.StageScaleMode. NO_SCALE;
-context.stage.scaleMode = scaleMode;
-```
-
-NO_SCALE适配模式的显示效果：
-
-![](5566955f2fcbf.png)
-
-该适配模式的自解释也很了然：没有任何缩放。是比EXACT_FIT更简单粗暴的缩放模式。也可以说是没有缩放的缩放模式！因为该模式直接用设计尺寸创建舞台，然后直接将舞台对齐浏览器可视区域的左上角。
-
-NO_SCALE模式原理图解：
-
-![](5566955f3415e.jpg)
-
-没错，只是比EXACT_FIT模式少一个步骤，因此该模式在显示不完整的同时，保持了一个优点：不但显示宽高比没有失真，而且是原始的1:1！
-
-很显然，该模式的产品适用性为零。但是在调试阶段，我们可能需要这种模式来预览游戏的显示最佳效果。因此，这里多给出调试阶段适用指数：★★★★☆。
-
-从另外一个角度来看，NO_SCALE模式的适配结果只是一个半成品，因为还有一部分Canvas区域暴露在浏览器可视区域之外！
-
-那么，从产品角度来看NO_SCALE适配模式推荐指数：☆☆☆☆☆！
-
-## SHOW_ALL适配模式：
-在launcher/egret_loader.js中，修改context.stage.scaleMode为SHOW_ALL：
-
-```
-var scaleMode = egret.StageScaleMode.SHOW_ALL;
-context.stage.scaleMode = scaleMode;
-```
-
-SHOW_ALL适配模式的显示效果：
+The display effect of showAll adaptation mode:
 
 ![](5566955f3bc53.png)
 
-SHOW_ALL模式原理图解：
+showAll mode schematic diagram:
 
 ![](5566955f451dd.jpg)
 
-该适配模式的原理可能是这几种适配模式中最复杂的了，但也是最常用的！
+The showAll mode is to keep the aspect ratio, showing the entire contents.After scaling, the contents of the application fill the player window in a narrower direction, so the two sides of the other direction may be left with black borders because they are not wide enough.
+In this mode, the stage size (stage.stageWidth, stage.stageHeight) is always equal to the content size of the application introduced externally.
 
-如果你已经开发过几款Egret的H5游戏或应用，那这可能是你最熟悉的模式，因为目前主流的移动设备屏幕宽高比，都不会有太大差别。相关的，浏览器可视区域的宽高比也不会有太大差别。所以，指定一个设计宽高尺寸，就可以在大部分移动设备有相接近的体验。
+showAll is a common pattern.
 
-所谓想接近的体验，那就是如果可视区域宽高比不跟设计宽高比完全一致，那么就会在第2步居中计算时，在居中方向两边留下黑边。
-
-前两种适配模式的产品价值都几乎为零，到这里终于算是一种产品适用的适配模式了。但是由于黑边问题的存在，我们还不能给这款适配模式满分。那么，从产品角度来看SHOW_ALL适配模式推荐指数：★★★★☆。
-
-## NO_BORDER适配模式：
-在launcher/egret_loader.js中，修改context.stage.scaleMode为NO_BORDER：
-
+### 1.2 noScale mode
+In the index.html file, set ```data-scale-mode="noScale"```
+Or write in the project code
 ```
-var scaleMode = egret.StageScaleMode.NO_BORDER;
-context.stage.scaleMode = scaleMode;
+this.stage.scaleMode = egret.StageScaleMode.NO_SCALE;
 ```
 
-NO_BORDER适配模式的显示效果：
+The display effect of noScale adaptation mode:
+
+![](5566955f2fcbf.png)
+
+noScale mode schematic diagram:
+
+![](5566955f3415e.jpg)
+
+The noScale mode does not scale any of the content, keeps the original 1:1 ratio, and then aligns the stage directly to the top left corner of the browser.Even if you change the player window size, it remains the same.If the player window is smaller than the content, some cropping may be made.
+In this mode, the stage size (stage.stageWidth, stage.stageHeight) always matches the size of the player window.
+
+### 1.3 noBorder mode
+In the index.html file, set ```data-scale-mode="noBorder"```
+Or write in the project code
+```
+this.stage.scaleMode = egret.StageScaleMode.NO_BORDER;
+```
+
+noBorder mode display:
 
 ![](5566955f4ce1b.png)
 
-这种适配模式可能是几种适配模式中最令人困惑的，但实际上也是给用户相当大的自由度的一种模式。先给出原理图解：
+noBorder mode schematic diagram:
+
+![](20170831173024.png)
+
+The noBorder mode will scale the content according to the size of the screen. After scaling the contents of the application to fill the player window in a wider direction, there will be no black edges, and the two sides of the other direction may be cut if they are beyond the player window. Only the middle part will be shown.
+In this mode, the stage size (stage.stageWidth, stage.stageHeight) is always equal to the content size of the application introduced externally.
+
+### 1.4 exactFit mode
+In the index.html file, set ```data-scale-mode="exactFit"```
+Or write in the project code
+```
+this.stage.scaleMode = egret.StageScaleMode.EXACT_FIT;
+```
+
+The display effect of the exactFit mode:
+
+![](5566955f23279.png)
+
+exactFit pattern schematic diagram:
+
+![](5566955f24d39.jpg)
+
+The exactFit mode does not zoom in/out the application content by keeping the original aspect ratio. After the scaling, the application contents just fill the player window.In short, it is directly stretched not in accordance with the proportion of the original content, with violence filled on the entire screen.
+In this mode, the stage size (stage.stageWidth, stage.stageHeight) is always equal to the content size of the application introduced externally.
+
+### 1.5 fixedWidth mode
+In the index.html file, set ```data-scale-mode="fixedWidth"```
+Or write in the project code
+```
+this.stage.scaleMode = egret.StageScaleMode.fixedWidth;
+```
+
+The display effect of fixedWidth mode:
+
+![](20170831163731.png)
+
+fixedWidth Schematic diagram:
 
 ![](5566955f54baa.jpg)
 
-实际上，该适配模式只参考了设计尺寸(design size)的宽度，我们给出的设计宽度是560。然后引擎根据浏览器可视区域的宽高比，计算出适配高度，使得适配宽高比与浏览器可视区域宽高比保持一致。
+The fixedWidth mode is to scale application content by keeping the original aspect ratio. After scaling, the application content fills the player window both horizontally and vertically. However, it only keeps the original width of the application content unchanged and the height may change.
+In this mode, the stage width (stage.stageWidth) is always equal to the width of the application content introduced externally.The stage height (stage.stageHeight) is determined by the current zoom ratio and the player window height.
 
-这样引擎根据设计宽度和计算得到的适配高度创建Egret舞台(或Canvas)，跟浏览器可视区域宽高比一致，那么缩放到浏览器可视区域，舞台中的内容大小会变化，但是宽高比会保持。
+### 1.6 fixedHeight mode
 
-与EXACT_FIT适配模式相比，NO_BORDER的共同点是：从视觉效果上，两种模式的Canvas都会进行相应的缩放，以恰好占满浏览器可视区域。但NO_BORDER为保持内容的宽高比例不失真，使用了一种更智能的方式。
+In the index.html file, set ```data-scale-mode="fixedHeight"```
+Or write in the project code
+```
+this.stage.scaleMode = egret.StageScaleMode.fixedHeight;
+```
 
-对于制作精良的游戏，保持宽高比不失真和占满所有可用的屏幕区域都是必要的。他们不能容忍为了保持一定的宽高比例不失真却又产生黑边(后边会提到)的情况，即鱼与熊掌要兼得，那么NO_BORDER适配模式可能是其最佳选择！
+The display effect of fixedHeight:
 
-那么，从产品质量来看NO_BORDER适配模式推荐指数： ★★★★★。
+![](20170831164309.png)
 
-但是在这种模式下，你可能要花更多精力，来维护UI动态布局和显示内容的完整性。
+fixedHeight mode schematic diagram:
 
-## 总结
-最后，来一个简明的总结是必要的：
+![](20170831175010.png)
 
-![](5566955f55a0c.jpg)
+The fixedHeight mode is to scale application content by keeping the original aspect ratio. After scaling, the application content fills the player window both horizontally and vertically. However, it only keeps the original height of the application content unchanged and the width may change.
+In this mode, the stage height (stage.stageHeight) is always equal to the height of the application content introduced externally at the time of initialization.The stage width (stage.stageWidth) is determined by the current zoom ratio and the player window width.
 
-对于大部分开发来说，黑边并不是很大的问题， 而且开发过程，你不需要考虑不同设备可视区域的适配。对于黑边敏感的要求比较高的产品，NO_BORDER是最佳选择。
+### 1.7 fixedNarrow mode
+In the index.html file, set ```data-scale-mode =" fixedNarrow "```
+Or write in the project code
+```
+this.stage.scaleMode = egret.StageScaleMode.fixedNarrow;
+```
+
+fixedNarrow mode display:
+
+![](20170831164918.png)
+
+Scale the contents of the application by maintaining the original aspect ratio. After scaling, the application content fills the player viewport horizontally and vertically, and the narrower orientation of the application content may be filled because it is not wide enough.
+In this mode, the stage height (Stage.stageHeight) and the stage width (Stage.stageWidth) are determined by the current zoom ratio and the player viewport width.
+
+### 1.8 fixedWide mode
+In the index.html file, set ```data-scale-mode="fixedWide"```
+Or write in the project code
+```
+this.stage.scaleMode = egret.StageScaleMode.fixedWide;
+```
+
+fixedWide mode display:
+
+![](20170831165147.png)
+
+Scale the contents of the application by maintaining the original aspect ratio. After scaling, the application content fills the player viewport horizontally and vertically, and the two sides of the wider orientation of the application content may be cut because it is beyond the player viewport.
+In this mode, the stage height (Stage.stageHeight) and the stage width (Stage.stageWidth) are determined by the current zoom ratio and the player viewport width.
+
+> fixedNarrow mode and fixedWide mode, which can be understood as the advanced package of fixedWidth and fixedHeight, have similar display effect similar to that of the latter two modes. However, the direction determining the zoom ratio is not fixed, instead, it is determined by the distance from the content to the edge of the screen.In these two modes, UI layout can be made easily.
+
+## 2. Rotation mode
+
+By setting the rotation mode, you can change the content according to the requirements when the browser rotates due to gravity sensing.
+
+![](5639734349718.png)
+
+You can modify the `data-orientation` attribute in the body section of index.html
+
+You can also modify in the project code at any time. For example:
+```
+this.stage.orientation = egret.OrientationMode.AUTO;
+```
+
+There are currently four kinds of rotation modes.
+
+### 2.1.auto mode
+![](563973426403f.png)
+
+auto mode: regardless of horizontal or vertical screen, content is displayed from top to bottom.
+
+### 2.2. portrait mode
+![](563973427ed9a.png)
+portrait mode: the display of content always starts from the upper left corner of the phone in the vertical state
+
+### 2.3. landscape mode
+![](563973428c02c.png)
+Similar to that of the portrait mode, the landscape mode always displays content from the upper right corner of the phone in the vertical state.
+
+### 2.4.landscapeFlipped mode
+![](563973429935d.png)
+landscapeFlipped mode is more special, which has the same starting point as that of landscape in the horizontal screen state, but has different starting point from that of landscape in the vertical state, changing from the top right into the lower left.
+
+landscape and landscapeFlipped, the two models, are generally used for horizontal screen games, but need to prompt the user to turn off the gravity sensor lock, so as to lock the screen direction.

@@ -1,13 +1,13 @@
-Egret 加载资源主要使用 egret.HttpRequest 类。该类封装了在异步加载资源和通讯方面作为 H5 标准的 XMLHttpRequest 对象。
+Egret loads resources mainly through the `egret.HttpRequest` class.This class encapsulates the `XMLHttpRequest` object used as an H5 standard for asynchronous loading of resources and communications.
 
-本节讲解的主要是加载静态文件，分为两种类型：文本和二进制数据。
-加载静态文件的特点是可以进行进度跟踪。
+This section is mainly about loading static files, which is divided into two types: text and binary data.
+Loading static files is characterized by the ability to track progress.
 
-## 加载文本   
+## 1. Load the text   
 
-HttpRequest 对象最核心的方法就是 open() 和 send() 。  open 方法接收该请求所要访问的URL。 作为可选项还可以传入加载方式，这个参数通常用HttpMethod取常量即可，默认是最常用的 GET 方式。       
-在加载完成时，通过HttpRequest 对象的 response 属性来获取返回的数据。    
-首先从最简单的加载文本来看如何完成加载和获取数据的过程：   
+The core method of `HttpRequest` object is `open ()` and `send () `.  The `open ()` method receives the URL to which the request will have access. As an option, the load mode can also be passed. This parameter usually takes the constant with `HttpMethod`, which is the most commonly used GET method by default.       
+When the load is completed, the `response' property of the` HttpRequest` object gets the returned data.    
+The method for loading text data is as follows:   
 
 ```
 var url = "resource/config/description.json";
@@ -35,12 +35,13 @@ request.once( egret.ProgressEvent.PROGRESS, progressHandler, null);
 request.open( url, egret.HttpMethod.GET ); 
 request.send( );
 ```
-HttpRequest默认的加载类型是 TEXT ，因此不需要专门设定。
-需要侦听的主要事件是 COMPLETE ，从这里来获取数据。   
-当然也要考虑意外的情况，在 IO_ERROR 做这些情况的处理。
-加载进度事件是 ProgressEvent.PROGRESS , 这在加载size较大的资源时比较有用。
+`HttpRequest` The default load type is TEXT, so no special settings are required.
+The main event that needs to be intercepted is `COMPLETE`, which gets the data from here.   
+To take into account the unexpected situation, do this in IO_ERROR.
+The load progress event is `ProgressEvent.PROGRESS`, which is useful when loading the resource of large contents.
 
-## 加载二进制   
+## 2. Load binary   
+The method of loading binary data is as follows:
 
 ```
 var url = "resource/assets/egret_icon.png";
@@ -65,9 +66,9 @@ request.once( egret.IOErrorEvent.IO_ERROR, respHandler, null);
 request.open( url, egret.HttpMethod.GET );
 request.send( );
 ```
-加载二进制数据，需要首先设置 HttpRequest 的加载类型为ARRAY_BUFFER。   
-数据加载完成后可从 response 属性取到 ArrayBuffer 对象，即可进行进一步读取操作。  
+Load binary data. First, set the `HttpRequest` load type as `ARRAY_BUFFER`.   
+After the data is loaded, you can take the `ArrayBuffer` object from the `response` property to make a further read operation.  
 
->文档适用于 Egret 2.5 。通过 URLLoader 构建通信请求请访问：
-[URLLoader网络通讯](../../../extension/game/URLLoaderNetwork/README.md)
-URLLoader 类已移动到 game 扩展库中。
+> Build a communication request via `URLLoader`. Please visit:
+[URLLoader network communication] (../../../extension/game/URLLoaderNetwork/README.md)
+`The URLLoader` class has been moved to the game extension library.

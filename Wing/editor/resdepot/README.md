@@ -57,9 +57,10 @@ egret项目中所用的[资源配置文件](../../../extension/RES/loadConfig/RE
 如果资源文件中有重名的资源项，或者资源对应的文件不存在等错误，则会自动检测出来，并通过标记红框或黄框的形式提醒。在界面底部也会有提示性文字。
 ![](573aff0564a44.png)
 上图展示了三种错误：
-* button_down.png文件刚被我删掉，该项资源对应的文件不存在，显示为黄色。
-* checkbox里checkbox_select_down.png的资源名被我改为了checkbox_select_disabled_png，与checkbox_select_disabled.png的资源名产生了冲突，资源重名显示为红色。
+* button_down.png文件刚被删掉，该项资源对应的文件不存在，显示为黄色。
+* checkbox里checkbox_select_down.png的资源名被改为checkbox_select_disabled_png，与checkbox_select_disabled.png的资源名产生了冲突，资源重名显示为红色。
 * 表单文件pic.json里的subkey则有一项重名，显示为黄色。
+
 ## 其他
 编辑资源后需要ctrl+s保存一下。
 

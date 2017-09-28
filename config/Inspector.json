@@ -11,14 +11,14 @@
     "isFolder": true,
     "text": "更新详情",
     "des": "更新详情",
-    "in_use": true
+    "in_use": false
   },
   {
     "children": [
       {
         "filename": "/tools/Inspector/manual/",
-        "text": "使用手册",
-        "des": "使用手册",
+        "text": "Manual",
+        "des": "Manual",
         "in_use": true
       }
     ],

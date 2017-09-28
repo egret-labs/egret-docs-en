@@ -5,7 +5,7 @@
 名称 | 必需 | 类型 | 描述
 ---- |:--------:| ---- | ------
 `name` | 是 | `string` | 插件扩展的名称, 全部是小写字母，并且不能有空格.
-`version` | 是 | `string` | 参考[Semver](http://semver.org/lang/zh-CN/). 例如: `1.0.0`
+`version` | 是 | `string` | 参考[Semver](http://semver.org/lang/zh-CN/). 例如: `1.2.0`
 `publisher` | 是 | `string` | 发布者名称
 `engines` | 是 | `object` | 包含`wing`字段的对象， 定义所需环境的版本。例如 `^3.0.0` 表示需要3.0.0或者更高版本.
 `displayName` | | `string`| 插件显示的名称.

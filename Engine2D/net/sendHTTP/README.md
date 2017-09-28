@@ -1,46 +1,46 @@
-在 Egret 项目中，通常会遇到与后端服务器进行数据交互的情况。Egret 中封装了 XMLHttpRequest 来进行异步的数据交互。
+Egret encapsulates the XMLHttpRequest` for asynchronous data interaction.
 
-## HTTP请求
+## 1.HTTP request
 
-通过 HTTP 协议可以实现 HTTP 客户端（如web浏览器）向 HTTP 服务端请求信息和服务。目前的 HTTP 1.1 协议是一种无状态协议，也就是说 HTTP 客户端和 HTTP 服务端不能保持持久的链接，使用请求/应答的模式来工作，如果客户端向服务端发送信息，服务端做出应答之后将关闭链接，来形成一套请求和应答。
+Through the HTTP protocol, requesting information and services from HTTP client (such as web browser) to the HTTP server can be achieved.The current HTTP 1.1 protocol is a stateless protocol, namely, HTTP client and HTTP server can not maintain a lasting link. With the request/response mode, if the client sends information to the server, the server will close the link after making response, so as to form a set of requests and responses.
 
-### 基本过程
+### 1.1. The basic process
 
-HTTP 通信机制都要经过如下的几个步骤：
+HTTP communication mechanism must go through the following steps:
 
-1. 建立TCP连接.
-1. Web浏览器向Web服务器发送请求命令.
-1. Web浏览器发送请求头信息
-1. Web服务器应答
-1. Web服务器发送应答头信息
-1. Web服务器向浏览器发送数据
-1. Web服务器关闭TCP连接(如果请求头部设置了`Connection:keep-alive`将保持连接状态仍然打开).
+1. Establish a TCP connection.
+2. The Web browser sends a request command to the Web server.
+3. The Web browser sends the request header information
+4. Web server response
+5. The Web server sends the response header information
+6. The Web server sends data to the browser
+7. The Web server shuts down the TCP connection (if the request header is set to `Connection: keep-alive`, the connection state will keep open).
 
-### HTTP 请求方法 
+### 1.2. HTTP request method 
 
-#### GET 方法
+#### GET method
 
-GET 方法是 HTTP　请求的默认方法，数据经过简单的编码发送出去，并作为 URL 的一部分发送到服务器。由于浏览器对 URL 长度的限制，提交的 数据长度也有限制。
+The GET method is the default method for HTTP requests, and the data is sent via  simple code and sent to the server as part of the URL.Due to the browser's restrictions on the length of the URL, the length of the data submitted is also limited.
 
-#### POST 方法
+#### POST method
 
-POST 方法克服了 GET 方法的一些缺点，可以发送较大的数据.数据也不再是明文发送的。出于安全的考虑一般选用 POST 方法。 POST 提交的数据也可以从标准输入输出流中获取。
+The POST method overcomes some of the drawbacks of the GET method, which can send large amounts of data, and the data is no longer sent in plaintext.For the sake of safety, the POST method is generally chosen. The data submitted by POST can also be obtained from the standard input and output streams.
 
-## 发送请求
+## 2. Request for sending data
 
-在测试发送请求之前先要有一个稳定的服务端进行测试，我们可以使用[httpbin.org](http://httpbin.org/)提供的`http://httpbin.org/get`和`http://httpbin.org/post`这两个稳定的服务器地址来测试发送请求。其中[get](http://httpbin.org/get)会返回 GET 请求的数据，[post](http://httpbin.org/post)会返回 POST 请求发送的数据。
+Testing the request for sending data requires a stable server.You can test the request for sending data by using `http://httpbin.org/get` and `http://httpbin.org/post`, the two stable server addresses provided by [httpbin.org](http://httpbin.org/).Among them, [get] (http://httpbin.org/get) will return the data requested by GET, while [post] (http://httpbin.org/post) will return the data requested by POST.
 
-Egret 使用`HttpRequest`类发送 HTTP 请求。可以指定请求的方法为 GET 或者 POST 。可以通过监听加载事件来检测服务器端的响应。使用 `HttpRequest` 来发送请求的过程如下:
+Egret uses the `HttpRequest` class to send an HTTP request.The method that can be used for specifying the request is GET or POST.The server-side response can be detected by monitoring the loaded events.The process of using `HttpRequest` to send the request are as follows:
 
-1. 实例化一个 `HttpRequest` 对象。
-1. 设置它的响应类型`responseType`。
-1. 通过`open`方法初始化请求一个对象，初始化请求地址和请求类型。
-1. 通过`setRequestHeader`设置请求头信息。如果是POST带参数的请求这一步很重要,需要告诉服务端请求的参数格式，而且这一步需要在`open`之后执行。
-1. 通过`send`方法发送请求，如果是`post`方法可以传入参数。
-1. 添加监听，监听服务器端的响应，包括进度事件和请求成功和失败事件。
+1. Instantiate a `HttpRequest` object.
+2. Set its response type `responseType`.
+3. Request an object by initializing the `open` method. Initialize the request address and request type.
+4. Set the request header information with `setRequestHeader`.If the request that POST shall be accompanied with parameters is a very important step, you need to inform the server of the requested parameter format, and this step needs to be executed after `open`.
+5. Send the request via the `send` method. If it is the` post` method, parameters can be introduced.
+6. Add monitoring and monitoring of the server response, which includes progress events, request success and failure events.
 
 
-下面可以具体看一段下代码:
+The code is as follows:
 
 ```
 var request = new egret.HttpRequest();
@@ -53,9 +53,9 @@ request.addEventListener(egret.IOErrorEvent.IO_ERROR,this.onGetIOError,this);
 request.addEventListener(egret.ProgressEvent.PROGRESS,this.onGetProgress,this);
 ```
 
-上面发送了一个 GET 请求到`http://httpbin.org/get`，然后需要我们添加回调事件，当请求成功或者失败之后来获取数据。
+In the above, a GET request was sent to the http: // httpbin.org / get`, and then a callback event is added. Data will be obtained when the request succeeds or fails.
 
-通过`COMPLETE`事件的`response`属性来获取到返回的信息。通过 `ProgressEvent` 事件的`bytesLoaded`和`bytesTotal`来获取到加载进度。下面添加回调函数：
+The `response' attribute of the `COMPLETE` event can get the information returned.Obtain the loadable progress through `bytesLoaded` and` bytesTotal` of the `ProgressEvent` event.The callback function code is as follows:
 
 ```
 private onGetComplete(event:egret.Event):void {
@@ -78,12 +78,12 @@ private onGetProgress(event:egret.ProgressEvent):void {
 }
 ```
 
-跟发送 GET 请求类似,发送 POST 请求的代码如下:
+The code for sending the POST request is as follows:
 
 ```
 var request = new egret.HttpRequest();
 request.responseType = egret.HttpResponseType.TEXT;
-//设置为 POST 请求
+//set to POST request
 request.open("http://httpbin.org/post",egret.HttpMethod.POST);
 request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 request.send();
@@ -92,7 +92,7 @@ request.addEventListener(egret.IOErrorEvent.IO_ERROR,this.onPostIOError,this);
 request.addEventListener(egret.ProgressEvent.PROGRESS,this.onPostProgress,this);
 ```
 
-添加回调函数：
+Add callback function:
 
 ```
 private onPostComplete(event:egret.Event):void {
@@ -115,23 +115,25 @@ private onPostProgress(event:egret.ProgressEvent):void {
 }
 ```
 
-## 发送带参数的请求
+## 3. Send a request accompanied with parameters
 
-上面我们发送了一段空的请求到服务端，实际使用过程中一般都需要发送带参数的数据到服务端。首先来看一下我们发送数据的格式。在 HTTP 客户端，我们发送的数据一般以`key`和`value`的形式组成，多个数据之间用`=`相连。拼接之后形成如下的形式:
+In the above, we sent a blank request to the server. During the actual usage process, generally we need to send a request with parameters to the server.
+
+Format of the data sent: the data sent by the HTTP client is usually in the form of `key` and` value`, and multiple data are connected with `&`.After splicing,  the following form is formed:
 
 ```
 key1=value1&key2=valueP2
 ```
 
-通过 GET 方法发送的参数会加到 URL 的后面拼接起来，所以参数以`?`分隔。POST 方法发送的参数需要先设置 HTTP 请求的头信息，告诉服务端是以什么样的形式来发送的数据。我们最常用的就是`application/x-www-form-urlencoded`,表示我们以`key`和`value`方式来格式化参数。服务端也可以用同样的方法来取到参数。
+The parameters sent via the GET method will be added at the place after the URL and separated by `?`.The parameters sent by POST need first to set the header information of HTTP request, tell the server in what form the data is sent.The most commonly used one is `application/x-www-form-urlencoded`, which means that we format the parameters with` key` and `value`.The server can also get the parameters with the same method.
 
-### 服务端获取参数配置
+### 3.1. The server obtains the parameter configuration
 
-下面以 PHP 为例来简要说明发送和或取参数的基本过程。
+Next, by taking PHP as an example, we briefly explain the basic process of sending and/or taking parameters.
 
-> PHP 环境配置请自行配置。其他后端语言同理。如果不使用`key`和`value`的方式获取数据，请参考相应语言的标准输入流的方式来获取。
+> Please configure PHP environment by yourself.It is the same case for other backend languages.If you do not use `key` and` value` to get the data, please get data by referring to the standard input stream of the corresponding language.
 
-首先建立`get_testphp`文件，在 PHP 中获得 GET 的参数可以通过一个全局数组`$_GET[]`来获取到。下面代码将获取并返回`key`为`p1`和`p2`的参数的值。
+First, create the `get_testphp` file. The parameter for getting GET in PHP can be obtained through a global array `$ _GET [] `.The following code will get and return the value of the parameter with `key` being `p1` and `p2`.
 
 ```
 <?php
@@ -139,49 +141,49 @@ key1=value1&key2=valueP2
      echo $_GET['p2'];
 ?>```
 
-同理建立`post_test.php`,在 PHP 中通过全局数组`$_POST[]`来获取参数。下面代码将获取并返回`key`为`p1`和`p2`的参数的值。
+Similarly, also create `post_test.php`, and get the parameters in PHP through the global array `$ _POST []` .The following code will get and return the value of the parameter with `key` being `p1` and `p2`.
 ```
 <?php
      echo $_POST['p1'];
      echo $_POST['p2'];
 ?>```
 
-###  客户端发送参数
+### 3.2. The client sends the parameters
 
-我们已经建立了两个 PHP 文件，下面向他们来发送参数。
+After establishing two PHP files, send parameters to them.
 
-首先是 GET 请求，GET 请求需要将参数拼接到 URL 后面来实现。其中 URL 和 参数之间需要用 `?` 来链接。修改上面 GET 请求相应代码如下:
+The first is a GET request, which needs to stitch parameters into the place after the URL before implementation.Where the URL and parameters need to use to be linked with `?`.Modify the corresponding codes of the above Get request, which is as follows:
 
 ```
-//拼接参数 
+//splice parameters 
 var params = "?p1=getP1&p2=getP2";
 var request = new egret.HttpRequest();
 request.responseType = egret.HttpResponseType.TEXT;
-//将参数拼接到url
+//splice the parameters into url
 request.open("php/get_test.php"+params,egret.HttpMethod.GET);
 request.send();
 ```
 
-发送 POST 请求. 需要注意的是发送 POST 请求需要将参数放到`send`方法的参数中发送出去。并且要设置其响应头，在我们的例子中使用`key` `value` 的方式来格式化参数，这里需要设置响应头`Content-Type`为`application/x-www-form-urlencoded`。修改上面 POST 请求相应代码如下:
+Send a POST request. It is important to note that parameters need to be put into the parameter of `send` method when sending a POST request.And its response header needs to be set. In our example, the methods of  `key` `value` are used to format the parameters, where the response head `Content-Type` needs to be set as `application/x-www-form-urlencoded`.Modify the corresponding codes of the above POST request, which is as follows:
 
 ```
-//拼接参数
+//splice parameters
 var params = "p1=postP1&p2=postP2";
 
 var request = new egret.HttpRequest();
 request.responseType = egret.HttpResponseType.TEXT;
 request.open("php/post_test.php",egret.HttpMethod.POST);
-//设置响应头
+//set the response header
 request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-//发送参数
+// send parameters
 request.send(params);
 ```
 
-完整代码如下:
+The complete code is as follows:
 
 ```
 /**
- * 下面的示例使用 egret.HttpRequest 类进行网络通信。
+ * The following example uses the egret.HttpRequest class for network communication.
  */
 class Main extends egret.DisplayObjectContainer {
 

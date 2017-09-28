@@ -1,8 +1,8 @@
-Egret对网络部分进行了封装，将网络访问请求与网络通信数据分离。在 “net” 文件夹中定义了与网络相关的五个类。分别为 `URLRequest`、 `URLLoader`、`URLLoaderDataFormat`、`URLRequestMethod` 和 `URLVariables`。
+﻿Egret encapsulates the network portion and separates the network access request from the network communication data. In the "net" folder, five classes related to the network are defined.They are `URLRequest`, Are `URLRequest`, `URLLoader`, `URLLoaderDataFormat`, `URLRequestMethod` and `URLVariables` respectively. 
 
-当我们需要创建一个网络连接的时候，我们需要创建一个 `URLLoader` 对象，该对象负责网络的连接状态操作， 同时负责接收网络回传的数据。网络通信时，需要的网络通信数据由 `URLRequest` 对象负责管理。
+When creating a network connection, you need to create a `URLLoader` object, which is responsible for the connection state operation of the network and is responsible for receiving data from the network. When the network is communicating, the network communication data is managed by the `URLRequest` object. 
 
-创建一个最简单通信请求我们需要使用 `URLLoader` 和 `URLRequest` 两个类。
+Creating a simplest communication request requires the use of two classes, `URLLoader` and `URLRequest` respectively. 
 
 ```
 private urlloader:egret.URLLoader;
@@ -10,9 +10,9 @@ private urlloader:egret.URLLoader;
 this.urlloader = new egret.URLLoader();
 ```
 
-在urlloader中你可以对网络通信进行操作，例如开始加载数据，检测数据加载进度或者数据加载是否完成。
+In the `urlloader`, the network communication can be operated. For example, to begin loading data, detect the progress of data loading or if data loading is completed.
 
-在执行加载数据时，我们需要给入通信地址，一般为网址或者服务器后台地址。添加网络地址，需要 `URLRequest` 对象。 我们以“http://httpbin.org/user-agent”这个测试地址为例。代码如下：
+When data is being loaded, you need to enter the communication address, which is usually the URL or server background address.To add a network address, you need the `URLRequest` object. Take the "http://httpbin.org/user-agent" test address as an example.The code is as follows:
 
 ```
 var urlreq:egret.URLRequest = new egret.URLRequest();
@@ -20,15 +20,15 @@ var urlreq:egret.URLRequest = new egret.URLRequest();
 urlreq.url = ;
 ```
 
-上面代码创建一个 `URLRequest` 类型的对象，并且将我们的测试地址赋给名称为 `url` 的属性。下面我们就可以开始加载数据了。
+The above code creates an object of `URLRequest` type, and assigns the test address to the attribute named` url`. 
 
-加载数据的方法是 `load`，你可以将刚刚创建的 `URLRequest` 对象作为参数传递进去。
+The way to load the data is `load`, which needs to pass the` URLRequest` object that you just created as a parameter.
 
 ```
 this.urlloader.load( urlreq );
 ```
 
-此时编译运行不会看到任何效果，因为我们没有对网络通信的状态进行任何监听或响应处理。我们继续添加代码，对网络加载的 `COMPLETE` 事件 进行监听。当网络加载完成后，则调用对应的函数。
+At this point, the compilation operation won't see any effect, because there is no state of network communication for any monitoring or response processing.Continue adding code to monitor the `COMPLETE` events loaded by the network.When the network load is completed, the corresponding function will be called.
 
 ```
 this.urlloader.addEventListener(egret.Event.COMPLETE, this.onComplete, this);
@@ -38,9 +38,9 @@ private onComplete(event:egret.Event):void
 }
 ```
 
-我们在事件响应函数中仅仅是将获取到的数据输出到JavaScript控制台中。
+In the event response function, the acquired data is exported to the JavaScript console.
 
-上面的内容完整源码如下：
+The above contents are as follows:
 
 ```
 class NetDemo extends egret.DisplayObjectContainer
@@ -55,7 +55,7 @@ class NetDemo extends egret.DisplayObjectContainer
     {
         this.urlloader = new egret.URLLoader();
         var urlreq:egret.URLRequest = new egret.URLRequest();
-        urlreq.url = "http://httpbin.org/user-agent";
+        urlreq.url = "http://httpbin.org/user-agent";	;
         this.urlloader.load( urlreq );
         this.urlloader.addEventListener(egret.Event.COMPLETE, this.onComplete, this);
     }
@@ -66,6 +66,6 @@ class NetDemo extends egret.DisplayObjectContainer
 }
 ```
 
-编译并运行，效果如图：
+Compile and run, with the effect shown as below:
 
 ![](568b42efcca3a.png)
