@@ -2,12 +2,12 @@
 ## Project creation
 - Click on the navigation bar "File"-> "New Project", the "New Project" drop-down menu will pop up. **<font color=red> as shown below: </font>**"
 	
-	![image](20170904171649.png)
+	![](20170904171649.png)
 
 - Select the project type, such as: empty Egret project, Egret game project, Egret EUI project, etc. Here Egret EUI project is taken as an example. In the drop-down menu of the above figure, select "Egret EUI project", "`Create EUI project`" panel will pop up, **<font color=red> as show below: </font>**
 
-	![image](20170904172957.png)
-	![image](20170904173224.png)
+	![](20170904172957.png)
+	![](20170904173224.png)
 	
    - area 1: Set the project name and project path for the stage.
 
@@ -21,7 +21,7 @@
 
 	**<font color=red>As shown below: </font>：**
 	
-	![image](20170904174006.png)
+	![](20170904174006.png)
 
    - area 1: Menu bar and toolbar
 
@@ -45,7 +45,7 @@ Under the `Project` tab of the menu bar:
 - ### Debug\F5
   **<font color=red> As shown below:</font>**
   	  
-  ![image](20170904174612.png)
+  ![](20170904174612.png)
    - Click Project -> Debug 
    - area 1: variable
    - area 2: observation expression
@@ -95,12 +95,12 @@ For the role of each directory, please refer to the [document](../../Engine2D/ge
 
 	**<font color=red>as shown below: </font>**
 
-	![image](20170904181052.png)
+	![](20170904181052.png)
 + Click the `Design 'tab.
 
   **<font color=red> as shown below: </font>**
 
-	![image](20170905093913.png)
+	![](20170905093913.png)
 	
 	
 	- area 1: The edit mode of eui, namely, `design`, `animation`，`preview` and `source code`.
@@ -120,7 +120,7 @@ For the role of each directory, please refer to the [document](../../Engine2D/ge
 		
   **<font color=red> as shown below: </font>**
 
-	![image](20170905095155.png)
+	![](20170905095155.png)
 		
 	
 
