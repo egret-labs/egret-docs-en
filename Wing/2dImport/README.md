@@ -128,3 +128,6 @@ For the role of each directory, please refer to the [document](../../Engine2D/ge
 
 ### Resource Management [Click Details](../editor/resdepot/README.md) 
 
+	![](20170905093913.png)
+	
+	
