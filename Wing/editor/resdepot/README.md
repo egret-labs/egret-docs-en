@@ -1,6 +1,6 @@
 
 ## Introduction
-The [resource configuration file] (../../../extension/RES/loadConfig/README.md) used in the egret project is a file of json format. The resource configuration file can be edited with any text editor, providing a visual editing method in the wing. Such visual editing provides a more convenient operation, capable of automatically checking the errors in the configuration file and operating in batches, etc.
+The [resource configuration file](../../../extension/RES/loadConfig/README.md) used in the egret project is a file of json format. The resource configuration file can be edited with any text editor, providing a visual editing method in the wing. Such visual editing provides a more convenient operation, capable of automatically checking the errors in the configuration file and operating in batches, etc.
 
 ## Introduction to features
 Open default.res.json to display the following interface:
