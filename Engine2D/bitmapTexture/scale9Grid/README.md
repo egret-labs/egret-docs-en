@@ -1,5 +1,4 @@
 
-c## Use
 Normally, for the aesthetic degree of the game screen, some rounded rectangles or irregular edges will be used. In the game, these graphics are often stretched, then the stretched graphics will be deformed. In order to make the edge not be deformed because of stretching, you can use the "Sudoku (Jiugongge)".
 
 The following figure is a rounded rectangle

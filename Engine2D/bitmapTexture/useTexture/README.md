@@ -5,7 +5,7 @@ Benefits of using the texture set:
 * Combine a large number of images into one image, thus reducing network requests.The image resource that was loaded several times is now loaded once. 
 * There will be less IO read in the engine rendering, thereby improving performance.
 
-Egret has built-in texture set support. Before the writing of code, you need to make a texture set. For specific tool to be used, please select the Texture Merger that is very popular in the industry. For details, refer to [Texture Merger] (../../../tools/TextureMerger/manual/README.md).
+Egret has built-in texture set support. Before the writing of code, you need to make a texture set. For specific tool to be used, please select the Texture Merger that is very popular in the industry. For details, refer to [Texture Merger](../../../tools/TextureMerger/manual/README.md).
 
 ## Steps for usage
 

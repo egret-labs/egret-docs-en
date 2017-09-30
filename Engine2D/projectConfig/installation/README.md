@@ -5,7 +5,7 @@ The following shows the installation and deployment process with Egret Engine v5
 
 ### 1. Download the installation package
 
-Download the Egret one-click installation package corresponding to the operating system from the Egret website [Download Center] [http://egret.com/downloads/engine.html].
+Download the Egret one-click installation package corresponding to the operating system from the Egret website [Download Center] [https://egret.com/en/downloads/engine.html].
 
 ### 2. Install under Windows system
 
