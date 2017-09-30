@@ -120,7 +120,7 @@ For the role of each directory, please refer to the [document](../../Engine2D/ge
 		
   **<font color=red> as shown below: </font>**
 
-	![](20170905095155.png)
+	![](20170905095156.png)
 		
 	
 
