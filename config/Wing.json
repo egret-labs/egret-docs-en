@@ -311,38 +311,38 @@
           },
           {
             "filename": "/Wing/features/userAndSpace/",
-            "text": "用户设置和工作空间设置",
-            "des": "用户设置和工作空间设置",
+            "text": "User and Space",
+            "des": "User and Space",
             "in_use": true
           },
           {
             "filename": "/Wing/features/task/",
-            "text": "任务配置",
-            "des": "任务配置",
+            "text": "Task Setting",
+            "des": "Task Setting",
             "in_use": true
           },
           {
             "filename": "/Wing/features/run/",
-            "text": "启动配置",
-            "des": "启动配置",
+            "text": "Run Configuration",
+            "des": "Run Configuration",
             "in_use": true
           },
           {
             "filename": "/Wing/features/file/",
-            "text": "文件操作",
-            "des": "文件操作",
+            "text": "File",
+            "des": "File",
             "in_use": true
           },
           {
             "filename": "/Wing/features/search/",
-            "text": "全局搜索",
-            "des": "全局搜索",
+            "text": "Search",
+            "des": "Search",
             "in_use": true
           },
           {
             "filename": "/Wing/features/terminal/",
-            "text": "终端",
-            "des": "终端",
+            "text": "Terminal",
+            "des": "Terminal",
             "in_use": true
           }
         ],
@@ -361,26 +361,26 @@
           },
           {
             "filename": "/Wing/debug/inspector/",
-            "text": "Chrome联机调试",
-            "des": "Chrome联机调试",
+            "text": "Debug in Chrome",
+            "des": "Debug in Chrome",
             "in_use": true
           },
           {
             "filename": "/Wing/debug/publish/",
-            "text": "新版打包工具说明",
-            "des": "新版打包工具说明",
+            "text": "App publish",
+            "des": "App publish",
             "in_use": true
           },
           {
             "filename": "/Wing/debug/packageTool/",
             "text": "移动平台打包测试",
             "des": "移动平台打包测试",
-            "in_use": true
+            "in_use": false
           }
         ],
         "isFolder": true,
-        "text": "调试",
-        "des": "调试",
+        "text": "Debug",
+        "des": "Debug",
         "in_use": true
       },
       {
