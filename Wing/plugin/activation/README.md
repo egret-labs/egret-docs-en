@@ -1,4 +1,4 @@
-EgretWing loads the plugin by means of inactive load. The `activate` method defined by the plugin will be invoked only when the plugin needs to be activated. Through the `activationEvents` field of the [`package.json`] (../../../Wing/plugin/configDes/README.md) of the plugin, a context is provided to indicate when the plugin will be activated. The following activation events are currently supported:
+EgretWing loads the plugin by means of inactive load. The `activate` method defined by the plugin will be invoked only when the plugin needs to be activated. Through the `activationEvents` field of the [`package.json`](../../../Wing/plugin/configDes/README.md) of the plugin, a context is provided to indicate when the plugin will be activated. The following activation events are currently supported:
 
 * [`onLanguage:${language}`](#activationeventsonlanguage)
 * [`onCommand:${command}`](#activationeventsoncommand)
