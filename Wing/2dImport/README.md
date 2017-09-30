@@ -1,64 +1,64 @@
 
-## 项目创建
-- 点击导航栏“`文件`”->“`新建项目`”，弹出“`新建项目`”下拉菜单。**<font color=red> 如下图：</font>**
+## Project creation
+- Click on the navigation bar "File"-> "New Project", the "New Project" drop-down menu will pop up. **<font color=red> as shown below: </font>**"
 	
 	![image](20170904171649.png)
 
-- 选择项目类型，如：空Egret项目、Egret游戏项目、Egret EUI项目等，此处以Egret EUI项目为例。在上图下拉菜单中选择“Egret EUI项目”，弹出“`创建EUI项目`”面板，**<font color=red> 如下图：</font>**
+- Select the project type, such as: empty Egret project, Egret game project, Egret EUI project, etc. Here Egret EUI project is taken as an example. In the drop-down menu of the above figure, select "Egret EUI project", "`Create EUI project`" panel will pop up, **<font color=red> as show below: </font>**
 
 	![image](20170904172957.png)
 	![image](20170904173224.png)
 	
-   - 1区域：设置舞台的项目名称和项目路径。
+   - area 1: Set the project name and project path for the stage.
 
-   - 2区域：项目依赖的扩展库。
+   - area 2: Project-dependent extension library.
 
-   - 3区域：设置舞台属性和引擎版本号。
+   - area 3: Set the stage attribute and the engine version number.
 
-   - 4区域：设置屏幕适配方式，包括缩放模式和旋转模式。
+   - area 4: Set the screen adaptation mode, including zoom mode and rotation mode.
 
-- 点击`完成`按钮。
+- Click the 'Finish' button.
 
-	**<font color=red>如下图</font>：**
+	**<font color=red>As shown below: </font>：**
 	
 	![image](20170904174006.png)
 
-   - 1区域：菜单栏和工具栏
+   - area 1: Menu bar and toolbar
 
-   - 2区域：文件目录
+   - area 2: File directory
 
-   - 3区域：项目输出日志信息
-   
-   - 4区域：代码编辑区域
+   - area 3: Project output log information
+   	   
+   - area 4: Code editing area
 	
 
-## 项目运行
+## Project operation
 
-在菜单栏的`项目`选项卡下：
+Under the `Project` tab of the menu bar:
 	
-- ### 构建
-	- 编译当前项目  
+- ### Construct
+	- Compile the current project  
 
-- ### 清理
-	- 清理项目，清理bin-debug中所有文件，然后生成js
+- ### Clean up
+	- Clean up the project, clean up all files in bin-debug, then generate js
 
-- ### 调试\F5
-  **<font color=red> 如下图：</font>**
-  
+- ### Debug\F5
+  **<font color=red> As shown below:</font>**
+  	  
   ![image](20170904174612.png)
-   - 点击项目->调试 
-   - 1区域：变量
-   - 2区域：观察表达式
-   - 3区域：调用栈
-   - 4区域：断点设置
-   - 5区域：调试操作，`继续`、`单步跳过`、`单步跳入`、`单步跳出`、`重启`、`结束`
+   - Click Project -> Debug 
+   - area 1: variable
+   - area 2: observation expression
+   - area 3: call stack
+   - area 4: breakpoint setting
+   - area 5: debug operation, `continue`, `single-step skip`, `single-step into`, `single-step out`, `restart`, `finish`
 
-[点击查看调试详情](../debug/inspector/README.md) 		
+[Click to view debugging details](../debug/inspector/README.md) 	
 
 
 
-## 目录结构介绍
-- wing项目目录	
+## Directory structure introduction
+- wing project directory
 		- .wing
 			- launch.json
 			- setting.json
@@ -86,45 +86,45 @@
 		- tsconfig.json
 		- wingProperties.json
 		
-各目录的作用可以查看[文档](../../Engine2D/getStarted/helloWorld)
+For the role of each directory, please refer to the [document](../../Engine2D/getStarted/helloWorld)
 
-## EUI 相关信息
+## EUI related information
 
-### 新建 EXML
-+ 右键点击eui_skins
+### New EXML
++ Right click on eui_skins
 
-	**<font color=red>如下图：</font>**
+	**<font color=red>as shown below: </font>**
 
 	![image](20170904181052.png)
-+ 点击`设计`页签。
++ Click the `Design 'tab.
 
-  **<font color=red>如下图：</font>**
+  **<font color=red> as shown below: </font>**
 
 	![image](20170905093913.png)
 	
 	
-	- 1区域：eui的编辑模式，`设计`，`动画`，`预览`，`源码` 三种模式。
+	- area 1: The edit mode of eui, namely, `design`, `animation`，`preview` and `source code`.
 	
-	- 2区域：设计区域、动画编辑、预览、源码编辑。
+	- area 2: Design area, animation editing, preview and source editing.
 	
-	- 3区域：EXML的编辑面板		
-	    - 资源库：在default.res.json中配置的资源。
+	- area 3: EXML's edit panel		
+	    - Repository: The resources configured in default.res.json.
 		
-		- 状态：自定义状态，例如：TestButtonSkin.exml 中有三个状态up、down、disabled，可以单独设置TestButtonSkin单独某个状态的皮肤。
+		- State: custom state, for example: TestButtonSkin.exml has three states, namely, up, downand disabled. The skin of individual state of TestButtonSkin can be set separately.
 		
-		- 组件：系统控件(Button、CheckBox、CheckBox等组件)、布局组件(Group、Panel、Scroller、ViewStack)、自定义组件。
+		- Components: system controls (Button, CheckBox, CheckBox and other components), layout components (Group, Panel, Scroller and ViewStack), custom components.
 		
-		- 图层：TestButtonSkin包含图层。
+		- Layers: TestButtonSkin contains layers.
 		
-		- 属性：包含常用、样式、大小和位置、布局。
+		- Attributes: Contain common, style, size and location, and layout.
 		
-  **<font color=red>如下图：</font>**
+  **<font color=red> as shown below: </font>**
 
 	![image](20170905095155.png)
 		
 		
 
-- 详细内容 [EXML可视化编辑](../editor/exml/README.md) 
+- Details [EXML Visual Editing](../editor/exml/README.md) 
 
-### 资源管理 [点击详情](../editor/resdepot/README.md) 
+### Resource Management [Click Details] (../editor/resdepot/README.md) 
 

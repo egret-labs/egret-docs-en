@@ -1,14 +1,14 @@
 
 
-EgretWing内置Git管理工具， 在右侧栏的GIT选项卡中能直接提交，拉取，推送代码到Git仓库。
+With its built-in Git management tool, EgretWing can, in the right column of the GIT tab, directly submit, pull and push codes to the Git warehouse.
 
 ![](12.png)
 
-在状态栏左侧也能显示远程仓库与本地仓库的同步状态。
+The left side of the status bar can also show the synchronization status of the remote repository with the local repository.
 
 ![](13.png)
 
-单击更改的文件列表，在编辑器能打开比较编辑器查看改变的具体细节。
+Click the changed file list to open the comparison editor in the editor to view the details of changes.
 
 ![](17.png)
 

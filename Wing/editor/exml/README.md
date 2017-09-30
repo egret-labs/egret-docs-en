@@ -1,49 +1,49 @@
 
-## 简介
-Egret Wing 中的Exml可视化编辑器，为针对EUI项目中的Exml皮肤进行代码编辑、可视化编辑、皮肤预览三个功能于一体的混合编辑器。
+## Introduction
+Egret Wing Exml visual editor is a mixed editor featured by code editing, visual editing and skin preview, which is specifically designed for Exml skin in the EUI project.
 
-该编辑器可以通过可视化的方式更加方便快捷的对Eui的Exml皮肤进行编辑，编辑方式包括但不限于托拉拽等。可视化编辑器由一下两个主要部分组成：
-* 编辑文档区
-* 编辑相关面板
+The editor can visually edit the Exml skin of Eui in a more convenient and efficient manner, with editing methods including but is not limited to pulling, dragging and so on.The visual editor consists of two main parts:
+* Edit the document area
+* Edit the relevant panels
 
-## 前置条件
-如果想使用Exml可视化编辑器，你的项目需要满足如下几个条件：
-* 必须为Egret项目
-* 项目所使用的UI库必须为Eui
-* 确保wingProperties.json内关于资源和主题的配置是正确的。
-* 你打开的文件必须为Exml
+## Preconditions
+Before using the Exml visual editor, your project needs to meet the following conditions:
+* Must be an Egret project
+* The UI library used by the project must be Eui
+* Make sure that the configuration of resources and topics in wingProperties.json is correct.
+* The file you open must be Exml
 
-## 如何打开
-如果满足了上述的前置条件即可以对Exml皮肤进行可视化编辑了。下面是Eui示例项目中的PanelSkin.exml文件的打开截图：
+## How to open it
+You can visualize the Exml skin after all the above preconditions are met.The following is a screenshot of the open PanelSkin.exml file in the Eui example project:
 ![](573afbc8b5e2a.png)
-视图模式 文档区中针对Exml的显示方式。其中有“源代码”、“设计”、“动画”和“预览”。
-* 视图模式—源代码 指文档区中对某一个Exml皮肤进行文本查看的视图模式。
-* 视图模式—设计 指文档区中对某一个Exml皮肤进行可视化操作和编辑的视图模式。
-* 视图模式-动画 指文档区中为某一个Exml皮肤制作动画效果的视图模式。
-* 视图模式—预览 指文档区中对某一个Exml皮肤进行预览的视图模式，在此模式下所有皮肤组件均有交互效果。
+View Mode: The mode for displaying Exml in the document area.Among them are "source code", "design", "animation" and "preview".
+* View Mode - The source code: It refers to the view mode for text viewing of an Exml skin in the document area.
+* View Mode - Design It refers to the view mode for visualizing and editing an Exml skin in the document area.
+* View Mode - Animation It refers to the view mode that animates an Exml skin in a document area.
+* View Mode - Preview It refers to the view mode in which an Exml skin is previewed in the document area, under which all skin components are interactive.
 
-## 资源库面板
+## Resource panel
 ![](573afbc8ca0a6.png)
 
-资源库面板中展示当前项目中所有可以被加载的资源，资源库中的资源依赖于项目使用的资源插件。 也可以通过拖拽的方式将资源库面板中的资源拖拽到文档区的设计视图模式中以创建该Image。
-## 组件
+The resource panel displays all the resources that can be loaded in the current project, and the resources in the repository depend on the resource plugins used by the project. You can also drag and drop the resources in the repository panel to the design view mode of the document area to create the Image.
+## Component
 ![](573afbc8d4915.png)
 
-组件面板包含当前项目中所有可以使用的组件列表，其种类为“控件”，“布局”，“自定义”。可以通过拖拽的方式在文档区的设计视图中创建组件。
+The component panel contains a list of all the components that can be used in the current project. The categories are "Controls", "Layouts", "Custom".You can create a component in the design view of the document area by dragging it.
 
-## 图层
+## Layer
 ![](573afbc8e6254.png)
 
-该面板展示出当前文档区正在编辑的Exml皮肤文件中所有组件的层级结构。可以通过该面板快速选中在文档区中与之对应的组件。也可以通过该面板更直观的调节文档区中组件之间的层级结构。
+The panel shows the hierarchy of all the components the Exml skin file that is being edited in the current document area.With the panel, you can quickly select the corresponding component in the document area.With the panel, you can also more intuitively adjust the hierarchical structure between components in the document area.
 
-## 状态
+## Status
 ![](573afbc9011ef.png)
 
-通过“状态”面板可以方便查看Exml皮肤在不同状态下的呈现效果。同时可以切换到不同状态对Exml皮肤进行编辑。如：按钮的normal, over, down, disabled四个状态。
+With the "state" panel, you can easily view the rendering effect of Exml skin in various states. At the same time you can switch to different states to edit the Exml skin.For example: button's four states, namely, normal, over, down and disabled.
 
-需要注意一点的是，“[所有状态]”并非是Egret程序中可以看到的，是方便用户使用Wing预览状态而设定，所以他并不会被编译进程序里。在Egret程序中可以看到的是除了“[所有状态]”以外的状态。所以您在编辑的时候注意当前选中的状态。
+It is important to note that "[all states]" is not what can be seen in the Egret program, instead, it is designed to facilitate the usage of the Wing preview state by the user. Therefore, it won't be compiled into the program.What you can see in the Egret program is the state other than "[all states]".So you need to pay attention to the currently selected state when editing.
 
-## 属性
+## Attributes
 ![](573afbc911fd2.png)
 
-可以通过“属性”面板直接操作当前被选中组件的属性。
+You can directly manipulate the properties of the currently selected component through the Properties panel.

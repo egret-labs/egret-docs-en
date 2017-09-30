@@ -1,10 +1,10 @@
 
-Set the current workspace under the `.wing / tasks.json` can customize the task.The common tasks include building, cleaning up and publishing, etc.These tasks are usually implemented by executing a command line program.
-If the `.wing` folder under the current workspace does not have` tasks.json`.You can use the **Tasks in the command panel: The Configure Task Runner ** command selects a task template.
+设置当前工作空间下 `.wing/tasks.json` 可以自定义任务。常见的任务如 构建，清理，发布。这些任务通过一般是执行命令行程序来实现的。
+如果当前工作空间下的 `.wing` 文件夹没有 `tasks.json` 。可以通过命令面板中的 **Tasks: Configure Task Runner** 命令选择一个任务模板。
 
 ![](5.png)
 
-For the general Egret projects, the task that matches the Egret command line has been automatically generated when the project is created: ** build (Ctrl + Shift + B), clean up, publish**.`tasks.json` is as follows:
+对于一般的Egret项目，在创建项目的时候已经自动生成了与Egret命令行匹配的任务： **构建(Ctrl+Shift+B)，清理，发布**。`tasks.json` 如下：
 
 ```
 {

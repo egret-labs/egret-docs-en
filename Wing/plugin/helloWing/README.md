@@ -1,27 +1,27 @@
 
 
-本文将通过一个简单的插件示例项目(HelloWing)，教会大家如何创建，构建，调试，发布一个wing插件项目。
+This article will guide you on how to create, build, debug and publish a wing plugin project through a simple plugin example project (HelloWing).
 
-HelloWing插件添加一条`command`，执行命令将会在控制台输出 `Hello Wing` 。
+HelloWing plugin adds a `command`, and the executive command will output` Hello Wing` in the console.
 
-### 创建插件项目
+### Create a plugin project
 
-**1**. 打开Wing `文件` - `新建项目` 菜单选择 `extension项目`。
+**1**. Open the Wing `File` - `New project` menu, then select `extension project`.
 
-输入项目名称 HelloWing，点击完成。
+Enter the project name HelloWing and click Finish.
 
-**2**. 项目插件过程中会自动安装依赖模块，之后打开一个新窗口编辑显示的项目。
+** 2 **. During the project plug-in process, Dependency module will be installed automatically, then a new window will be opened to edit the displayed items.
 
-**3**. 创建插件入口`extension.ts`和入口方法`activate`。
+** 3 **. Create plugin entry `extension.ts` and entry method `activate`.
 
 	export function activate() {
-    	//TODO
+    	    
 	}
 
 
-> 每个插件都需要一个入口ts和入口方法`activate`来激活插件。入口ts的位置在`package.json`中定义。
+> Each plugin requires an entry ts and the entry method `activate` to activate the plugin.The location of the entry ts is defined in `package.json`.
 
-**4**. 修改`tsconfig.json`设置编译项目所需要的各个参数。以本项目为例，内容如下
+** 4 **. Modify `tsconfig.json` to set the parameters required to compile the project.Take this project as an example. The contents are as follows:
 
 	{
 		"compilerOptions": {
@@ -36,9 +36,9 @@ HelloWing插件添加一条`command`，执行命令将会在控制台输出 `Hel
 		]
 	}
 
-> 有关`tsconfig.json`的更多说明参考 [官方文档](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json)
+> For more information about `tsconfig.json`'s reference [official documentation] (https://github.com/Microsoft/TypeScript/wiki/tsconfig.json)
 
-**5**. 在项目根目录下修改`package.json`定义插件的基本信息。基本内容如下：
+** 5 **. Modify the the basic information of the definition plugin `package.json` in the root directory of the project.The basic contents are as follows:
 
 ```
 {
@@ -87,12 +87,12 @@ HelloWing插件添加一条`command`，执行命令将会在控制台输出 `Hel
 }
 ```
 
-> 有关`package.json`的更多说明参考 [插件描述文件](../../../Wing/plugin/configDes/README.md)
+> For more information about `package.json`'s description, please refer to [plugin description file](../../../Wing/plugin/configDes/README.md)
 
 
-### 编写插件代码
+### Write plugin code
 
-**1**. 在`package.json`中注册[插件扩展点](../../../Wing/plugin/extendPoint/README.md)。本例创建了一个`extension.helloWing`的命令。在`package.json`对应的代码如下：
+**1**. Register in `package.json` [Plugin extension point](../../../Wing/plugin/extendPoint/README.md).This example creates a `extension.helloWing` command.The corresponding code in `package.json` is as follows:
 
 	"contributes": {
 		"commands": [
@@ -103,13 +103,13 @@ HelloWing插件添加一条`command`，执行命令将会在控制台输出 `Hel
 		]
 	}
 
-**2**. 在`package.json`中定义[激活事件](../../../Wing/plugin/activation/README.md)。当执行`extension.hellowing`命令时激活插件。在`package.json`对应的代码如下：
+**2**. 在`package.json`中定义[激活事件](../../../Wing/plugin/activation/README.md)。当执行`extension.hellowing`命令时激活插件。在`package.json`对应的代码如下：	**2**. Define [Activation event] in `package.json` (../../../Wing/plugin/activation/README.md).Activate the plugin when executing the `extension.hellowing` command.The corresponding code in `package.json` is as follows:
 
 	"activationEvents": [
 		"onCommand:extension.helloWing"
 	]
 
-**3**. 接下来开始代码的编写。在激活方法`activate`中注册`extension.hellowing`命令的实现方法。在控制台输出 `Hello Wing` 的消息。代码如下：
+**3**. Next, code writing will begin.In the activation method `activate`, register the implementation method of the `extension.hellowing` command.In the console, output `Hello Wing` message..The code is as follows:
 
 	import * as wing from 'wing';
 
@@ -122,39 +122,39 @@ HelloWing插件添加一条`command`，执行命令将会在控制台输出 `Hel
 	    wing.window.showInformationMessage("Hello Wing");
 	}
 
-> `import * as wing from 'wing';`这一句导入`wing`模块，就可以使用`wing.d.ts`中定义的api。
+> `import * as wing from 'wing';` After this sentence imports the `wing` module, you can use the api. defined in `wing.d.ts`. 
 
-> `wing.commands.registerCommand`这句表示注册命令对应的实现方法。
+> `wing.commands.registerCommand` This sentence means the corresponding implementation method of the registration command.
 
-> 这里不仅可以使用`wing.d.ts`和`node.d.ts`中的api，甚至能通过npm下载第三方模块，实现各种功能。
+> Here, besides the usage of api in `wing.d.ts` and `node.d.ts`, you can even achieve a variety of functions by downloading third-party modules with npm.
 
-### 编译项目
+### Compile the project
 
-在Wing中使用**Ctrl/Cmd + Shift + B**编译项目。编译后的js代码将输出到项目根目录下的 `out` 文件夹中。
+Use the Ctrl/Cmd + Shift + B ** to compile project in Wing.The compiled js code will be outputted to the `out` folder under the project root directory.
 
-### 测试插件
+### Test plugin
 
-Wing提供方便的[调试插件](../../../Wing/plugin/debug/README.md)支持插件的测试和调试。
+Wing provides convenient [debug plugin](../../../Wing/plugin/debug/README.md) to support plug-in testing and debugging.
 
-如果启动成功，下方的`调试`面板会输出：
+If the boot succeeds, the `debug` panel below will output:
 
 	'C:\Program Files (x86)\Egret\Egret Wing 3\EgretWing.exe' --debugBrkPluginHost=46412 --extensionDevelopmentPath=e:\egret\HelloWing 
 
-并打开一个新的Wing窗口。
+And open a new Wing window.
 
-表示Wing已经识别并正在加载`hellowing`插件。
+This indicates that Wing has recognized and is loading the `hellowing` plugin.
 
-在新的窗口中使用 `Ctrl/Cmd+Shift+P` 快捷键打开命令面板，执行 `hellowing` 命令。便可在`调试`面板中看到如下的输出：
+In the new window, use the `Ctrl/Cmd+Shift+P` shortcut keys to open the command panel and execute the `hellowing` command.You can see the following output in the `debug` panel:
 
 ![hellowing](568686757c4ac.png)
 
-同时在新窗口的顶部弹出信息提示栏，如下图：
+At the same time, message prompt column will pop up at the top of the new window, as shown below:
 
 ![](20170906105814.png)
-### 发布插件
+### Release plugin
 
-点击菜单栏`插件` - `插件管理` - `发布插件`，在项目根目录下生成`hellowing-1.2.0.wext`文件
+Click on the menu bar `Plugin` - `Plugin management` - `Publish plugin`, `hellowing-1.2.0.wext` file will be generated in the project root directory 
 
-将生成的`.wext`文件分享到[Egret论坛](http://bbs.egret.com)](https://github.com/egret-labs/wing-extensions)。
+Share the generated `.wext` file to the [Egret forum] (http://bbs.egret.com)] (https://github.com/egret-labs/wing-extensions).
 
-> 发布时可以在项目中的 `.wingignore` 文件中定义排除文件。
+> You can define the exclusion files in the `.wingignore` file in the project when you publish.

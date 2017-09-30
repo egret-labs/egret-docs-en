@@ -1,45 +1,45 @@
 
 
-## 支持以下功能
+## Support the following functions
 
-- 支持ftp以及sftp协议上传项目文件
-- 支持配置不同的ftp配置，按需上传
-- 支持手动选择文件目录上传文件
-- 支持差异上传文件，减少不必要的上传
+- Support ftp and sftp protocol to upload project files
+- Support the configuration of different ftp configuration, on-demand upload
+- Support to manually select the file directory to upload files
+- Support differential upload files, and reduce unnecessary uploads
 
-## 添加ftp配置实用介绍
-- 首先打开一个项目文件（若当工作空间没有项目，则无法使用ftp功能）
-- 选择菜单->插件->FTP-> 添加FTP服务器配置,在弹出界面中输入ftp配置的必要信息，点击确认后就会在.wing文件下的创建ftp-sync.json文件，更多详细的配置可以在文件中直接修改生效。
+## Add practical introduction to ftp configuration 
+- First open a project file (if the workspace has no project, you can not use the ftp function)
+- Select the Menu -> Plugin -> FTP-> Add FTP server configuration, then in the pop-up interface, enter the necessary information of ftp configuration. After clicking OK, file ftp-sync.json file can be created under .wing file. More detailed configuration can be directly modified and take effect in the file.
 
-## ftp配置中有效属性介绍
-- name：ftp配置名称
-- host:ftp服务器地址
-- user:ftp 用户名
-- password:ftp 用户密码
-- port：ftp 协议端口
-- protocol:ftp协议，支持 ftp与sftp协议。
-- remotePath:上传至服务端的目标路径
-- privateKeyPath:本地私钥路径，用于sftp协议
-- ignoreDir: 忽略文件目录名称（只要文件目录的名称与之匹配，则该文件目录下的所有文件都会被忽略。）  
-- ignoreFileSuffix:根据后缀名忽略文件
-- diffFile:差异文件
+## Introduction to valid attributes in ftp configuration
+- name: ftp configuration name
+- host: ftp server address
+- user: ftp username
+- password: ftp user password
+- port: ftp protocol port
+- protocol: ftp protocol, support ftp and sftp protocols.
+- remotePath: upload the target path to the server
+- privateKeyPath: Local private key path for the sftp protocol
+- ignoreDir: Ignore the file directory name (as long as the file directory name matches it, all files in the file directory will be ignored.)  
+- ignoreFileSuffix: Ignore files by suffix name
+- diffFile: difference file
 
 ![RES](573af4008ce7f.png)
 
 
-## 项目发布并上传至FTP服务器使用介绍
+## The project is published and uploaded to the FTP server usage introduction
 
-- 首先打开一个项目文件（若当工作空间没有项目，则无法使用ftp功能）
-- 选择菜单->插件->FTP-> 上传至FTP服务器(若当前没有ftp配置，则会弹出添加FTP配置窗口),发布完成后会根据配置询问上传至具体哪个ftp服务器。
+- First, open a project file (if the workspace has no project, you can not use the ftp function)
+- Select the Menu -> Plug -> FTP -> Upload to the FTP server (If there is no ftp configuration, it will pop up to add FTP configuration window). After the completion of the publishing, it will inquire which ftp server the upload will be made for according to the configuration.
 
 ![RES](573af40074c18.png)
 
-- 选择完ftp服务器之后，接下是选择上传安全模式，有两种：safe模式，至对服务器文件进行添加与覆盖，不会有删除操作；full模式，则会有删除操作文件。
+- After selecting the ftp server, the next step is to upload the security mode. There are two types: safe mode. To add and overwrite the server file, there will be no deletion operation; full mode. There will be deletion of operation file.
 
 ![RES](573af400a9cb8.png)
 
--最后等待上传成功，如果配置错误等原因导致连接不上，会在10秒后弹出相关错误提示。
+- Finally, wait for the completion of upload. If the configuration  error and other reasons lead to connection failure, relevant error messages will pop up after 10 seconds.
 
 ![RES](573af40099777.png)
 
--如果能看见上传成功的提示，则表示ftp上传成功了。
+- If you can see the prompt of successful upload, it indicates that the ftp upload is successful.

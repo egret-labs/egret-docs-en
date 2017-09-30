@@ -1,54 +1,54 @@
 
 
-从根本上说，Wing 是一款代码编辑器，像其他编辑器一样，它左边有一个树状的文件管理器，方便查看正在编辑的项目或文件夹。右边是一个编辑器区域，显示你正在编辑文件的内容。
+Basically, Wing is a code editor. Just like any other editors, it has a tree-shape file manager on the left, which makes it easy to view the project or folder being edited.The right side is an editor area that shows the contents of the file you are editing.
 
-当然，Wing 也有许多不同于其他编辑器的优势，这篇文章将会一一的介绍这些功能。
+Of course, Wing also has many advantages different from other editors, which will be introduced in this article.
 
-## 文件，文件夹和项目
-Wing 的编辑模式是基于文件或文件夹的，只要打开一个文件或文件夹就能立即使用 Wing 进行开发了。
+## Files, folders and projects
+Wing's edit mode is based on the file or folder. As long as a file or folder is opened, development can be implemented immediately with Wing.
 
-在此之上，Wing 也能识别常用语言和框架的项目文件。比如，如果你用Wing打开了一个含有 `tsconfig.json`的文件夹，Wing 就会识别它，并为当前文件夹提供 TypeScript 智能提示支持。
+On top of this, Wing also recognizes project files of commonly used languages and frameworks.For example, if you open a folder containing `tsconfig.json` with Wing, Wing will recognize it and provide TypeScript smart prompt support for the current folder.
 
-## 基本布局
-Wing 有着简单直观的布局，为代码编辑区保留了最大化的空间，同时也保留了足够的空间来浏览项目中的文件。Wing的UI主要分为下面的几大块：
-- **编辑器** 编辑代码的主要区域，能够并排打开三个编辑器进行开发
-- **侧边栏** 包含文件，搜索，Git和调试等功能面板
-- **状态栏** 显示正在编辑的文件或文件夹额外的信息。
-- **底边栏** 包含输出，控制台等等常用的面板。
+## Basic layout
+Wing has a simple and intuitive layout, which retain both the maximum space for the code editing area and enough space for browsing the files in the project.Wing's UI is mainly divided into the following blocks:
+- **The editor** edits the main area of the code and is capable of opening three editors side by side for development
+- **The sidebar** contains function panels such as files, search, Git, and debugging
+- **The status bar** displays the additional information about the file or folder being edited.
+- **The bottom bar** contains the common panels such as output, console and so on.
 
-每次打开Wing的时候，它会自动还原到你上次关闭它的状态，包括打开的文件夹，各个面板的布局以及上次打开的文件。
+Every time you open Wing, it will automatically restore to the status of the last time you closed it, including the open folder, the layout of each panel and the open files of last time.
 
 ![](codebasics_layout.png)
 
-不同于以往编辑器，Wing 没有采用标签页(tabs)来管理打开的文件，在Wing中你能都同时并列打开三个编辑器。
+Unlike the previous editor, Wing does not use tabs to manage open files. In Wing you can open three editors side by side at the same time.
 
-这有助于减少大量标签页叠加造成的不便，而且并不会减少你同时打开文件的数量，在“文件”面板中维护者你当前正在编辑的文件的列表，你能很方便的找到你需要的文档。
+This helps reduce the inconvenience caused by the large number of tab overlaps and does not reduce the number of files you can open at the same time. In the "File" panel you maintain the list of files you are currently editing, so you can easily find the document you need.
 
-## 多编辑器编辑
-可以同时打开3个并排显示的编辑器。
+## Multiple editor edits
+You can open three editors concurrently displayed side by side at the same time.
 
-如果有一个正在显示的编辑器，有几种方式来打开一个并排显示的编辑器。
-- 在文件列表中，按住`Ctrl`(Mac:`Cmd`)点击一个文件
-- 在文件列表中，右击一个文件，点击“在侧边编辑器打开”
-- 按快捷键 `Ctrl+\` 在新编辑器中打开正在编辑的文档
+If there is an editor that is being displayed, there are several ways to open a editor displayed side-by-side.
+- In the list of files, hold down `Ctrl` (Mac: `Cmd`) and click on a file
+- In the list of files, right-click on a file, click "Open in the side editor"
+- Press the shortcut key `Ctrl+\` in the new editor to open the document being edited
 
 ![](codebasics_sidebyside.png)
 
-注意，不论何时打开一个文件，当前活动的编辑器总是会显示新打开的文件的内容，所以，想要在特定的编辑器中打开文件时，请先点击一下它，来激活这个编辑器。
+Note that whenever you open a file, the currently active editor always displays the contents of the newly opened file. Therefore, when you want to open the file in a specific editor, click on it to activate the editor.
 
-当同时打开了多个编辑器窗口的时候，可以通过按 `Ctrl/Cmd` + `1`,`2`或`3`来切换到您需要的编辑器。
-> 可以通过拖动编辑器的标题栏，来重新排列几个编辑器的顺序，通过编辑器间的分隔线来调整每个编辑器的大小
+When multiple editor windows are opened at the same time, you can switch to the editor you want by pressing `Ctrl/Cmd` + `1`, `2` or `3`.
+> You can rearrange the order of several editors by dragging the editor's title bar to adjust the size of each editor by using the separation lines between editors
 
-## 文件管理器
+## File manager
 
-“文件”面板可以用来浏览、打开、管理项目中的文件和文件夹。
+The "File" panel can be used to browse, open and manage files and folders in a project.
 
-在 Wing 中打开了一个文件夹的时候，该文件夹中所有的内容会显示在“文件”面板中。在这里可以进行各种文件操作：
-- 创建、删除文件或文件夹，或者重命名。
-- 通过拖动来移动文件或文件夹
-- 使用右键菜单来查看所有的操作
+When you open a folder in Wing, all the contents of that folder will be displayed in the "File" panel.Here you can do a variety of file operations:
+- Create, delete files or folders, or rename them.
+- Move file or folder by dragging it
+- View all the operations by right clicking on the menu
 
-> 可以直接从文件系统拖动文件到文件面板来复制到当前目录
+> You can copy the file to the current directory by directly dragging it from the file system to the file panel 
 
 ![](codebasics_explorer_menu.png)
 

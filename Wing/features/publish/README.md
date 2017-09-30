@@ -1,11 +1,11 @@
-# 发布介绍
+# Release introduction
 
-## 发布功能介绍
-- 发布Egret项目：在弹出的窗口中配置发布信息，并发布当前Egret项目。
-- 发布Egret项目并上传：发布成功后，将当前项目上传至ftp服务器。（ftp上传功能参见FTP上传功能介绍。）
+## Release feature introduction
+- Release the Egret project: Configure the release information in the pop-up window and release the current Egret project.
+- Release the Egret project and upload: After the release succeeds, upload the current project to the ftp server.(For more information about ftp upload function, please see FTP upload function introduction.)
 
-## 发布配置介绍
-- 版本号：用于发布时，在`bin-release/web/`目录下创键以版本号为名的子文件夹，如果为空，系统会随机创建版本号。
-- 发布方式：可选html5(网页)与native（本地）方式。
-- 是否压缩：发布native本地应用时是否进行压缩
-- 压缩密钥：压缩使用的密码
+## Release configuration introduction
+- Version number: When it is used for release, please create a sub-folder named after the version number under the `bin-release/web/` directory. If it is empty, the system will randomly create the version number.
+- Release method: optional, html5 (Web page) or native (local).
+- Whether to compress: whether to compress when releasing native applications
+- Compression key: The password used for compression

@@ -1,103 +1,103 @@
 
 
-## 多编辑器 ##
+## Multiple editor edits ##
 
-EgretWing允许最多同时打开三个编辑器，并排在编辑器显示。
+EgretWing allows up to three editors to be opened at the same time, and displayed side by side in the editor.
 
-如果已经打开了一个编辑器，有多种方式在编辑器的右侧打开一个新的编辑器：
+If you have already opened an editor, there are several ways to open a new editor on the right side of the editor:
 
-- 在文件选项卡的中按住`Ctrl`键(Mac下为`Cmd`键)，并点击要打开的文件
-- 在当前激活的编辑器中使用快捷键 `Ctrl+\` 将把当前编辑器一分为二
-- 在文件夹选项卡的右键菜单上选择 **在新编辑器中打开**
+- Hold down the `Ctrl` key (`Cmd` key on Mac) in the File tab and click the file you want to open
+- Use the shortcut key `Ctrl + \` in the currently activated editor to divide the current editor into two parts
+- Right click on the Menu of the folder tab, then select **Open in the new editor**
 
 ![](18.png)
 
 
-## 智能提示 ##
+## smart prompts ##
 
-EgretWing支持多种语言的自动补全功能，如: JavaScript, JSON, HTML, CSS, Less, Sass, C# and TypeScript。
+EgretWing supports multi-language auto-completion features such as: JavaScript, JSON, HTML, CSS, Less, Sass, C# and TypeScript.
 
 ![](19.png)
 
-## 参数提示 ##
+## Parameter prompt ##
 
-在 JavaScript，TypeScript中，输入方法的参数时能看到当前输入参数的类型和注释说明。如果是重载方法，可以通过 `上箭头` 和 `下箭头` 快捷键选择需要参数。
+In JavaScript, TypeScript, you can see the type and annotation of the current input parameter when you enter the parameters of the method.If it is overloaded, you can select the required parameters through `up` arrow and `down` arrow shortcut keys .
 
 ![](20.png)
 
-## 悬浮提示 ##
+## Suspension prompt ##
 
-当鼠标移动到文字上时，如果该字符是一个变量或者下面例子中的css选择器，将出现一个悬浮提示框。
+When the mouse is moved above the text, a pop-up prompt box will appear if the character is a variable or the css selector in the following example, .
 
 ![](21.png)
 
-## 跳转到定义 ##
+##  Jump to definition ##
 
-如果语言支持,可以按下快捷键`F12`跳转到光标所在位置的变量或者方法的定义。
+If the language supports, you can press the shortcut key `F12` to jump to the variable or method definition of the cursor location.
 
-也可以按下 `Ctrl` 键鼠标移动到变量或者方法上，将显示方法定义细节。
+You can also press the `Ctrl` key to move the mouse over a variable or method, the method definition details will be displayed.
 
 ![](22.png)
 
-> 你还可以使用 `Ctrl+Click` 调整到定义，或者使用 `Ctrl+Alt+Click` 在新编辑器中打开定义。如果打开了一个新编辑器窗口，你能够使用 `Ctrl+Alt+Left` 返回到之前的编辑器。
+> You can also use `Ctrl+Click` to adjust to the definition, or use `Ctrl+Alt+Click` to open the definition in the new editor.If you open a new editor window, you can use `Ctrl+Alt+Left` to return to the previous editor.
 
-## 快速大纲 ##
+## Quick outline ##
 
-使用快捷键 `Ctrl+Shift+O` 能够打开快速大纲面板，显示当前文件中定义的所有类，方法和变量。
+Use the shortcut keys `Ctrl+Shift+O` to open the Quick Outline panel, which displays all the classes, methods, and variables defined in the current file.
 
 ![](23.png)
 
 
-## 查找引用 ##
+## Find reference ##
 
-可以通过执行**查找所有引用**(快捷键`Shift+F12`)命令找到当前变量或者方法被引用的所有位置。
+By executing **Find all references** (shortcut key `Shift+F12`) commands, you can find all the locations where the current variable or method is referenced .
 
 ![](24.png)
 
-## 重命名变量 ##
+## Rename the variable ##
 
-一些语言(如TypeScript)支持全局重命名变量。使用快捷键`F2`输入变量的新名称并按下`Enter`，项目中所有使用该变量的位置将被重命名。
+Some languages (such as TypeScript) support global rename variables.If you use the shortcut key `F2` to enter the new name of the variable and press` Enter`, all the locations that use the variable in the project will be renamed.
 
 ![](25.png)
 
 
-## 错误和警告 ##
+## Error and warning ##
 
-当文件出现语法错误或者警告时，将提示错误，使用快捷键 `Ctrl+Shift+M` 查看所有的错误，在错误面板中查看出现的错误
+When any syntax error or warning happens to the file, error message will be prompted. With the shortcut keys `Ctrl + Shift + M`, you can view all the errors. In the error panel, you can also view the errors that have appeared.
 
 ![](27.png)
 
-## 多选 ##
+## Multiple choice ##
 
-EgretWing支持多个光标，可以快速编辑相似的文本。 可以使用 `Alt+Click` 快捷键添加多个光标，每一个光标都是独立的。 也可以使用 `Ctrl+Alt+Down` 或者 `Ctrl+Alt+Up` 在下面或者上面插入光标。
+EgretWing supports multiple cursors and can quickly edit similar text. You can use the `Alt + Click` shortcut to add multiple cursors, each of which is independent. You can also use the `Ctrl+Alt+Down` or `Ctrl+Alt+Up` to insert the cursor below or above.
 
 ![](28.gif)
 
-## 跨行选择 ##
+## Cross-line selection ##
 
-按住 `Shift+Alt` 移动光标可以选择多行文本。
+You can select multiple lines of text by press and holding `Shift + Alt` to move the cursor。 .
 
 ![](29.gif)
 
 
-## 代码折叠 ##
+## Code folding ##
 
-可以使用在行号右边的折叠图标来折叠代码。
+You can use the Fold icon that is to the right of the line number to fold the code.
 
 ![](30.gif)
 
-也可以使用快捷键折叠和展开代码：
+You can also use shortcut keys to fold and expand the code:
 
-- 折叠 (`Ctrl+Shift+[`)
-- 展开 (`Ctrl+Shift+]`)
-- 折叠所有 (`Ctrl+K Ctrl+O`)
-- 展开 (`Ctrl+K Ctrl+J`)
+- Fold  (`Ctrl+Shift+[`)
+- Expand (`Ctrl+Shift+]`)
+- Collapse all (`Ctrl+K Ctrl+O`)
+- Expand (`Ctrl+K Ctrl+J`)
 
-## 常用快捷键 ##
+## Common shortcuts ##
 
-在EgretWing中编辑器中有很多实用功能的快捷键：
+There are many useful shortcuts in the EgretWing editor:
 
-- 切换到上一个编辑器 (`Ctrl+Tab`)
-- 切换到上一个编辑位置 (`Alt+Left`)
-- 格式化代码 (`Shift+Alt+F`)
-- 删除当前行 (`Ctrl+Shift+k`)
+- Switch to the previous editor (`Ctrl+Tab`)
+- Switch to the previous edit position (`Alt+Left`)
+- Format code (`Shift+Alt+F`)
+- Delete the current line (`Ctrl+Shift+k`)

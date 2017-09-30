@@ -1,38 +1,38 @@
 
-EgretWing提供了包括 **编辑器设置，文件设置，窗口设置** 等近200个设置项来满足各种用户习惯。常用的设置如：
+EgretWing provides nearly 200 setting items including **editor settings, file settings and window settings** to meet a variety of user habits.The common settings are as follows:
 
-    // 字体.
+    // Font.
     "editor.fontFamily": "",
-    // 字体大小.
+    // Font size.
     "editor.fontSize": 0,
-    // 显示行号
+    // Show line number
     "editor.lineNumbers": true,
-    // 一个制表符等于的空格数
+    // the number of spaces equivalent to a tab
     "editor.tabSize": 4,
-    // 按 "Tab" 时插入空格
+    // Insert space when pressing "tab"
     "editor.insertSpaces": true,
     
-    // 读取或写入文件的默认编码格式.
+    // Read or write the file's default encoding format.
     "files.encoding": "utf8",
-    // 默认换行符
+    // Default line break
     "files.eol": "\r\n"
 
-可以通过菜单栏，**文件---首选项**菜单打开**用户设置**或者**工作区设置**
+You can open **User settings** or **Workspace setting** through menu bar, namely, **File—Preferences** menu
 
 ![](4.png)
 
-设置分为**用户设置**和**工作区设置**。用户设置是全局的，在任何地方都可以生效，用户设置会覆盖默认设置。用户设置保存在用户缓存目录的 settings.json 中。
-工作空间设置是针对某个文件夹的，只对当前工作空间有效，工作空间设置会覆盖用户设置。工作空间设置保存在当前工作空间下的 .wing/settings.json 中。
-所以最终的优先级是 **工作区设置  > 用户设置 > 默认设置**。
+Settings are divided into **User settings ** and**Workspace settings**.User settings are global and can take effect anywhere, and user settings will override the default settings.The user settings are saved in the settings.json of the user cache directory.
+Workspace settings are for a folder, which is only valid for the current workspace. The workspace settings will override the user settings.The workspace settings are saved in the .wing/settings.json under the current workspace.
+So the final priority is **Workspace settings> User settings> Default settings**.
 
-通过修改 `settings.json` 文件改变当前的设置。例如我习惯的用户配置就是这样写的
+The current settings can be changed by modifying `settings.json` file.For example, I used to configure the user as follows
 
 
-	{
-		"editor.insertSpaces": false,
-		"files.eol": "\n",
-		"window.openFilesInNewWindow": false,
-		"tslint.enable": false
-	}
+{
+"editor.insertSpaces": false,
+"files.eol": "\n",
+"window.openFilesInNewWindow": false,
+"tslint.enable": false
+}
 
-每个字段表示的功能可以通过默认配置中的字段说明找到具体的含义。
+The exact meaning of the function represented by each field can be found in the field description in the default configuration.

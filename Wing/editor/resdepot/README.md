@@ -1,69 +1,69 @@
 
-## 简介
-egret项目中所用的[资源配置文件](../../../extension/RES/loadConfig/README.md)是json格式的文件。资源配置文件可以用任何文本编辑器编辑，在wing里则提供了可视化的编辑方式，可视化的编辑提供了更加简便的操作，自动检查配置文件的中错误，批量操作等功能。
+## Introduction
+The [resource configuration file] (../../../extension/RES/loadConfig/README.md) used in the egret project is a file of json format. The resource configuration file can be edited with any text editor, providing a visual editing method in the wing. Such visual editing provides a more convenient operation, capable of automatically checking the errors in the configuration file and operating in batches, etc.
 
-## 功能介绍
-打开default.res.json，显示如下界面：
+## Introduction to features
+Open default.res.json to display the following interface:
 ![](573aff051fd8b.png)
-上面是设计视图界面，可以点源码切换到文本编辑界面。
-设计界面大致分为以下几个区，与上图数字对应：
-* 1资源树区
-* 2资源信息区
-* 3资源预览区
-* 4组信息
-* 5组内资源
+The above is the design view interface. You can switch to the text editor interface by clicking on the source code.
+The design interface is roughly divided into the following areas, corresponding to the figures above:
+* 1 resource tree area
+* 2 resource information area
+* 3 resource preview area
+* 4 group information
+* 5 resources within the group
 
-### **1.资源树区域**
-这里以树的形式展示了资源文件的内容。树的左上角有折叠/展开树的功能按钮，和搜索框（采用了模糊匹配），搜索效果如下：
+### **1. Resource tree area**
+Here the resource file content is shown in the form of tree.The upper left corner of the tree has a function button for folding/expanding the tree, and the search box (using a fuzzy match). The search effect is as follows:
 ![](573aff052f86f.png)
-选中一项会在信息区和预览区显示所选资源。
-右键可以删除资源。
-可以批量删除资源，同时按住ctrl/command/shift键即可选择多项。 
-可以删除文件夹。
-删除资源的同时会从相关的组里自动删除。
-可以从本地文件系统中拖入图片等资源到资源树中，拖入的文件自动添加到资源配置中。
-支持拖入文件/文件夹的方式。
-如果拖入的资源文件不在当前项目资源目录下，则会自动拷贝到当前项目资源目录的assets目录下。
-### **2.信息区**
-这里显示了所选资源的详细内容，主要有‘资源名’，‘资源类型’，‘在配置中的相对资源路径’，‘附加参数（9切信息）’，‘二级key（sheet文件的subkeys）’等。
-资源名可以在这里编辑修改。
-可以修改资源项的类型。
-可以刷新二级key。
+Select an item in the information area and preview area to display the selected resources.
+Right click to delete the resource.
+The resources can be deleted in batches. You can select multiple items while holding down the ctrl/command/shift at the same time. 
+You can delete a folder.
+Deleting a resource is automatically deleted from the associated group.
+You can drag the image from the local file system and other resources to the resource tree, dragged into the file automatically added to the resource configuration.
+Support for dragging files/folders.
+If the dragged resource file is not in the current project resource directory, it will be automatically copied to the current project resource catalog under the assets directory.
+### **2. Information area**
+Here are the details of the selected resources, mainly 'resource name', 'resource type', 'relative resource path in configuration', 'additional parameters', 'secondary key' subkeys) 'and so on.
+The resource name can be edited here.
+You can modify the type of resource item.
+You can refresh the secondary key.
 ![](573aff053f842.png)
 
-### **3.预览区**
-这里是各种资源的预览效果，image类型的展示为图片，sheet文件展示为整张图，位图字体显示位图字。
-对于image类型的资源，预览区左下角有一个9切编辑按钮，可以打开9切编辑界面：
+### **3. Preview area**
+Here is a variety of resources preview effect, of which image type is displayed as image, sheet file as a whole picture, bitmap font as  bitmap text.
+For the resources of image type, there is a 9-thumbnail editing button, which can open the 9 thumbnail editing interface:
 ![](573aff0550dae.png)
-编辑后将在资源文件中写入该资源的9切数据。
-### **4.资源组**
-这里显示的是资源文件中groups分组情况。
-点‘添加’按钮可以添加新的资源组。
-右键菜单里可以选择删除组。
-可以多选。
-可以批量删除。
-### **5.组内资源**
-这里显示了当前所选组里的资源。选择一项将会在信息区预览区显示该资源详细内容，并在资源树里定位到该资源。
-右键菜单里可以选择删除项。
-可以多选。
-可以批量删除。
-双击名字可以改名。
-可以从本地文件系统拖入资源到当前区域。支持拖入文件/文件夹的方式。
-如果拖入的资源不在当前项目的资源目录下，则自动拷贝到当前项目资源目录下的assets下。
-可以从资源树拖拽资源到当前区，将自动添加到当前组。
+The 9-thumbnail data of the resources will be written in the resource file after the editing is completed.
+### **4. Resource group**
+This shows the grouping of the resource files.
+Click the 'Add' button to add a new resource group.
+You can choose to delete groups by right clicking on the menu
+More than one can be chosen.
+Can be deleted in bulk.
+### **5. Resources within the group**
+This shows the resources in the currently selected group.Selecting an item will display the details of the resource in the preview area of the information area and locate the resource in the resource tree.
+You can choose to delete items by right clicking on the menu.
+More than one can be chosen.
+Can be deleted in bulk.
+You can change the name by double-clicking.
+You can drag resources from the local file system to the current zone.Support the operation of dragging files / folders.
+If the dragged resources are not in the current project's resource directory, they are automatically copied to the assets under the current project resource directory.
+You can drag resources from the resource tree to the current zone and add them automatically to the current group.
 ![](573aff04e00c9.gif)
 
-## 资源冲突
-如果资源文件中有重名的资源项，或者资源对应的文件不存在等错误，则会自动检测出来，并通过标记红框或黄框的形式提醒。在界面底部也会有提示性文字。
+## Resource conflict
+If the resource file has a re-name resource item, or the corresponding file does not exist or there is other errors, it will automatically detect and remind by the means of marking red or yellow box.At the bottom of the interface there will be prompt text.
 ![](573aff0564a44.png)
-上图展示了三种错误：
-* button_down.png文件刚被删掉，该项资源对应的文件不存在，显示为黄色。
-* checkbox里checkbox_select_down.png的资源名被改为checkbox_select_disabled_png，与checkbox_select_disabled.png的资源名产生了冲突，资源重名显示为红色。
-* 表单文件pic.json里的subkey则有一项重名，显示为黄色。
+The figure above shows three types of errors:
+The button_down.png file has just been deleted. The file corresponding to the resource does not exist and is displayed in yellow.
+* In checkbox, the resource name of checkbox_select_down.png is changed to checkbox_select_disabled_png, which is in conflict with the resource name in the checkbox_select_disabled.png. When resource name is duplicated, it will be displayed in red.
+*The the subkey in the form file pic.json has one name duplication, which is shown in yellow.
 
-## 其他
-编辑资源后需要ctrl+s保存一下。
+## Other
+After the resource is edited, you need to save by pressing ctrl+s.
 
-资源编辑器基于wing项目，需要从项目的配置文件wingProperties.json中读取资源配置。打开wingProperties.json，在resourcePlugin->configs下加入自己的资源文件：
+The resource editor is based on the wing project and needs to read the resource configuration from the project's configuration file wingProperties.json. Open wingProperties.json, add your own resource file under resourcePlugin-> configs:
 ![](573aff0506c43.png)
 

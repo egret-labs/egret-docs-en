@@ -1,4 +1,4 @@
-EgretWing使用惰性加载的方式加载插件，当插件需要被激活时才会调用插件定义的 `activate` 方法。通过插件的 [`package.json`](../../../Wing/plugin/configDes/README.md) 的 `activationEvents` 字段，提供一个上下文表示插件何时被激活。目前支持下列的激活事件：
+EgretWing loads the plugin by means of inactive load. The `activate` method defined by the plugin will be invoked only when the plugin needs to be activated. Through the `activationEvents` field of the [`package.json`] (../../../Wing/plugin/configDes/README.md) of the plugin, a context is provided to indicate when the plugin will be activated. The following activation events are currently supported:
 
 * [`onLanguage:${language}`](#activationeventsonlanguage)
 * [`onCommand:${command}`](#activationeventsoncommand)
@@ -7,7 +7,7 @@ EgretWing使用惰性加载的方式加载插件，当插件需要被激活时�
 
 ## activationEvents.onLanguage
 
-当打开对应语言的文档时触发该事件，例如
+This event will be triggered when the document of corresponding language is opened. For example:
 
 ```json
 ...
@@ -19,7 +19,7 @@ EgretWing使用惰性加载的方式加载插件，当插件需要被激活时�
 
 ## activationEvents.onCommand
 
-当一个命令 `command` 被执行时将触发该事件， 例如:
+The event will be triggered when a command `command` is executed. For example:
 
 ```json
 ...
@@ -31,7 +31,7 @@ EgretWing使用惰性加载的方式加载插件，当插件需要被激活时�
 
 ## activationEvents.workspaceContains
 
-当工作空间中包含指定文件时触发该事件，例如：
+The event will be triggered when the workspace includes the specified file. For example:
 
 ```json
 ...
@@ -43,7 +43,7 @@ EgretWing使用惰性加载的方式加载插件，当插件需要被激活时�
 
 ## activationEvents.*
 
-当EgretWing启动时将触发该事件， 例如:
+The event will be triggered when EgretWing is started. For example:
 
 ```json
 ...

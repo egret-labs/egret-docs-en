@@ -1,4 +1,4 @@
 
-左侧栏的文件选项卡中，包含了当前工作空间的文件列表树。使用右键菜单能显示可以执行的命令。
+The File tab in the left pane contains the file list tree of the current workspace.With right-click menu, you can display the commands that can be executed 
 
 ![](10.png)

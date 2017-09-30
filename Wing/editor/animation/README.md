@@ -1,117 +1,117 @@
-下面通过一个简单的缓动动画来说明如何使用动画功能。
+Here's a simple easing animation to show you how to use animation.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/17.gif)
 
-### 1.创建EUI项目和皮肤文件
+### 1. Create EUI projects and skin files
 
-从项目创建向导中选择创建一个Egret EUI项目。
+Select an Egret EUI project from the Project Creation Wizard.
 
-创建一个AnimationSkin.exml的皮肤文件。设置皮肤的类名为"skins.AnimationSkin"
+Create a skin file for AnimationSkin.exml. Set the skin class name as "skins.AnimationSkin"
 
 ![](http://xzper.qiniudn.com/2016/12/animation/18.png)
 
-在**设计模式**下拖拽添加一个新的按钮到皮肤文件中。
+In the ** design mode**, add a new button by dragging and dropping it to the skin file.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/01.png)
 
-由于动画涉及到改变组件的旋转属性，建议将锚点设置到中心，设置按钮的宽高和描点属性。
+Since the animation involves changing the rotation attributes of the component, it is recommended that the anchor point is set to the center, set the width and height of the button, and the anchor point property.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/19.png)
 
 
-**TIPS:** 尽量不要给要添加动画的目标对象设置自动布局(left, right, top, bottom, horizontalCenter，verticalCenter)属性。这些属性可能会使对象的x, y, widht, height属性失效，如果动画里面涉及到改变这些属性的值，那么动画的表现也会出现异常。
+**TIPS:** Try not to set the automatic layout (left, right, top, bottom, horizontalCenter, verticalCenter) attributes for the target object to which you want to add an animation. These attributes may make the x, y, widht, height attributes of the object invalid. If the animation involves the values that change these attributes, then the performance of the animation will be abnormal.
 
 
-### 2.切换到动画模式
+### 2. Switch to animation mode
 
-切换到动画模式，在动画模式下，下面的Panel面板中会多一个动画面板。
+Switch to the animation mode. In the animation mode, the following Panel panel will be added with an animation panel.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/03.png)
 
-请记住这个重要的面板，动画的添加，编辑和预览都将在这个面板上完成。
+Please remember this important panel because animation adding, editing and previewing will be done on this panel.
 
-**TIPS:** 一些行为在动画模式下将会被禁用或者限制。 例如在动画模式下，无法删除/复制/粘贴显示对象，对应的快捷键也会失效。 在**非关键帧状态下**也无法设置显示对象的位置, 大小等属性。 如果要对显示对象进行操作请**切换到设计模式**或者**在关键帧下操作属性**。
+**TIPS:** Some behaviors will be disabled or restricted in animated mode. For example, in the animation mode, you can not delete/copy/paste the display object, and the corresponding shortcut will be invalid. In the ** non-critical frame state**, you also can not set such attributes as location and size of the display object. If you want to operate the display object, please **switch to the design mode** or **operate the attributes in the key frame**.
 
 
-### 3.添加动画组和动画
+### 3. Add animation groups and animations
 
-动画是以**组为单位**进行播放的，每个动画组可以为**多个显示对象**设置动画属性。
+The animation is played in **groups**, and each animation group can set the animation attributes for **multiple display objects**.
 
-首先使用动画面板左下角的'+'按钮，添加一个动画组，并设置动画组的id，这里设置id为tweenGroup。
+First, use the '+' button in the lower left corner of the animation panel to add an animation group, then set the animation group id, where id is set as tweenGroup.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/04.png)
 
-接下来为动画组添加第一个动画。 但是可以发现动画那一栏的添加按钮是灰色不可用的。 在添加动画之前需要先选中一个显示对象，指定动画对应的目标才能添加动画。 
+Next, add the first animation to the animation group. But you can find Add button in the animation column of is gray and not available. Before you add an animation, you need to select a display object and specify the corresponding animation target. 
 
-这里以刚刚添加的按钮为例，先在编辑区选中该按钮。
+Here, taking the newly added button as an example, first select the button in the editing area.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/05.png)
 
-此时动画面板上动画那一栏的添加按钮已经可以操作了。
+At this point,  the Add button on the animation column of the animation panel can be operated.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/06.png)
 
-点击添加按钮将会为该对象添加一个动画。
+Clicking the Add button to add an animation to the object.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/07.png)
 
-“button”是这个按钮的id。 如果目标对象没有设置id属性则会自动创建一个，否则使用用户设置的id。 
+"Button" is the id of the button. If the target object does not set the id attribute, one will be created automatically, otherwise the user id set by the user will be used. 
 
-### 4.编辑动画属性
+### 4. Edit the animation attributes
 
-每个动画对应一个动画时间轴，通过在时间轴上**添加关键帧**和**缓动行为**来改变目标对象在不同时刻的属性。 此时时间轴上还没有关键帧和动画行为。
+Each animation corresponds to an animation timeline. The attribute of the target object at different time can be changed by adding **keyframes** and **easing behavior** to the timeline. At this point, there is no keyframe and animation behavior on the timeline.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/08.png)
 
-#### 添加关键帧
+#### Add keyframes
 
-首先在时间轴上1s的位置点击右键选择“添加关键帧”。
+First, right click on the position of 1s of the timeline to select the "Add keyframe".
 
 ![](http://xzper.qiniudn.com/2016/12/animation/09.png)
 
-添加完成后时间轴上会使用 “■” 符号表示这是一个关键帧。
+When it is added, the timeline will use "■" symbol to indicate that this is a keyframe.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/10.png)
 
-在关键帧的位置可以设置对象的大小，位置，缩放，旋转，透明度等属性。 与设计模式类似，可以**在编辑区操作显示对象**或者**在右侧的属性面板**中可以设置关键帧属性。
+In the location of the keyframe,  such attributes as object's size, location, zoom, rotation and transparency can be set. Similar to the design pattern, you can **operate the display object** or set the keyframe attributes in the **Attributes panel on the right.**
 
 ![](http://xzper.qiniudn.com/2016/12/animation/11.png)
 
-这里我们根据动画的在该时刻的状态，设置了Y，缩放，透明度，旋转，缓动函数等属性。 注意：如果关键帧的属性不填留空则表示不对该属性做改变。
+Here we set Y, zoom, transparency, rotation, easing function and other attributes according to the state of the animation at the moment. Note: If the attributes of the keyframe are not filled in, it indicates that the attribute won't be changed.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/12.png)
 
-#### 创建补间动画
+#### Create tween animation
 
-有了关键帧还不够，动画在关键帧的时候会直接将目标属性设置成关键帧的值。 如果要让目标对象”动“起来，需要添加一个补间动画。
+Only the key frame is not enough. The animation in the key frame will be the target attribute will be set as the value of the key frame. If you want the target object to "move", you need to add a tweened animation.
 
-在关键帧的位置或者之前的某一时刻右键选择“创建补间动画”。
+Right-click on the location of the keyframe or at any previous time to select "Create Tween Animation".
 
 ![](http://xzper.qiniudn.com/2016/12/animation/13.png)
 
-时间轴上将会使用“●”标记补间动画的开头和结束，“→”标记这一段是补间动画。
+The timeline will use "●" to mark the beginning and end of the tweened animation, and the "→" mark is a tweened animation.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/14.png)
 
-由于在添加补间动画的位置之前没有其他的关键帧，所以该段补间动画的开头是开始0时刻的位置。
+Since there are no other keyframes before adding the position of the tweened animation, the beginning of the segment tween is the beginning of the 0 position.
 
-这样就创建了一个持续1s的补间动画，动画会不停设置目标的属性动起来。
+This creates a 1-second tweened animation that continuously sets the object's attributes so that it will move.
 
-#### 修改关键帧位置和补间动画时间
+#### Modify keyframe position and tween animation time
 
-如果要改变关键帧或者补间动画的起始位置或者持续时间，可以直接在时间轴上左右拖拽关键帧的位置。
+If you want to change the start position or duration of a keyframe or tweened animation, you can drag the keyframe position directly on the timeline.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/15.gif)
 
-### 5.预览动画
+### 5. Preview the animation
 
-动画编辑完成后可以通过**拖拽时间轴上的时间戳**或者**直接点击时间轴下方的播放按钮**预览动画。
+After the animation editing is completed, you can preview the animation by **dragging the timestamp on the timeline** or **by clicking the play button below the timeline**.
 
 ![](http://xzper.qiniudn.com/2016/12/animation/16.png)
 
-### 6.代码中调用
+### 6. Call in code
 
-最终的皮肤文件：
+The final skin file:
 
 AnimationSkin.exml
 
@@ -131,38 +131,38 @@ AnimationSkin.exml
 		</w:Declarations>
 		<e:Button id="button" label="按钮" x="193" y="35" width="100" height="50" anchorOffsetX="50" anchorOffsetY="25"/>
 	</e:Skin>
-
-
-在项目中，通过以下代码，当用户点击按钮的时候播放该动画组中的动画：
+		<e:Button id="button" label="按钮" x="193" y="35" width="100" height="50" anchorOffsetX="50" anchorOffsetY="25"/>
+	</e:Skin>
+In the project, through the following code, the user can play the animation in the animation group animation when clicking the button:
 
 AnimationPanel.ts
 
 	class AnimationPanel extends eui.Component {
 		constructor() {
 			super();
-			// 设置当前面板的皮肤
+			// set the skin of the current panel
 			this.skinName = skins.AnimationSkin;
 		}
 	
 		/**
-		 * EXML中对应id为tweenGroup的动画组对象
+		 * The corresponding id in EXML is the animation group object in tweenGroup
 		 */
 		public tweenGroup: egret.tween.TweenGroup;
 	
 		/**
-		 * EXML中对应id为button的按钮对象
+		 * The corresponding id in EXML is the button object of button
 		 */
 		public button: eui.Button;
 	
 		/**
-		 * 动画组播放完成
+		 * Animation group playback is completed
 		 */
 		private onTweenGroupComplete(): void {
 			console.log('TweenGroup play completed.');
 		}
 	
 		/**
-		 * 动画组中的一项播放完成
+		 * One of the animation groups is played
 		 */
 		private onTweenItemComplete(event: egret.Event): void {
 			const item = event.data as egret.tween.TweenItem;
@@ -171,11 +171,11 @@ AnimationPanel.ts
 		}
 	
 		/**
-		 * 当点击按钮时播放动画
+		 * Play the animation when the button is clicked
 		 */
 		private onButtonClick(): void {
 			this.tweenGroup.play();
-			//this.tweenGroup.play(0);从头播放
+			//this.tweenGroup.play(0); play from the beginning
 		}
 	
 		protected createChildren(): void {
@@ -187,7 +187,7 @@ AnimationPanel.ts
 	}
 
 
-最后如果对动画的实现感兴趣可以研究下EXML中关于动画的部分，以及在GitHub上可以找到动画实现的源代码：
+Finally, if you are interested in the realization of the animation, please study the animation part in the EXML, and the source code for realizing the animation can be found in the GitHub:
 
 https://github.com/egret-labs/egret-core/blob/master/src/extension/tween/TweenWrapper.ts
 

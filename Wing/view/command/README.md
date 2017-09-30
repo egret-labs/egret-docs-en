@@ -1,8 +1,8 @@
 
 
-命令面板能方便的查找和执行命令，使用快捷键 **F1** 或者 **Ctrl+Shift+P** 呼出面板。
+Command panel can easily find and execute the command, use the shortcut keys **F1** or **Ctrl+Shift+P** call-out panel.
 
 ![](8.png)
 
 
-面板每一项都是一个命令，如果该命令有快捷键，在右侧会显示对应的快捷键。
+Each item of the panel is a command. If the command has a shortcut key, the corresponding shortcut key will be displayed on the right.

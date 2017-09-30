@@ -1,67 +1,67 @@
 
-## 打开
+## Open
 ![image](where.png)
 
-## 使用说明
-### android工程
+## Instructions for use
+### android project
  ![image](android.png)
  
- * 1.选择目标平台，android（android studio、eclipse）和 ios
- 	> ios 只能在 Mac 下才可以选择。
- * 2.选择操作类型，debug 和 release，其中仅提供android版本的release，ios在debug和release时请在执行完后在xcode中进行后续的操作
- * 3.设置native项目的导出名
- * 4.设置native项目的导出路径
- * 5.android sdk路径，设置到sdk即可。例：/Users/helloca/Documents/androidSDK/adt-bundle-mac-x86_64-20140702/sdk
- * 6.gradle路径，设置到bin即可。例：/Users/helloca/Documents/gradle-2.12/bin
-	> 注：eclipse平台对应的是设置ant路径，设置到bin即可。例：/Users/helloca/Documents/apache-ant-1.9.7/bin
- * 7.android studio版本的support路径。例：/Users/helloca/Documents/egret-android-support-as
-	> 注：eclipse平台对应的是eclipse版本的support路径
- * 8.签名文件所在路径，android发布时使用。
- * 9.签名文件的别名，android发布时使用。
- * 10.签名文件的key password，android发布时使用。
- * 11.签名文件的store password，android发布时使用。
- * 12.zipalign工具的路径，只需指明到其父路径即可，android发布时使用。例：/Users/helloca/Documents/androidSDK/adt-bundle-mac-x86_64-20140702/sdk/build-tools/22.0.1
- * 13.开始按钮，点击后开始执行相应的debug或者release操作
- * 14.强制覆盖选项
-    * 当把项目拷贝到其他的电脑或者位置时，想继续进行打包测试。勾选`强制覆盖选项`可自动删除已有记录，然后重新生成对应的工程。
-	* 导出时请关闭所有对native工程目录和文件的访问，以防止出现因占用而无法写入或者无法删除的情况，特别是windows下。
-	* 强制覆盖会将文件夹连同文件夹下内容全部删除，请慎重使用该功能。
- * 15.帮助，点击后会在浏览器中打开帮助文档的链接。
- * android工程debug时，会在构建完后自动查找连接的设备。如果查找到会自动安装apk文件。请确认设备是否连接并打开了usb调试功能，如果没有请在构建完成后手动安装。
+ * 1.Select the target platform, android (android studio, eclipse) and ios
+ > ios can only be selected on Mac.
+ * 2.Select the type of operation, debug and release, which only provide android version of the release. When ios is under debug and release, please go on with the follow-up operation in xcode after the implementation is completed
+ * 3.Set the export name of the native project
+ * 4.Set the export path for the native project
+ * 5.It is ok to just set android sdk path to sdk.Example: /Users/helloca/Documents/androidSDK/adt-bundle-mac-x86_64-20140702/sdk
+ * 6.It is ok to set gradle path to bin.Example: /Users/helloca/Documents/gradle-2.12/bin
+> Note: Since eclipse platform corresponds to the set ant path, it is ok to just set to the bin. For example: /Users/helloca/Documents/apache-ant-1.9.7/bin
+ * 7.android studio version of the support path.Example: /Users/helloca/Documents/egret-android-support-as
+> Note: eclipse platform corresponds to the eclipse version of the support path
+ * 8.The path of signature file, which is used for android release.
+ * 9.The alias of the signature file, which is used for android release.
+ * 10.The key password of the signature file, which is used for android release.
+ * 11.The store password of the signature file, which is used for android release.
+ * 12.The path of zipalign tool, and it is ok to just specify the path to its parent, which is user for android release.Example: /Users/helloca/Documents/androidSDK/adt-bundle-mac-x86_64-20140702/sdk/build-tools/22.0.1
+ * 13.Start button, click to start implementing the corresponding debug or release operation
+ * 14.Forced override options
+    * When you copy the project to another computer or location, you want to continue the packaging test.Check the `Forced overwrite` option to automatically delete existing records, and then regenerate the corresponding project.
+    * When exporting, please close all access to the native project directory and file, thus preventing the failure to write or delete due to occupation, especially under Windows.
+ * As forced coverage will delete the folder and all its contents, please use this function with caution.
+ * 15.Help, click to open the link of the help document in the browser.
+ * When android is engineering debug, it will automatically find the connected device after the construction is completed.If the device is found out, it will automatically install the apk file.Please check whether the device is connected and has opened the usb debugging function. If not, please install it manually after the construction is completed.
 
-### ios工程
+### ios works
 ![image](ios.png)
 
- * 1.选择对应的操作，debug、release
- * 2.ios版本的support路径
+ * 1.Select the corresponding operation, such as debug, release
+ * 2.The support path of ios version
  
-#### 注：
-   * 路径中不能含有中文或者空格。
-   * windows系统不建议将各项依赖放置在系统盘下。
-   * ios构建完成后请使用xcode打开ios的项目，然后在xcode里点击测试或正式发布。
-   * xcode测试建议直接连接真机测试。现在真机测试是免费的，不需要购买苹果开发者账号。
-   * xcode正式发布时需提供正式的开发者账号和证书，请自行购买。
+#### Note:
+   * The path can not contain Chinese or spaces.
+   * For Windows system, it is not recommended to put the dependencies under the system disk.
+   * After ios is constructed, please use xcode to open ios project, and then click on the test in xcode or release officially.
+   * For xcode test, it is recommended that real machine is directly connected for testing.Now the real machine test is free and needn't to buy Apple developer account.
+   * When xcode is officially released, a formal developer account and certificate are needed. Please purchase by yourself.
    
-## 依赖条件：
-### Android
-#### 必需：
-* 1.最新版egret engine [点击下载](http://www.egret.com/products/engine.html) 
-* 2.android sdk [mac版下载](http://pan.baidu.com/s/1dD8WUL7) [windows版下载](http://pan.baidu.com/s/1gdsDRn9)
-* 3.java sdk [mac版下载](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) [windows版下载](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+## Dependent conditions:
+## Android
+## Required:
+ * 1.The latest version of egret engine [Click to download](http://www.egret.com/products/engine.html) 
+ * 2.android sdk [Download of Mac version] (http://pan.baidu.com/s/1dD8WUL7) [Download of Windows version] (http://pan.baidu.com/s/1gdsDRn9)
+ * 3.java sdk [Download of Mac version](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) [Download of Windows version](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-#### 以下两种方式任选其一：
-* eclipse打包方式
-	* 1.ant [点击下载](http://ant.apache.org/bindownload.cgi)
-	
-	* 2.eclipse版的egret-android-support [点击下载](http://www.egret.com/products/products-others.html#egret-support)
-	
-	
-* android studio打包方式
-	* 1.gradle [点击下载](https://services.gradle.org/distributions)
-	
-	* 2.android studio版本的egret-android-support [点击下载](http://www.egret.com/products/products-others.html#egret-support)
+#### Choose one of the following two methods:
+* eclipse packing method
+	* 1.ant [Click to download](http://ant.apache.org/bindownload.cgi)
+
+	* 2.egret-android-support of eclipse version [Click to download](http://www.egret.com/products/products-others.html#egret-support)
+
+
+* android studio packing method
+* 1.gradle [Click to download](https://services.gradle.org/distributions)
+
+* 2.egret-android-support of android studio version [Click to download](http://www.egret.com/products/products-others.html#egret-support)
 
 ### iOS
-* 1.egret engine [点击下载](http://www.egret.com/products/engine.html) 
-* 2.egret-ios-support [点击下载](http://www.egret.com/products/products-others.html#egret-support)
+* 1.egret engine [Click to download](http://www.egret.com/products/engine.html) 
+* 2.egret-ios-support [Click to download](http://www.egret.com/products/products-others.html#egret-support)
 * 3.xcode

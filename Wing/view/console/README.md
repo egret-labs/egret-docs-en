@@ -1,8 +1,8 @@
 
 
-输出面板显示一些提示消息，显示当前运行状态。输出面板有多个频道(`Channel`)区分不同输出的来源。
+The output panel displays some prompt messages, showing the current operating status.The output panel has multiple channels (`Channel`) for distinguishing different sources of output.
 
-例如Tasks频道会输出项目编译过程中相关的信息，GIT频道输出Git执行过程中的信息，Project频道输出项目创建相关的信息等。
+For example, Tasks channel will output information related to the project compilation process, GIT channel will output information involved in the Git implementation process, and Project channel will output information relevant to the creation of project.
 
 ![](15.png)
 

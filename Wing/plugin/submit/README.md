@@ -1,42 +1,42 @@
-## 打包插件
-在`.wingignore`中配置好发布要排除的文件或文件夹。 
-点击菜单栏`插件` - `插件管理` - `发布插件`，或使用 `Ctrl/Cmd + Shift + P` 打开命令面板，键入 `Package`。
+## Pack the plugin
+Configure the file or folder to be excluded in `.wingignore`. 
+Please open the command panel by clicking on the menu bar, namely, `Plugin`-`Plugin management`-`Release plugin`, or using `Ctrl/Cmd + Shift + P`. Then enter `Package`.
 ![package](56d966daf0934.png)
 
-发布完成后会在项目目录下生成后缀为`.wext` 的插件文件格式。
+After the release is completed, a plugin file format with suffix `.wext` will be generated under the project directory. 
 
-您可以将发布后的文件分享给其他用户，手动安装。或者上传到 Egret Store 让所有的开发者下载使用。
+You can share the post-release files to other users and install them manually.Or upload to the Egret Store for all developers to download.
 
-### 上传到 Egret Store
-在浏览器中打开 [Egret Store](http://t.egret.com/work)。
+### Upload to Egret Store
+Open in the browser [Egret Store](http://t.egret.com/work)。
 
-用您的 Egret ID (论坛或 Egret Store 账号)登录。
+Log in with your Egret ID (forum or Egret Store account).
 
-点击上方的“添加项目”按钮。
+"Click the ""Add Item"" button above."
 
 ![](20170906115000.png)
 
-填写所需的信息。其中在`平台`中选择`插件工具` - `Wing插件`。
+Fill in the required information.In the `Platform`, select `Plugin tool` - `Wing plugin`.
 
 ![](20170906115338.png)
 
-为了保证 Egret Store 中插件的可用性，上传成功后请等待工作人员的审核。
+In order to ensure the availability of plugins in the Egret Store, please wait for the review by staff after uploading.
 
-### 更新 Egret Store 中的插件版本
+### Update the plugin version in the Egret Store
 
-需要更新线上版本的时候，可以点击您的用户名，打开`我的主页`。
+When you need to update the online version, please click on your user name, and open `My Home Page`.
 
-在`我的项目`中找到要更新的插件，点击插件下放的“继续编辑”按钮。
+"Find the plugin to be updated in `My project` and click on the ""Continue editing"" button under the plugin."
 
 ![](20170906120020.png)
 
-在打开的编辑作品面板中，选择新版本的插件，编辑相关资料，上传源码。编辑完的作品，需等待管理员审核。
+In the opened editing works panel, select the new version of the plugin, edit the relevant information and upload the source code.The edited works need to be reviewed by the administrator.
 
-## 安装插件
+## Install the plugin
 
 ![](20170906120404.png)
 
-点击  `Extensions`
-在搜索框中输入关键词搜索插件。
-找到插件，点击右下角的安装即可。
+Click `Extensions`
+Search for plugin by entering keyword in the search box.
+Find the plugin and install it by clicking on the right corner.
 

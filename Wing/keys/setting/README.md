@@ -1,13 +1,13 @@
 
 
-EgretWing提供了近300个快捷键设置项自定义命令的快捷键。可以通过菜单栏，`文件---首选项` 菜单打开 **快捷键设置面板** 选项，如下图。
+EgretWing provides shortcuts for nearly 300 custom commands of shortcut key setting items.You can open the **Shortcut key settings panel** option via the menu bar, then `File - Preferences' menu, as shown below.
 
 ![](20170905120732.png)
 
-设置快捷键的方法：
+The method for setting the shortcut key:
 
-- 找到对应命令，点击其右侧的修改按钮，如下图：
+- Find the corresponding command, then click on the Modify button on the right side, as shown below:
 
    ![](20170905121133.png)
 
-- 按下想要设置的快捷键，和 **Enter** 键。
+- Press the shortcut key you want to set and **Enter** key.
