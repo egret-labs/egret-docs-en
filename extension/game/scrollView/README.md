@@ -1,6 +1,6 @@
 ScrollView is a scrolling view. By opening a scroll window, you can add the displayed contents, and the content can be slidden up and down, left and right in this window of fixed size.Similar to other display objects, ScrollView can't be displayed until it has been added to the display list.Here's how to use ScrollView and demonstrate its performance.
 
-> The `egret.ScrollView` class is located in the `game` library. If it is used, make sure that the `game` library is referenced in the project.For the method operation, please refer to: [Modular configuration and usage of third-party libraries] (../../../extension/threes/instructions/README.md)
+> The `egret.ScrollView` class is located in the `game` library. If it is used, make sure that the `game` library is referenced in the project.For the method operation, please refer to: [Modular configuration and usage of third-party libraries](../../../extension/threes/instructions/README.md)
 
 ## 1. Create a scrolling view
 
