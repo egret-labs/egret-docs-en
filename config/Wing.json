@@ -367,8 +367,8 @@
           },
           {
             "filename": "/Wing/debug/publish/",
-            "text": "App publish",
-            "des": "App publish",
+            "text": "Publish App",
+            "des": "Publish App",
             "in_use": true
           },
           {
@@ -387,56 +387,56 @@
         "children": [
           {
             "filename": "/Wing/plugin/introduction/",
-            "text": "EgretWing插件项目",
-            "des": "EgretWing插件项目",
+            "text": "EgretWing plugin",
+            "des": "EgretWing plugin",
             "in_use": true
           },
           {
             "filename": "/Wing/plugin/helloWing/",
-            "text": "快速入门 - HelloWing",
-            "des": "快速入门 - HelloWing",
+            "text": "Guide - HelloWing",
+            "des": "Guide - HelloWing",
             "in_use": true
           },
           {
             "filename": "/Wing/plugin/configDes/",
-            "text": "插件描述文件",
-            "des": "插件描述文件",
+            "text": "config",
+            "des": "config",
             "in_use": true
           },
           {
             "filename": "/Wing/plugin/extendPoint/",
-            "text": "扩展点",
-            "des": "扩展点",
+            "text": "Extend Point",
+            "des": "Extend Point",
             "in_use": true
           },
           {
             "filename": "/Wing/plugin/activation/",
-            "text": "激活事件",
-            "des": "激活事件",
+            "text": "Activation",
+            "des": "Activation",
             "in_use": true
           },
           {
             "filename": "/Wing/plugin/submit/",
-            "text": "提交插件",
-            "des": "提交插件",
+            "text": "Aubmit",
+            "des": "Aubmit",
             "in_use": true
           },
           {
             "filename": "/Wing/plugin/debug/",
-            "text": "调试插件",
-            "des": "调试插件",
+            "text": "debug",
+            "des": "debug",
             "in_use": true
           }
         ],
         "isFolder": true,
-        "text": "插件开发",
-        "des": "插件开发",
+        "text": "Plugin",
+        "des": "Plugin",
         "in_use": true
       }
     ],
     "isFolder": true,
-    "text": "使用手册",
-    "des": "使用手册",
+    "text": "Manual",
+    "des": "Manual",
     "in_use": true
   }
 ]
