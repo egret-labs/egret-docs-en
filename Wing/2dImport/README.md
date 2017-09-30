@@ -120,11 +120,11 @@ For the role of each directory, please refer to the [document](../../Engine2D/ge
 		
   **<font color=red> as shown below: </font>**
 
-	![image](20170905095155.png)
+	![image](./20170905095155.png)
 		
 		
 
 - Details [EXML Visual Editing](../editor/exml/README.md) 
 
-### Resource Management [Click Details] (../editor/resdepot/README.md) 
+### Resource Management [Click Details](../editor/resdepot/README.md) 
 
