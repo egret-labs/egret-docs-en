@@ -424,7 +424,7 @@
         "in_use": false
       },
       {
-        "filename": "/Engine2D/displayObject/basicConcept/",
+        "filename": "/Engine2D/displayObject/displayObject/",
         "text": "DisplayObject",
         "des": "DisplayObject",
         "in_use": true
@@ -580,7 +580,7 @@
   {
     "children": [
       {
-        "filename": "/Engine2D/mask/maks/",
+        "filename": "/Engine2D/mask/mask/",
         "text": "Mask",
         "des": "Mask",
         "in_use": true
@@ -619,8 +619,8 @@
       }
     ],
     "isFolder": true,
-    "text": "碰撞检测",
-    "des": "碰撞检测",
+    "text": "Collision Detection",
+    "des": "Collision Detection",
     "in_use": true
   },
   {
@@ -675,8 +675,8 @@
       }
     ],
     "isFolder": true,
-    "text": "文本",
-    "des": "文本",
+    "text": "text",
+    "des": "text",
     "in_use": true
   },
   {
@@ -751,8 +751,8 @@
       }
     ],
     "isFolder": true,
-    "text": "网络",
-    "des": "网络",
+    "text": "Network",
+    "des": "Network",
     "in_use": true
   },
   {
@@ -947,7 +947,7 @@
         "filename": "/Engine2D/screenAdaptation/insight/",
         "text": "Insight",
         "des": "Insight",
-        "in_use": false
+        "in_use": true
       }
     ],
     "isFolder": true,
@@ -1055,8 +1055,8 @@
     "children": [
       {
         "filename": "/Engine2D/publish/publish/",
-        "text": "打包 HTML5",
-        "des": "打包 HTML5",
+        "text": "Package HTML5",
+        "des": "Package HTML5",
         "in_use": true
       },
       {
