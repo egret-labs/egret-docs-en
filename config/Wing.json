@@ -189,8 +189,8 @@
         "children": [
           {
             "filename": "/Wing/2dImport/",
-            "text": "Egret 2D 项目向导",
-            "des": "Egret 2D 项目向导",
+            "text": "Project creation",
+            "des": "Project creation",
             "in_use": true
           },
           {
