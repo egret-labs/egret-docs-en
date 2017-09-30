@@ -253,46 +253,46 @@
           },
           {
             "filename": "/Wing/keys/setting/",
-            "text": "快捷键设置",
-            "des": "快捷键设置",
+            "text": "Setting",
+            "des": "Setting",
             "in_use": true
           }
         ],
         "isFolder": true,
-        "text": "快捷键",
-        "des": "快捷键",
+        "text": "Shortcut",
+        "des": "Shortcut",
         "in_use": true
       },
       {
         "children": [
           {
             "filename": "/Wing/editor/code/",
-            "text": "代码编辑器",
-            "des": "代码编辑器",
+            "text": "Code Editor",
+            "des": "Code Editor",
             "in_use": true
           },
           {
             "filename": "/Wing/editor/exml/",
-            "text": "EXML可视化编辑器",
-            "des": "EXML可视化编辑器",
+            "text": "EXML visual editor",
+            "des": "EXML visual editor",
             "in_use": true
           },
           {
             "filename": "/Wing/editor/resdepot/",
-            "text": "资源编辑器",
-            "des": "资源编辑器",
+            "text": "Resource editor",
+            "des": "Resource editor",
             "in_use": true
           },
           {
             "filename": "/Wing/editor/animation/",
-            "text": "动画编辑器",
-            "des": "动画编辑器",
+            "text": "Animation editor",
+            "des": "Animation editor",
             "in_use": true
           }
         ],
         "isFolder": true,
-        "text": "编辑器",
-        "des": "编辑器",
+        "text": "Editor",
+        "des": "Editor",
         "in_use": true
       },
       {
@@ -347,8 +347,8 @@
           }
         ],
         "isFolder": true,
-        "text": "功能",
-        "des": "功能",
+        "text": "Features",
+        "des": "Features",
         "in_use": true
       },
       {
