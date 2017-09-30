@@ -1,10 +1,3 @@
----
-title: "HelloWorld"	HelloWorld
-author: Egret
-date: Aug 28, 2017
-output: word_document
----
-
 ### Install the engine
 
 Download [Egret Engine](http://www.egret.com/products/engine.html), (refer to: [Installation and Deployment (../../../Engine2D/projectConfig/modelconfig/README.md)).
