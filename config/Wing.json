@@ -197,18 +197,18 @@
             "filename": "/Wing/guide/",
             "text": "EgretWing3入门指南",
             "des": "EgretWing3入门指南",
-            "in_use": true
+            "in_use": false
           },
           {
             "filename": "/Wing/base/",
-            "text": "Egret Wing 3.0 基础介绍",
-            "des": "Egret Wing 3.0 基础介绍",
+            "text": "Introduction",
+            "des": "Introduction",
             "in_use": true
           }
         ],
         "isFolder": true,
-        "text": "入门介绍",
-        "des": "入门介绍",
+        "text": "Introduction",
+        "des": "Introduction",
         "in_use": true
       },
       {
@@ -221,26 +221,26 @@
           },
           {
             "filename": "/Wing/view/command/",
-            "text": "命令面板",
-            "des": "命令面板",
+            "text": "Command Panel",
+            "des": "Command Panel",
             "in_use": true
           },
           {
             "filename": "/Wing/view/debugger/",
-            "text": "调试控制台",
-            "des": "调试控制台",
+            "text": "Debugger",
+            "des": "Debugger",
             "in_use": true
           },
           {
             "filename": "/Wing/view/console/",
-            "text": "输出面板",
-            "des": "输出面板",
+            "text": "Console",
+            "des": "Console",
             "in_use": true
           }
         ],
         "isFolder": true,
-        "text": "界面",
-        "des": "界面",
+        "text": "Interface",
+        "des": "Interface",
         "in_use": true
       },
       {
