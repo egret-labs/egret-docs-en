@@ -399,8 +399,8 @@
           },
           {
             "filename": "/Wing/plugin/configDes/",
-            "text": "config",
-            "des": "config",
+            "text": "Config",
+            "des": "Config",
             "in_use": true
           },
           {
@@ -423,8 +423,8 @@
           },
           {
             "filename": "/Wing/plugin/debug/",
-            "text": "debug",
-            "des": "debug",
+            "text": "Debug",
+            "des": "Debug",
             "in_use": true
           }
         ],
