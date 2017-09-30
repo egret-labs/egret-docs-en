@@ -121,7 +121,7 @@ For the role of each directory, please refer to the [document](../../Engine2D/ge
   **<font color=red> as shown below: </font>**
 
 	![](20170904181052.png)
-		
+	![](20170905093913.png)
 	
 
 - Details [EXML Visual Editing](../editor/exml/README.md) 
