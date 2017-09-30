@@ -1,4 +1,4 @@
-The extension point allows the developer to customize some of the extensions in the wing. Define the extension point via the `contributes` field of the [`package.json`] (../../../Wing/plugin/configDes/README.md) plugin.The following extension points are currently supported
+The extension point allows the developer to customize some of the extensions in the wing. Define the extension point via the `contributes` field of the [`package.json`](../../../Wing/plugin/configDes/README.md) plugin.The following extension points are currently supported
 
 
 * [`commands`](#contributescommands)

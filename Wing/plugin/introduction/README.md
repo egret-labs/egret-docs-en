@@ -2,7 +2,7 @@ The EgretWing plugin project is based on `NodeJS` and can be written in the `Typ
 
 ## Necessary development environment
 
-- [Download the latest Wing](http://www.egret.com/products/wing.html) 。
+- [Download the latest Wing](https://egret.com/en/products/wing.html) 。
 - NPM command line tool, NodeJS installation package with `npm` command line tool.
 
 
@@ -71,8 +71,3 @@ We have posted some common plugins and examples on GitHub for reference.Project 
 
 https://github.com/egret-labs/wing-extensions
 
-## More documentation
-
-Thanks for the detailed tutorial written by the developer named Xia Shu
-
-http://edn.egret.com/cn/book/ls/tid/58

@@ -45,7 +45,7 @@
 ## Dependent conditions:
 ## Android
 ## Required:
- * 1.The latest version of egret engine [Click to download](http://www.egret.com/products/engine.html) 
+ * 1.The latest version of egret engine [Click to download](https://www.egret.com/en/products/engine.html) 
  * 2.android sdk [Download of Mac version] (http://pan.baidu.com/s/1dD8WUL7) [Download of Windows version] (http://pan.baidu.com/s/1gdsDRn9)
  * 3.java sdk [Download of Mac version](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) [Download of Windows version](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
@@ -62,6 +62,6 @@
 * 2.egret-android-support of android studio version [Click to download](http://www.egret.com/products/products-others.html#egret-support)
 
 ### iOS
-* 1.egret engine [Click to download](http://www.egret.com/products/engine.html) 
+* 1.egret engine [Click to download](https://www.egret.com/en/products/engine.html) 
 * 2.egret-ios-support [Click to download](http://www.egret.com/products/products-others.html#egret-support)
 * 3.xcode
