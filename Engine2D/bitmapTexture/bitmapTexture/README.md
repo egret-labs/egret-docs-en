@@ -15,7 +15,7 @@ Assign a texture for the bitmap object and display the rendered file on the scre
 The way to specify a texture is to set the `texture` attribute in `Bitmap`.
 
 ```
-img.texture = RES.getRes("Image ID");	);
+img.texture = RES.getRes("Image ID");
 ```
 
 ## 2. Resource configuration
