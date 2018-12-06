@@ -2,7 +2,7 @@
   "isFolder": true,
   "text": "Update",
   "des": "更新详情",
-  "in_use": true,
+  "in_use": false,
   "children": [{
     "filename": "/Native/native/update/0.1.12/",
     "text": "Egret Native 0.1.12",
@@ -180,7 +180,7 @@
       "isFolder": true,
       "text": "Native Support",
       "des": "原生支持",
-      "in_use": false
+      "in_use": true
     },
     {
       "children": [{
@@ -211,7 +211,7 @@
       "isFolder": true,
       "text": "打包发布",
       "des": "打包发布",
-      "in_use": true
+      "in_use": false
     }
   ]
 }]
