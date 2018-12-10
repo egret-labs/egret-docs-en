@@ -962,36 +962,12 @@
         "text": "Debug",
         "des": "Debug",
         "in_use": true
-      },
-      {
-        "filename": "/Engine2D/debug/consolePanel/",
-        "text": "使用内置日志输出面板",
-        "des": "使用内置日志输出面板",
-        "in_use": false
-      },
-      {
-        "filename": "/Engine2D/debug/showDebug/",
-        "text": "显示脏矩形和帧频信息",
-        "des": "显示脏矩形和帧频信息",
-        "in_use": false
-      },
-      {
-        "filename": "/Engine2D/debug/fpsPanel/",
-        "text": "FPS 面板",
-        "des": "FPS 面板",
-        "in_use": false
-      },
-      {
-        "filename": "/Engine2D/debug/performanceOptimization/",
-        "text": "最佳实践",
-        "des": "最佳实践",
-        "in_use": false
       }
     ],
     "isFolder": true,
     "text": "Debug",
     "des": "Debug",
-    "in_use": false
+    "in_use": true
   },
   {
     "children": [
