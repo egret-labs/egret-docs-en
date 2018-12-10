@@ -185,33 +185,27 @@
     {
       "children": [{
           "filename": "/Native/support/publish/publishHTML5/",
-          "text": "打包 HTML5",
+          "text": "Publish HTML5",
           "des": "打包 HTML5",
           "in_use": true
         },
         {
-          "filename": "/Native/support/publish/publishRuntime/",
-          "text": "打包 Runtime",
-          "des": "打包 Runtime",
-          "in_use": false
-        },
-        {
           "filename": "/Native/support/publish/publishAndroid/",
-          "text": "打包 Android app",
+          "text": "Publish Android app",
           "des": "打包 Android app",
           "in_use": true
         },
         {
           "filename": "/Native/support/publish/publishIOS/",
-          "text": "打包 iOS app",
+          "text": "Publish iOS app",
           "des": "打包 iOS app",
           "in_use": true
         }
       ],
       "isFolder": true,
-      "text": "打包发布",
+      "text": "Publish",
       "des": "打包发布",
-      "in_use": false
+      "in_use": true
     }
   ]
 }]
