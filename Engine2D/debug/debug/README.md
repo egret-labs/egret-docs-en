@@ -54,12 +54,8 @@ In the code, `egret.log (message?: Any, ... optionalParams: any [])` can be dire
 
 Locate the above code block in the index.html file:
 
-`Set if the redraw area is displayed, when this value is` true`, egret will show the redrawn area with a red box in the stage.
 
-! [Redraw area] (575e943cb6ecc.png)
-		
-
-`Set if to display frame rate information, when this value is `true`, Egret will be in the upper left corner of the stage show FPS and other performance indicators
+`data-show-fps="true/false"` Set if to display frame rate information, when this value is `true`, Egret will be in the upper left corner of the stage show FPS and other performance indicators
 		
 * FPS:  60		- Frame frequency
 
