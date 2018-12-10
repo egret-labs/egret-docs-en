@@ -6,16 +6,18 @@ For example, the `ImageLoader` class loads the image at 'resource / egret.png' t
 ``` TypeScript
 var imgLoader:egret.ImageLoader = new egret.ImageLoader;
 imgLoader.once( egret.Event.COMPLETE, this.imgLoadHandler, this ); 
- );  
+imgLoader.load( "resource/egret.png" );  
 ```
 
 In the defined callback event, you can use the following method to obtain the BitmapData corresponding to the image, and thus to create a bitmap:
 
 ``` TypeScript
 imgLoadHandler( evt:egret.Event ):void{
-    var loader:egret.ImageLoader = evt.currentTarget;
-    var bmd:egret.BitmapData = loader.data;
-    var bmp:egret.Bitmap = new egret.Bitmap( bmd );
+    let loader:egret.ImageLoader = evt.currentTarget;
+    let bmd:egret.BitmapData = loader.data;
+    let texture = new egret.Texture();
+    texture.bitmapData = bmd;
+    let bmp:egret.Bitmap = new egret.Bitmap(texture);
     this.addChild(bmp);
 }
 ```
