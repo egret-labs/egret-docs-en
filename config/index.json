@@ -46,12 +46,6 @@
         "in_use": "true"
       },
       {
-        "filename": "Lakeshore.json",
-        "des": "Lakeshore相关文档",
-        "text": "Lakeshore",
-        "in_use": "true"
-      },
-      {
         "filename": "Depot.json",
         "des": "Res Depot",
         "text": "Res Depot",
@@ -79,6 +73,12 @@
         "filename": "Feather.json",
         "des": "Egret Feather说明文档",
         "text": "Egret Feather",
+        "in_use": "true"
+      },
+      {
+        "filename": "Lakeshore.json",
+        "des": "Lakeshore相关文档",
+        "text": "Lakeshore",
         "in_use": "true"
       },
       {
