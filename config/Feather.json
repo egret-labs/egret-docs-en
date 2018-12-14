@@ -9,7 +9,7 @@
       }
     ],
     "isFolder": true,
-    "text": "更新详情",
+    "text": "Update",
     "des": "更新详情",
     "in_use": true
   },
@@ -17,7 +17,7 @@
     "children": [
       {
         "filename": "/tools/Feather/manual/",
-        "text": "使用手册",
+        "text": "Manual",
         "des": "使用手册",
         "in_use": true
       }
