@@ -92,31 +92,5 @@
     "text": "Tools",
     "des": "工具分类",
     "in_use": true
-  },
-  {
-    "children": [
-      {
-        "filename": "platform.json",
-        "des": "平台接入相关文档",
-        "text": "平台接入",
-        "in_use": "false"
-      },
-      {
-        "filename": "Developer.json",
-        "des": "Developer更新日志",
-        "text": "Developer更新日志",
-        "in_use": "false"
-      },
-      {
-        "filename": "microclient.json",
-        "des": "微端解决方案",
-        "text": "微端解决方案",
-        "in_use": "false"
-      }
-    ],
-    "isFolder": true,
-    "text": "Other",
-    "des": "平台分类",
-    "in_use": false
   }
 ]
