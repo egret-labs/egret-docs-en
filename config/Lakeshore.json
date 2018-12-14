@@ -5,13 +5,13 @@
         "filename": "/Lakeshore/update/update212/",
         "text": "Lakeshore 2.1.2",
         "des": "Lakeshore 2.1.2",
-        "in_use": true
+        "in_use": false
       },
       {
         "isFolder": true,
         "text": "历史更新",
         "des": "历史更新",
-        "in_use": true,
+        "in_use": false,
         "children": [
           {
             "filename": "/Lakeshore/update/update210/",
@@ -72,9 +72,29 @@
   {
     "children": [
       {
-        "filename": "/Lakeshore/update/update201/",
-        "text": "Lakeshore 2.0.1",
-        "des": "Lakeshore 2.0.1",
+        "children": [
+          {
+            "filename": "/Lakeshore/manual/example/newProject/",
+            "text": "NewProject",
+            "des": "新建项目",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/example/dafeiji/",
+            "text": "Shooting game",
+            "des": "打飞机项目",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/example/weixinShare/",
+            "text": "Weixin Share",
+            "des": "添加微信分享",
+            "in_use": true
+          }
+        ],
+        "isFolder": true,
+        "text": "Example",
+        "des": "示例项目",
         "in_use": true
       }
     ],
