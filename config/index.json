@@ -24,6 +24,12 @@
         "des": "Egret Native相关文档",
         "text": "Egret Native",
         "in_use": "true"
+      },
+      {
+        "filename": "Lakeshore.json",
+        "des": "Lakeshore相关文档",
+        "text": "Lakeshore",
+        "in_use": "true"
       }
     ],
     "isFolder": true,
@@ -73,12 +79,6 @@
         "filename": "Feather.json",
         "des": "Egret Feather说明文档",
         "text": "Egret Feather",
-        "in_use": "true"
-      },
-      {
-        "filename": "Lakeshore.json",
-        "des": "Lakeshore相关文档",
-        "text": "Lakeshore",
         "in_use": "true"
       },
       {
