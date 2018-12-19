@@ -74,6 +74,20 @@
       {
         "children": [
           {
+            "filename": "/Lakeshore/manual/basicConcept/basicConcept/",
+            "text": "Basic Concept",
+            "des": "基本概念",
+            "in_use": true
+          }
+        ],
+        "isFolder": true,
+        "text": "Basic Concept",
+        "des": "基本概念",
+        "in_use": true
+      },
+      {
+        "children": [
+          {
             "filename": "/Lakeshore/manual/example/newProject/",
             "text": "NewProject",
             "des": "新建项目",
