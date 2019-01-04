@@ -81,26 +81,60 @@
       },
       {
         "children": [{
-          "filename": "/Lakeshore/manual/behavior/rotation/",
-          "text": "Rotation",
-          "des": "旋转",
-          "in_use": true
-        }, {
-          "filename": "/Lakeshore/manual/behavior/scrolling/",
-          "text": "Scroll",
-          "des": "滚屏",
-          "in_use": true
-        }, {
-          "filename": "/Lakeshore/manual/behavior/turret/",
-          "text": "Turret",
-          "des": "炮塔",
-          "in_use": true
-        }, {
-          "filename": "/Lakeshore/manual/behavior/timer/",
-          "text": "Timer",
-          "des": "计时器",
-          "in_use": true
-        }],
+            "filename": "/Lakeshore/manual/behavior/rotation/",
+            "text": "Rotation",
+            "des": "旋转",
+            "in_use": true
+          }, {
+            "filename": "/Lakeshore/manual/behavior/scrolling/",
+            "text": "Scroll",
+            "des": "滚屏",
+            "in_use": true
+          }, {
+            "filename": "/Lakeshore/manual/behavior/turret/",
+            "text": "Turret",
+            "des": "炮塔",
+            "in_use": true
+          }, {
+            "filename": "/Lakeshore/manual/behavior/navigate/",
+            "text": "Navigate",
+            "des": "寻路",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/behavior/pin/",
+            "text": "Pin",
+            "des": "别针",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/behavior/flicker/",
+            "text": "Flicker",
+            "des": "闪烁",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/behavior/timer/",
+            "text": "Timer",
+            "des": "计时器",
+            "in_use": true
+          }, {
+            "filename": "/Lakeshore/manual/behavior/nodeMoves/",
+            "text": "NodeMoves",
+            "des": "节点移动",
+            "in_use": true
+          }, {
+            "filename": "/Lakeshore/manual/behavior/outOfBounds/",
+            "text": "OutOfBounds",
+            "des": "出界销毁",
+            "in_use": true
+          }, {
+            "filename": "/Lakeshore/manual/behavior/fadeInAndFadeOut/",
+            "text": "fadeInAndFadeOut",
+            "des": "淡入淡出",
+            "in_use": true
+          }
+        ],
         "isFolder": true,
         "text": "Behavior",
         "des": "行为",
