@@ -81,6 +81,37 @@
       },
       {
         "children": [{
+            "filename": "/Lakeshore/manual/commonElements/attributes/",
+            "text": "Attributes",
+            "des": "通用属性",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/commonElements/conditions/",
+            "text": "Conditions",
+            "des": "通用条件",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/commonElements/action/",
+            "text": "Action",
+            "des": "通用动作",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/commonElements/expression/",
+            "text": "Expression",
+            "des": "表达式",
+            "in_use": true
+          }
+        ],
+        "isFolder": true,
+        "text": "Elements",
+        "des": "通用元素",
+        "in_use": true
+      },
+      {
+        "children": [{
             "filename": "/Lakeshore/manual/behavior/rotation/",
             "text": "Rotation",
             "des": "旋转",
