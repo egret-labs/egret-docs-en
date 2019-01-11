@@ -173,6 +173,91 @@
       },
       {
         "children": [{
+            "filename": "/Lakeshore/manual/module/system/",
+            "text": "System",
+            "des": "System",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/module/genius/",
+            "text": "Genius",
+            "des": "精灵",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/module/scale9gird/",
+            "text": "Scale9gird",
+            "des": "九宫格",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/module/button/",
+            "text": "Button",
+            "des": "按钮",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/module/animation/",
+            "text": "Animation",
+            "des": "动画",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/module/tileTile/",
+            "text": "瓦片",
+            "des": "瓦片",
+            "in_use": false
+          },
+          {
+            "filename": "/Lakeshore/manual/module/bitmapfonts/",
+            "text": "Bitmapfonts",
+            "des": "位图字体",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/module/textField/",
+            "text": "文本",
+            "des": "文本",
+            "in_use": false
+          },
+          {
+            "filename": "/Lakeshore/manual/module/tiledMap/",
+            "text": "Tiled",
+            "des": "Tiled",
+            "in_use": false
+          },
+          {
+            "filename": "/Lakeshore/manual/module/sound/",
+            "text": "Sound",
+            "des": "声音",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/module/touch/",
+            "text": "触屏",
+            "des": "触屏",
+            "in_use": false
+          },
+          {
+            "filename": "/Lakeshore/manual/module/weixin/",
+            "text": "微信",
+            "des": "微信",
+            "in_use": false
+          },
+          {
+            "filename": "/Lakeshore/manual/module/function/",
+            "text": "Function",
+            "des": "函数",
+            "in_use": true
+          }
+        ],
+        "isFolder": true,
+        "text": "Module",
+        "des": "组件",
+        "in_use": true
+      },
+      {
+        "children": [{
             "filename": "/Lakeshore/manual/example/newProject/",
             "text": "NewProject",
             "des": "新建项目",
