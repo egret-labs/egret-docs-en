@@ -112,6 +112,11 @@
       },
       {
         "children": [{
+            "filename": "/Lakeshore/manual/behavior/bullet/",
+            "text": "Bullet",
+            "des": "子弹",
+            "in_use": true
+          }, {
             "filename": "/Lakeshore/manual/behavior/rotation/",
             "text": "Rotation",
             "des": "旋转",
@@ -133,6 +138,12 @@
             "in_use": true
           },
           {
+            "filename": "/Lakeshore/manual/behavior/drag/",
+            "text": "Drag",
+            "des": "拖拽",
+            "in_use": true
+          },
+          {
             "filename": "/Lakeshore/manual/behavior/pin/",
             "text": "Pin",
             "des": "别针",
@@ -142,6 +153,12 @@
             "filename": "/Lakeshore/manual/behavior/flicker/",
             "text": "Flicker",
             "des": "闪烁",
+            "in_use": true
+          },
+          {
+            "filename": "/Lakeshore/manual/behavior/curve/",
+            "text": "Curve",
+            "des": "曲线",
             "in_use": true
           },
           {
@@ -160,8 +177,13 @@
             "des": "出界销毁",
             "in_use": true
           }, {
+            "filename": "/Lakeshore/manual/behavior/borderRestrictions/",
+            "text": "BorderRestrictions",
+            "des": "边界限制",
+            "in_use": true
+          }, {
             "filename": "/Lakeshore/manual/behavior/fadeInAndFadeOut/",
-            "text": "fadeInAndFadeOut",
+            "text": "FadeInAndFadeOut",
             "des": "淡入淡出",
             "in_use": true
           }
