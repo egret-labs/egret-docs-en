@@ -9,7 +9,7 @@
         "isFolder": true,
         "text": "Update",
         "des": "历史更新",
-        "in_use": false,
+        "in_use": true,
         "children": [{
             "filename": "/Lakeshore/update/update210/",
             "text": "Lakeshore 2.1.0",
