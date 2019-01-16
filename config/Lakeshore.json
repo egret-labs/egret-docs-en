@@ -29,21 +29,9 @@
             "in_use": true
           },
           {
-            "filename": "/Lakeshore/update/update200/",
-            "text": "Lakeshore 2.0.0",
-            "des": "Lakeshore 2.0.0",
-            "in_use": true
-          },
-          {
             "filename": "/Lakeshore/update/update121/",
             "text": "Lakeshore 1.2.1",
             "des": "Lakeshore 1.2.1",
-            "in_use": true
-          },
-          {
-            "filename": "/Lakeshore/update/update120/",
-            "text": "Lakeshore 1.2.0",
-            "des": "Lakeshore 1.2.0",
             "in_use": true
           },
           {
