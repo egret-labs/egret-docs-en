@@ -3,11 +3,11 @@
         "filename": "/Lakeshore/update/update212/",
         "text": "Lakeshore 2.1.2",
         "des": "Lakeshore 2.1.2",
-        "in_use": false
+        "in_use": true
       },
       {
         "isFolder": true,
-        "text": "历史更新",
+        "text": "Update",
         "des": "历史更新",
         "in_use": false,
         "children": [{
@@ -62,9 +62,9 @@
       }
     ],
     "isFolder": true,
-    "text": "更新详情",
+    "text": "Update",
     "des": "更新详情",
-    "in_use": false
+    "in_use": true
   },
   {
     "children": [{
