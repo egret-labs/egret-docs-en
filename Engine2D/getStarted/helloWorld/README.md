@@ -1,83 +1,88 @@
-### Install the engine
 
-Download [Egret Engine](https://www.egret.com/en/products/engine.html), (refer to: [Installation and Deployment](../../../Engine2D/projectConfig/installation/README.md)).
+### Engine Installation
 
-### Install the development tools
+Download [Egret Engine](http://www.egret.com/products/engine.html),（You can refer to：[Installation and Deployment](../../../Engine2D/projectConfig/installation/README.md)）。
 
-Open Egret Launcher, switch to the Tools Management tab, and click Install Egret Wing, as shown below.
+### Development Tool Installation
 
-![](down.jpg)
+Open Egret Launcher and see the login screen, shown as below:
 
-### Create project
+![](./login.png)
 
-1. Open the Egret Wing, click the menu ""File"" -> ""New Project"" to create the project, as shown below.
+You will see the main interface of Egret Launcher after login.
 
-![](create1.jpg)
+![](./main.png)
 
-2. Select ""Egret game project"" to create a project with a game template, as shown below.
+### Create Project
 
-![](create2.jpg)
+1、Click the menu `Project` -> `Create Project` to create the project, shown as below:
 
-3. In the new project panel that pops up, set the basic configuration of the project, as shown below.
+![](./project1.png)
 
-![](create3.png)
+You can also select `Import Project` to import an existing project.
 
-* Project name 
+
+2、In the new project panel, set the basic configurations of the project, shown as below:
+
+![](project2.png)
+
+* Project Name
 The name of the current project, such as HelloWorld.
 
-* Project path
-The file path to which the project is stored.
+* Project Path
+The file path of the project is stored.
 
-* Extension library selection
-The system library to be used in the project.
+* Project Type
+The project of the project, such as Egret game project, and Egret EUI project.
 
-![](create4.jpg)
+* Engine Version
+  The egret version of the current project use.
 
-* Stage width and height
- The height and width of the default game stage are in pixels.
+* Select extension library.
+The required system library of project. For more introduction of extension library selection please refer to:[Extension Library Introduction](../../../Engine2D/projectConfig/extendRepSummary/README.md)
 
-* Engine version number
-  	  
-  The version of the Egret used by the current project.
-  	  
-* Stage background color
+* Stage Size
+The height and width of the stage by default, pixel as unit.
+
+* Scaling Mode
+  Select showALL mode for screen adaption mode. More introduction on scaling mode you can refer to: [Screen Adaption](../../../Engine2D/screenAdaptation/screenAdaptation/README.md)
 	
-	The default background color displayed by the stage.
+* Rotation Mode
+	Select auto mode for screen rotation mode. More introduction on rotation settings please refer to: [Screen Adaption](../../../Engine2D/screenAdaptation/screenAdaptation/README.md)
 
-* Zoom mode
-  The screen's adaptation mode. Here please choose showALL mode.For more information about the zoom mode, please refer to: [Zoom Mode and Rotation Mode Description] (../../../Engine2D/screenAdaptation/explanation/README.md)
-	
-* Rotatation settings
-	
-	The screen rotation mode, here please select auto mode. For more information about rotation settings, please refer to: [Zoom mode and rotation mode description](../../../Engine2D/screenAdaptation/explanation/README.md)
+Click `Create` to create Hello World project.
 
-Click OK to create the Hello World project.
+You can open an manage the project in Egret Launcher.
 
-### Project structure
+![](project3.png)
 
-On the left side of Egret Wing, you can see the directory structure of the current project :
+### Project Structure
 
-![](56a1a8c3b9412.jpg)
+In the left side of Egret Wing, you can see the directory structure of the current project:
 
-Description of each folder function
-* bin-debug: When the project is debugged, the resulting files are stored in this directory.
-* libs: library files, including Egret core libraries and other extension libraries, which is stored in this directory.
-* promise: promise support library files are stored in this directory.
-* resource: The project resource file is stored in this directory.
-* src: The project code file is stored in this directory.
-* template: The project template file is stored in this directory.
+![](project4.png)
 
-* egretProperties.json: The project's configuration file.For the instructions on specific configuration, please refer to: [EgretProperties Description](../../../Engine2D/projectConfig/configFile/README.md)
-* tsconfig.json: typescript compiles the configuration file.
-* wingProperties.json: Egret Wing project configuration file.
-* index.html: entry file.For the instructions on specific configuration, please refer to: [Entry document description](../../../Engine2D/projectConfig/indexFile/README.md)
+Folder function description:
+* .wing: it includes task configuration file and startup configuration file of Egret project.
+* Egret Wing project configuration file.
+* bin-debug：This directory is used to store the files from project debug.
+* libs：Library file, includes Egret core library and other extension library are all stored in this directory.
+* resource：The project resource files are stored in this directory.
+* scripts：The script files of project construction and release are stored in this directory.
+* src：Project code file is stored in this directory.
+* template：The project template file is stored in this directory.
+* egretProperties.json：The configuration file of the project. For specific configuration instructions please refer to: [EgretProperties Instruction](../../../Engine2D/projectConfig/configFile/README.md)
+* index.html：Entry file. For specific configuration instructions please refer to：[Entry file instructions](../../../Engine2D/projectConfig/indexFile/README.md)
+* manifest.json：Web page list file。
+* tsconfig.json：typescript Compile the configuration file.
+
 
 ### Run the project
 
-Click on the menu ""Project"" -> ""Build"", compile the project, as shown below.
+Click the menu "Project" -> "construct" to compile the project, shown as below:
 
 ![](build.png)
 
-After the construction is completed, click the menu "Project" -> "Debug", run the project, as shown below.
+Click "Project" -> "Debug" in menu after construction completed and run the project, shown as below:
 
 ![](debug1.png)
