@@ -1,7 +1,7 @@
 
 ### Engine Installation
 
-Download [Egret Engine](http://www.egret.com/products/engine.html),（You can refer to：[Installation and Deployment](../../../Engine2D/projectConfig/installation/README.md)）。
+Download [Egret Engine](http://www.egret.com/en/products/engine.html),（You can refer to：[Installation and Deployment](../../../Engine2D/projectConfig/installation/README.md)）。
 
 ### Development Tool Installation
 
