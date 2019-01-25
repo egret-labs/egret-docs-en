@@ -671,7 +671,7 @@
   {
     "children": [{
         "filename": "/Engine2D/event/principle/",
-        "text": "事件处理机制的原理",
+        "text": "Event Principle",
         "des": "事件处理机制的原理",
         "in_use": true
       },
@@ -683,19 +683,19 @@
       },
       {
         "filename": "/Engine2D/event/event/",
-        "text": "Event类",
+        "text": "Event",
         "des": "Event类",
         "in_use": true
       },
       {
         "filename": "/Engine2D/event/listener/",
-        "text": "事件侦听器",
+        "text": "EventListener",
         "des": "事件侦听器",
         "in_use": true
       },
       {
         "filename": "/Engine2D/event/priority/",
-        "text": "事件的优先级",
+        "text": "Priority",
         "des": "事件的优先级",
         "in_use": true
       },
@@ -704,18 +704,12 @@
         "text": "触摸事件",
         "des": "触摸事件",
         "in_use": true
-      },
-      {
-        "filename": "/Engine2D/event/touchCanel/",
-        "text": "取消触摸事件",
-        "des": "取消触摸事件",
-        "in_use": true
       }
     ],
     "isFolder": true,
     "text": "事件机制",
     "des": "事件机制",
-    "in_use": false
+    "in_use": true
   },
   {
     "children": [{
@@ -781,28 +775,16 @@
   },
   {
     "children": [{
-        "filename": "/Engine2D/blendMode/normal/",
-        "text": "NORMAL",
-        "des": "NORMAL",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/blendMode/add/",
-        "text": "ADD",
-        "des": "ADD",
-        "in_use": true
-      },
-      {
-        "filename": "/Engine2D/blendMode/erase/",
-        "text": "ERASE",
-        "des": "ERASE",
+        "filename": "/Engine2D/blendMode/blendMode/",
+        "text": "BlendMode",
+        "des": "混合模式",
         "in_use": true
       }
     ],
     "isFolder": true,
-    "text": "混合模式",
+    "text": "BlendMode",
     "des": "混合模式",
-    "in_use": false
+    "in_use": true
   },
   {
     "children": [{
@@ -917,21 +899,14 @@
   },
   {
     "children": [{
-        "filename": "/Engine2D/screenAdaptation/explanation/",
-        "text": "缩放模式和旋转模式说明",
-        "des": "缩放模式和旋转模式说明",
-        "in_use": false
-      },
-      {
-        "filename": "/Engine2D/screenAdaptation/insight/",
-        "text": "Insight",
-        "des": "Insight",
-        "in_use": true
-      }
-    ],
+      "filename": "/Engine2D/screenAdaptation/rotationMode/",
+      "text": "Rotation Mode",
+      "des": "旋转模式",
+      "in_use": true
+    }],
     "isFolder": true,
-    "text": "Insight",
-    "des": "Insight",
+    "text": "Screen Mode",
+    "des": "屏幕适配",
     "in_use": true
   },
   {
@@ -949,14 +924,14 @@
   {
     "children": [{
       "filename": "/Engine2D/callJS/tsCallJs/",
-      "text": "ts 与 js 互调",
+      "text": "Ts Call js",
       "des": "ts 与 js 互调",
       "in_use": true
     }],
     "isFolder": true,
-    "text": "调用原生JS",
+    "text": "Ts Call js",
     "des": "调用原生JS",
-    "in_use": false
+    "in_use": true
   },
   {
     "children": [{
