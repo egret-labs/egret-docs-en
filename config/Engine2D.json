@@ -698,6 +698,12 @@
         "text": "Priority",
         "des": "事件的优先级",
         "in_use": true
+      },
+      {
+        "filename": "/Engine2D/event/touchEvent/",
+        "text": "TouchEvent",
+        "des": "触摸事件",
+        "in_use": true
       }
     ],
     "isFolder": true,
