@@ -1,10 +1,10 @@
-Egret package `Graphics` class to achieve vector graphics function. You can draw a rectangle, round, straight, curve, arc and so on. Next we will introduce the basic usage of vector graphics and a number of advanced usage.
+The Egret encapsulates  `Graphics` class implements vector drawing function, can draw a rectangle, circle, line, curve, arc, etc. The basic and advanced USES of the vector drawing feature are described below.
 
-## 1. Draw a rectangle
+## 1.Draw a rectangle
 
-The drawing method encapsulated in the `Graphics` class cannot be used directly and needs to be used in the display object. Some display objects (such as `Shape` and` Sprite`) already contain drawing methods, so you can call these methods directly in the display object for drawing.
+`Graphics` class encapsulation methods cannot be used directly, but need to use in the display object.And some display objects（such as  `Shape` and `Sprite` ）has been included in the drawing method, so it can be shown directly calling these methods for drawing objects.
 
-Taking `Shape` as an example, the following codes draw a rectangle:
+The following code to  `Shape` object, for example, draw a rectangle:
 
 ```
 class GraphicsTest extends egret.DisplayObjectContainer
@@ -25,11 +25,11 @@ class GraphicsTest extends egret.DisplayObjectContainer
 }
 ```
 
-Run after compilation, with the effect shown as below:
+Run after compilation, the effect is as follows:
 
 ![](5565675e01970.png)
 
-The following three lines are the core drawing codes of the codes:
+The core drawing code in this code is the following three lines:
 
 ```
 shp.graphics.beginFill( 0xff0000, 1); 
@@ -37,19 +37,19 @@ shp.graphics.drawRect( 0, 0, 100, 200 );
 shp.graphics.endFill();
 ```
 
-Accessing the `graphics` attribute of `shp` will return a `Graphics`, the drawing method of which can be operated for implementing the drawing.
+Visit `shp`   `graphics` property returns a  `Graphics` object, this object operation method of drawing the drawing can be realized.
 
-Call the `beginFill ()` method to set the filling color of the rectangle, where the filling color is set to red (color value 0xff0000), while setting `alpha` to 1 to indicate that it is completely opaque.
+All  `beginFill()` method set the fill color of the rectangle, it sets the fill color to red (color value 0 xff0000), at the same time will `alpha`  is set to 1, said completely opaque.
 
-Call the `drawRect ()` method to set the position and size of the rectangle. The former two parameters are the X and Y coordinates of the upper left corner of the rectangle (relative to the anchor point of `shp`). The latter two parameters are respectively the width and height of the rectangular. Here we draw a 100*200 rectangle at (0, 0) point.
+Call `drawRect()` method to set the size and location of the rectangle, the former two parameters respectively, the top left corner of the rectangular X and Y coordinates （relative to the  `shp` anchor point calculation), after the two parameters for the width and height of the rectangular respectively, here at point (0, 0) to draw a rectangular 100 * 200.
 
-Call the 'endFill () `method to end the current drawing operation.
+Call `endFill()` method over the current draw () operation.
 
-To add a stroke to a rectangle, set the style of the line with the `lineStyle ()` method.
+If you want to add stroke to rectangular, need to set the style of line, through `lineStyle()` method.
 
-The first parameter of the method is the line width of the stroke, and the second parameter is the color of the stroke.
+The first parameter of this method is the line width of the stroke, and the second parameter is the color of the stroke.
 
-Add a line to the drawing codes:
+Add a line to the drawing code:
 
 ```
 shp.graphics.lineStyle( 10, 0x00ff00 );
@@ -79,21 +79,21 @@ class GraphicsTest extends egret.DisplayObjectContainer
 }
 ```
 
-Compile and run, with the effect shown as below:
+Compile and run, the effect is as follows:
 
 ![](5565675e02ce3.png)
 
-## 2. Draw a circle
+## 2.Draw a circular
 
-The method of drawing a circle is similar to drawing a rectangle. You just need to change the `drawRect ()` method to the `drawCircle ()` method.
+The method of drawing circle is similar to drawing rectangle, you just need to change `drawRect()` methods to `drawCircle()` methods。
 
 ```
 drawCircle( x:number, y:number, radius:number): void
 ```
 
-The `drawCircle ()` method accepts three parameters, of which the first is the X-axis coordinate of the center, the second is the Y-axis coordinate of the center, and the third is the radius.
+methods like  `drawCircle()`  method takes three parameters, the first argument for the X coordinate of the center of the circle the second parameter for the Y coordinate of the center of the circle radius is the third parameter.
 
-> Note: The X and Y axis positions of the center are calculated relative to the anchor point of the `Shape` object.
+>Note：the X axis and Y axis of center position is relative to the `Shape` calculated anchor point of the object.
 
 The following code example draws a circle with a radius of 50 pixels:
 
@@ -119,26 +119,26 @@ class GraphicsTest extends egret.DisplayObjectContainer
 }
 ```
 
-Compile and run, with the effect shown as below:
+Compile and run, the effect is as follows:
 
 ![](5661535675def.png)
 
-## 3. Draw a straight line
+## 3.Draw a straight line
 
-Two methods are needed when drawing a line with Graphics: `moveTo ()` and `lineTo ()`, and their input parameters are a pair of coordinate values. `moveTo ()` is responsible for drawing the starting point of the line, and `lineTo ()` is responsible for drawing the end of the line.
+Using Graphics drawing a straight line need to use two methods: `moveTo()` and  `lineTo()`，they input parameters is a sitting values.`moveTo()` is responsible for drawing a straight line starting point,`lineTo()` is responsible for drawing the end of the line.
 
 ```
 moveTo( x:number, y:number): void
 lineTo( x:number, y:number): void
 ```
 
-Before drawing a line, you need to first create a line style, and set the `lineStyle ()` method:
+Before drawing a straight line, need to set the style of line, set `lineStyle()` method:
 
 ```
 shp.graphics.lineStyle( 2, 0x00ff00 );
 ```
 
-Then use `moveTo ()` to set the starting point of the line, and use `lineTo ()` to set the end of the line. The complete code is as follows:
+Then use the `moveTo()` to set the starting point of line, use `lineTo()` to set the end of the line. The complete code is as follows:
 
 ```
 class GraphicsTest extends egret.DisplayObjectContainer
@@ -160,11 +160,11 @@ class GraphicsTest extends egret.DisplayObjectContainer
 }
 ```
 
-Run after compilation, with the effect shown as below:
+Run after compiling, the effect is as follows:
 
 ![](566153894306a.png)
 
-You can also draw a number of end-to-end straight lines, forming a polyline, with the code as follows:
+It is also possible to draw a number of straight lines end to end continuously to form a broken line. The code is as follows:
 
 ```
 var shp:egret.Shape = new egret.Shape();
@@ -190,26 +190,26 @@ shp.graphics.endFill();
 this.addChild( shp );
 ```
 
-> When you draw a polyline, you can use the `lineTo ()` method continuously, without the need to use the `moveTo ()` method for multiple times.
+>Draw the line, without repeated use `moveTo()` method， continuous use `lineTo()` method.
 
-Run after compilation, with the effect shown as below:
+Run after compilation, the effect is as follows:
 
 ![](5661538977888.png)
 
-## 4. Draw the curve
-The curve provided in Egret is the "second Bezier curve". The following figure is the structure of the "second Bezier curve", where P0 is the starting point, P1 is the control point and P2 is the end point.
+## 4.Draw the curve
+The curve drawing in Egret is the "quadratic Bessel curve", and the diagram below is the structure diagram of the "quadratic Bessel curve", in which P0 is the starting point, P1 is the control point and P2 is the terminal point.
 
 ![](566153b5385e7.png)
 
-When drawing a curve, please use the `curveTo ()` method in `Graphics`.
+In the curve plotting, need to use  `Graphics`    `curveTo()`  method.
 
 ```
 curveTo( x1:number, y1:number, x2:number, y2:number ): void
 ```
 
-The `curveTo ()` method requires four parameters, of which the former two ones are the position of the control point (P1), and the latter two ones are the position of the end point (P2).
+`curveTo()` method to set up the four parameters, the first two parameters are the position of the control points (P1), after the location of the two parameters is the finish (P2).
 
-When you execute a drawing, first use the `moveTo ()` method to specify the starting point of the curve, and then use `curveTo ()` to specify the control point and end point of the curve. When the program is drawing, the drawing process is as follows:
+First, when performing a drawing using `moveTo()` method specifies the starting point, curve and then use the `curveTo()` specified curve control points and the finish. When the program is drawing, the drawing process is as follows:
 
 ![](566153b54d721.gif)
 
@@ -235,21 +235,21 @@ class GraphicsTest extends egret.DisplayObjectContainer
 }
 ```
 
-Run after compilation, with the effect shown as below:
+ Run after compilation, the effect is as follows:
 
 ![](566153b573f6a.png)
 
-## 5. Draw the arc
+## 5.Draw the arc
 
-Draw a closed arc using the `drawArc ()` method in `Graphics`.
+In the closed circular arc using  `Graphics`    `drawArc()`   method。
 
 ```
 drawArc( x:number, y:number, radius:number, startAngle:number, endAngle:number, anticlockwise:boolean ):void
 ```
 
-The first two parameters are the center of the arc path, and `radius` is the radius of the arc. `startAngle` is the angle of the starting point of the arc, which is calculated from the x-axis direction and take radians as the unit. `endAngle` is the angle of the arc end point, `anticlockwise` controls the drawing direction. If it is true, draw the arc counterclockwise, otherwise please do so clockwise.
+The first two parameters arc center position of the path,`radius`arc radius. `startAngle` is the Angle of the arc starting point, from the x axis, in radians, `endAngle` is the Angle at the end of circular arc,`anticlockwise` Control the drawing direction. If true, draw the arc counterclockwise; otherwise, draw clockwise.
 
-The following example draws an arc from 0 to π:
+The following example will draw an arc from zero to PI:
 
 ```
 class GraphicsTest extends egret.DisplayObjectContainer
@@ -270,17 +270,17 @@ class GraphicsTest extends egret.DisplayObjectContainer
 }
 ```
 
-Compile and run, with the effect shown as below:
+Compile and run, the effect is as follows:
 
-![](55fa85513f04e.png)
+![](p1.png)
 
-Where endAngle uses `Math.PI` to represent radians π, which can be queried in the math-related API.
+Here the endAngle use `Math.PI` to represent radian π, and you can check it in math-related API.
 
 http://developer.egret.com/cn/apidoc/index/name/global.Math
 
-## 6. Draw advanced arc usage
+## 6. Draw arc advanced use
 
-### 6.1. Draw the arc
+### 6.1.Draw arc
 
 ~~~
 var shape:egret.Shape = new egret.Shape();
@@ -291,7 +291,7 @@ shape.graphics.endFill();
 
 ![](569f036c09b4d.png)
 
-### 6.2. Draw the arch
+### 6.2. Painting arch
 
 ~~~
 var shape:egret.Shape = new egret.Shape();
@@ -302,26 +302,26 @@ shape.graphics.endFill();
 
 ![](569f036c2577d.png)
 
-> The difference between the arch and the arc is that the drawing arch needs to fill the pattern and the arc does not need to fill the pattern.
+> The difference between arch painting and arc painting is that arch painting requires filling graphics and arc painting does not require filling graphics.
 
-### 6.3. Draw the sector
+### 6.3.Painting fan
 
-In fact, the sector is the closed area after the center of the circle connects with the two ends of the arc.
+ A fan is a closed area between the center of a circle and the two ends of an arc.
 
 ~~~
 var r:number = 50;
 var shape:egret.Shape = new egret.Shape();
 shape.graphics.beginFill(0xff0000);
-shape.graphics.moveTo(r, r);//The drawing point moves (r, r) point
-shape.graphics.lineTo(r * 2, r);//draw lines to the starting point of the arc点
-shape.graphics.drawArc(50, 50, 50, 0, 260 * Math.PI / 180, false);//draw arch clockwise from the starting point to the end point
-shape.graphics.lineTo(r, r);//draw lines from the finish line to the circle. The following is fored in this fan-shaped closed area 
+shape.graphics.moveTo(r, r);//Plot the point move (r, r) point
+shape.graphics.lineTo(r * 2, r);//Draw a line to the beginning of the arc
+shape.graphics.drawArc(50, 50, 50, 0, 260 * Math.PI / 180, false);//Draw an arc clockwise from the starting point to the end point
+shape.graphics.lineTo(r, r);// Draw a line from the end to the circle. A fan-shaped enclosed area is formed
 shape.graphics.endFill();
 ~~~
 
 ![](569f036be6477.png)
 
-### 6.4. Draw a curved progress bar
+### 6.4.Draw curved progress bars
 
 ~~~
 private getArcProgress():egret.Shape {
@@ -345,9 +345,9 @@ private getArcProgress():egret.Shape {
 }
 ~~~
 
-For the use of `egret.startTick` in the code, refer to [Timer Timer] ../../timeControl/timer)
+About code  `egret.startTick` usage, reference [Timer  Timer](../../timeControl/timer)
 
-### 6.5. Draw fan-shaped progress bar
+### 6.5.Sector the progress bar
 
 ~~~
 private getSectorProgress():egret.Shape {
@@ -377,17 +377,17 @@ private getSectorProgress():egret.Shape {
 }
 ~~~
 
-### 6.6. Draw irregular bar progress bar
+### 6.6.Draw an irregular border progress bar
 
-The following is an example of simulating the progress of the border by combining the mask (`mask`) and the fan-shaped progress bar. For the specific usage of `mask`, refer to [mask] (../../mask/rectangleMask)
+Below is an example, through a combination of  (`mask`and fan bezel progress bar to simulate the progress of the show. About `mask` specific usage, refer to [mask](../../mask/rectangleMask)
 
-* * First, provide a fully enclosed graphic with only borders. Such as
+* First, provide a fully enclosed graph with only borders. Such as
 
 ![](569f036c525df.png)
 
-* * Use the fan-shaped progress bar described above and ensure that the area of the circle defined by the sector can completely cover the border map. To align the center of the sector with the center of the frame.
+* Use the pie bar described above, and make sure that the area of the circle identified by the pie can completely cover the border diagram. Aim the center of the fan at the center of the bezel.
 
-* Set the `mask' of the border to the fan-shaped progress bar, thus completing a simple border progress bar. You can complete the progress bar suitable for the project by modifying the masked graphics. For example, graphics is not a border, but a gray-box fill map.
+* Will border `mask` set to fan the progress bar, thus a simple frame progress bar has been completed. You can modify the masked figure to make a progress bar that fits the project, such as the figure is not a border, but a gray box filled graph.
 
 ![](569f036bbe628.png)
 
@@ -434,16 +434,16 @@ private drawBorderProgress():egret.DisplayObjectContainer {
 }
 ~~~
 
-* Renderings
+* Rendering
 
 ![](569f036ba015a.png)   ![](569f036bbe628.png)
 
 
-> Since `mask` heavily consumes CPU, it is suggested that you'd better minimize the use of continuous modification of `mask` when drawing.
+> `mask` 's CPU consumption is very high, it is suggested that using less constantly modified `mask` ways to do animation.
 
-## 7. Draw multiple shapes
+## 7.Drawing of multiple shapes
 
-The following code draws four small cells in a `Shape` object, next to each other, and red and blue.
+The following code in a `Shape` draw four small grid ，next to each other, and the red and blue.
 
 ```
 this.graphics.beginFill( 0x0000ff );
@@ -463,16 +463,16 @@ this.graphics.drawRect( 0, 50, 50,50 );
 this.graphics.endFill();
 ```
 
-Put the `Shape` object into the display list, compile and run, thus getting the effect as shown below:
+The`Shape` objects on the display list, compile operation, get the effect as shown in figure:
 
 ![](566153e55d510.png)
 
-> Note: Multiple shapes are drawn, independent of each other. Each time when you draw and fill, you must end with `endFill ()` before starting the next drawing.
+>Note: multiple shapes, are independent from each other, each drawing fill, must take the  `endFill()` end ，to start the next map.
 
 
-## 8. Empty the drawing
+## 8.Empty the drawing
 
-The operation of emptying the drawing is to empty all the images that have been drawn, by executing the `clear ()` method in `Graphics`, with codes as follows:
+Empty to drawing the image drawing operations is to have all to empty, can perform  `Graphics`    `clear()` method，the code is as follows:
 
 ```
 shp.graphics.clear();
