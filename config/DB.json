@@ -4,5 +4,9 @@
 		"text": "DragonBones 5.6.1",
 		"des": "DragonBones 5.6.1",
 		"in_use": true
-	}
+	},
+	"isFolder": true,
+	"text": "更新详情",
+	"des": "更新详情",
+	"in_use": true
 }]
