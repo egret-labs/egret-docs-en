@@ -1,10 +1,10 @@
 [{
-	"children": {
+	"children": [{
 		"filename": "/DB/update/update561/",
 		"text": "DragonBones 5.6.1",
 		"des": "DragonBones 5.6.1",
 		"in_use": true
-	},
+	}],
 	"isFolder": true,
 	"text": "Update",
 	"des": "更新详情",
