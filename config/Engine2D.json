@@ -364,9 +364,9 @@
       },
       {
         "filename": "/Engine2D/projectConfig/tempfile/",
-        "text": "入口文件模板",
+        "text": "Tempfile",
         "des": "入口文件模板",
-        "in_use": false
+        "in_use": true
       },
       {
         "filename": "/Engine2D/projectConfig/configFile/",
@@ -382,33 +382,26 @@
       },
       {
         "filename": "/Engine2D/projectConfig/tsconfig/",
-        "text": "tsconfig 配置文件",
+        "text": "TSconfig",
         "des": "tsconfig 配置文件",
-        "in_use": false
+        "in_use": true
+      },
+      {
+        "filename": "/Engine2D/projectConfig/webassembly/",
+        "text": "Webassembly",
+        "des": "webassembly 版本使用",
+        "in_use": true
       },
       {
         "filename": "/Engine2D/projectConfig/libraryProject/",
         "text": "Library Project",
-        "des": "Library Project",
+        "des": "第三方扩展库",
         "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/compileOrder/",
-        "text": "编译顺序说明",
-        "des": "编译顺序说明",
-        "in_use": false
-      },
-      {
-        "filename": "/Engine2D/webassembly/",
-        "text": "webassembly 概述",
-        "des": "webassembly 概述",
-        "in_use": false
-      },
-      {
-        "filename": "/Engine2D/projectConfig/wasmconfig/",
-        "text": "WebAssembly 项目配置",
-        "des": "WebAssembly 项目配置",
-        "in_use": false
+      }, {
+        "filename": "/Engine2D/projectConfig/upgradev52/",
+        "text": "Upgrade to 5.2.x",
+        "des": "5.0 to 5.2",
+        "in_use": true
       }
     ],
     "isFolder": true,
@@ -869,14 +862,14 @@
   {
     "children": [{
       "filename": "/Engine2D/renderMode/webgl/",
-      "text": "WebGL渲染",
+      "text": "WebGL",
       "des": "WebGL渲染",
       "in_use": true
     }],
     "isFolder": true,
-    "text": "渲染模式",
+    "text": "Render Mode",
     "des": "渲染模式",
-    "in_use": false
+    "in_use": true
   },
   {
     "children": [{
