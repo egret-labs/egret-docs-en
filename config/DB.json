@@ -9,4 +9,65 @@
 	"text": "Update",
 	"des": "更新详情",
 	"in_use": true
+}, {
+	"children": [{
+		"filename": "/DB/dbLibs/5foramt/",
+		"text": "5.0 Data Format",
+		"des": "5.0数据格式说明",
+		"in_use": true
+	}, {
+		"filename": "/DB/dbLibs/dataFormat/",
+		"text": "4.0&4.5DataFromat",
+		"des": "4.0&4.5数据格式说明",
+		"in_use": true
+	}, {
+		"filename": "/DB/dbLibs/createProject/",
+		"text": "CreateProject",
+		"des": "创建项目",
+		"in_use": true
+	}, {
+		"filename": "/DB/dbLibs/createAnimation/",
+		"text": "CreateAnimation",
+		"des": "创建骨骼动画",
+		"in_use": true
+	}, {
+		"filename": "/DB/dbLibs/morePeopleAnimation/",
+		"text": "Multiple Animation",
+		"des": "多人物动画",
+		"in_use": true
+	}, {
+		"filename": "/DB/dbLibs/motionControlskeleton/",
+		"text": "MotionControlskeleton",
+		"des": "控制骨骼运动",
+		"in_use": true
+	}, {
+		"filename": "/DB/dbLibs/animationSpeed/",
+		"text": "AnimationSpeed",
+		"des": "改变动画速度",
+		"in_use": true
+	}, {
+		"filename": "/DB/dbLibs/maskAndMixed/",
+		"text": "MaskAndMixed",
+		"des": "动画遮罩与混合",
+		"in_use": true
+	}, {
+		"filename": "/DB/dbLibs/copy/",
+		"text": "Copy",
+		"des": "动画拷贝",
+		"in_use": true
+	}, {
+		"filename": "/DB/dbLibs/events/",
+		"text": "Events",
+		"des": "骨骼动画事件",
+		"in_use": true
+	},{
+		"filename": "/DB/dbLibs/replaceTexture/",
+		"text": "ReplaceTexture",
+		"des": "骨骼换装",
+		"in_use": true
+	}],
+	"isFolder": true,
+	"text": "DragonBones Libs",
+	"des": "DragonBones 程序库",
+	"in_use": true
 }]
