@@ -1,23 +1,38 @@
 
-The configuration file named ```egretProperties.json``` is included in the root folder of the project, and the configuration involved in the engine is stored here.
+Project under the root folder of famous for `egretProperties.json`  configuration files, configuration are stored in the engine.
 
-### The whole frame
+### The overall structure
 
-![image](5604f755ba98b.png)
+![](./p1.png)
 
-### egret_version field
+### EngineVersion field
 
-The version of the egret command line currently used by the project.
+Egret engine version of the project currently used to run the game,
 
-### modules field
+### CompilerVersion field
+Project currently used egret command line version, such as performing  `build`,`publish` commands, such as each version is slightly different
 
-Define all library files referenced in the project.
-Each library is the configuration information in the form of ```{ "name":"moduleName" , "path":"modulePath"}```.	
-```name``` field is the library name.```path``` field is the library file storage path. If this field isn't available, take the default value ```$ {EGRET_DEFAULT}```
+### Template field
+If this field is present, the release  `Html5` project, will use `template/web/index.html` file for entry. [click to see more details](../tempfile/index.html)
+
+### Target field
+Perform  `build` and  `publish`  command of the target type.
+
+* `web`：It compiles into Html5 projects
+* `wxgame`：It compiles into a WeChat mini-game project
+* `bricks `：Can compile QQ to play a game of items
+* `android `：Will compile into an android project
+* `iOS`： It compiles into an iOS project
+
+### Modules field
+
+Defines all library files referenced in the project.
+Each library is shaped like a  ```{ "name":"moduleName" , "path":"modulePath"}``` configuration information.
+```name``` field is the library name.```path``` field is the library file storage path, if there is no this field, take the default values```${EGRET_DEFAULT}```
 
 ``` json
 {
-	"egret_version":"5.0.6",
+	"egret_version":"5.2.6",
 	"modules":[
 		{
 			"name":"egret",
@@ -38,72 +53,28 @@ Each library is the configuration information in the form of ```{ "name":"module
 }
 ```
 
-`` `` path``` field can include library file version number
+```path``` field can include library file version number
 
-	There are two environmental variables in the Egret Engine:
-	`` `EGRET_DEFAULT``` represents the path of the current engine.
-	`` `EGRET_APP_DATA``` represents the path in the cache folder in the engine launcher.
-	In the above configuration file, the ```egret``` module of the engine will use the path corresponding to the version configured in ```egret_version```, and the ```tween``` module will use the path corresponding to the 4.0.3 version downloaded in the engine launcher.
-	In this way, developers can selectively upgrade the specific module of the engine, thereby reducing the potential stability risk resulting from the version upgrade.
+```path``` field corresponds to the path of the possible in the project, can also be outside the project.
 
+*  if you are in a project, the project runtime directly loads the library corresponding to this path.
+* If outside the project, the engine compile this path is first library copy of the corresponding to the project's  `libs/modules` folder, and then load the library in this folder.
 
-The path corresponding to the ```path``` field may be inside or outside of the project. 
+After modify the configuration of the content, you need to perform  `egret clean` command to build, to ensure that the changes to take effect.
+[click to see more](../modelconfig/index.html)
 
-* If it is inside the project, the library corresponding to this path is loaded directly when running the project.
-* If it is outside of the project, the library corresponding to this path will first be copied to the ```libs/modules``` folder inside the project when compiling the engine. Then, the library inside the folder will be loaded.
+### UrlParams field (supported above 3.1.6)
 
-After modifying the contents of the configuration, you need to execute the ```egret clean``` command for reconstruction, so as to ensure the changes take effect.
+* For ```egret run```command add URL parameter,
 
-### Publish field
-The configuration file required to publish the project.
+```
+{
+	"urlParams":{
+		"okok":12,
+		"id":455464564
+	}
+}
+```
+The above configuration, for example, in the execution `egret run`  will open in the browser address:
 
-* path: the directory where the published file is located. The default value is "bin-release".
-
-* web: The method for publishing Web project resource file.0, publish according to the name of the original material path; 1. The resources will be published after it is renamed after crc32 naming method.The default is 0.
-
-* native: The method for publishing Native project resource file.0, publish according to the name of the original material path; 1. The resources will be published after it is renamed after crc32 naming method.The default is 1.
-
-In RES module provided by Egret, the supported publishing method is web = 0, native = 1. If you need to customize the version control, please modify the corresponding publishing method.
-
-### template field
-If : {} ``` field is available, use the template, otherwise the template needn't be used
-
-### eui field
-eui project related configuration
-
-* exmlRoot:  Specify the root directory for exml file storage, which must be a relative path.It would be best if the directory only includes exml file. If other files are also included, the compilation speed will be affected.
-
-* themes: The theme file array, which configures all the theme file paths that must be relative paths.
-
-* exmlPublishPolicy: the strategy used by the theme file for storing exml when publishing, including path, content and gjs
-
-
-	path: the theme file only stores the path and will load different exml files. It is not recommended when it is the same as debug
-	content: the theme file stores exml content and won’t load different exml files. The advantage is that the whole file is smaller
-	gjs: the theme file stores the js content that has been compiled by exml, and won’t load different exml file. The advantage is fast resolution
-
-
-### native field
-native-related configuration, which is only useful for native projects. This field can be ignored when the Web project is published.
-
-* path_ignore: the list that shall be ignored when the project material is copied to the publishing directory, the string value of which will be parsed into a regular expression.
-For example, set the value of this field to "anim.* ons".
-The project resource file directory is as follows:
-![image](5604f756594ae.png) 
-The published resource file directory is as follows:
-![image](5604f7562d513.png)
-
-* android_path (the field that can be ignored): the directory of the created android project will be automatically created when android project is created.
-
-* ios_path (the field that can be ignored): the directory of the created ios project will be automatically created when ios project is created.
-
-### web field
-web configuration, which is only useful for web projects. This field can be ignored when the Native project is published.
-* path_ignore: (4.0.0 or above is supported) the list that shall be ignored when the project material is copied to the publishing directory.
-
-
-### urlParams field (3.1.6 or above is supported)
-
-* As for the ```egret run``` command, add URL parameters. For example, open the address after implementing ```egret run```:
-
-```http://10.0.4.63:3001/index.html?okok=12&id=455464564```
+`http://10.0.4.63:3000/index.html?okok=12&id=455464564`

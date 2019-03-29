@@ -63,25 +63,19 @@
     "children": [{
         "filename": "/Engine2D/projectConfig/installation/",
         "text": "Installation",
-        "des": "Installation",
+        "des": "安装与部署",
         "in_use": true
-      },
-      {
-        "filename": "/Engine2D/projectConfig/launcherManager/",
-        "text": "启动器",
-        "des": "引擎和工具的管理",
-        "in_use": false
       },
       {
         "filename": "/Engine2D/projectConfig/cmdManual/",
         "text": "Command Manual",
-        "des": "Command Manual",
+        "des": "命令行手册",
         "in_use": true
       },
       {
         "filename": "/Engine2D/projectConfig/indexFile/",
         "text": "Index File",
-        "des": "Index File",
+        "des": "入口文件说明",
         "in_use": true
       },
       {
@@ -93,14 +87,14 @@
       {
         "filename": "/Engine2D/projectConfig/configFile/",
         "text": "Project Config",
-        "des": "Project Config",
+        "des": "项目配置文件说明",
         "in_use": true
       },
       {
         "filename": "/Engine2D/projectConfig/modelconfig/",
-        "text": "模块版本配置",
+        "text": "Modelconfig ",
         "des": "模块版本配置",
-        "in_use": false
+        "in_use": true
       },
       {
         "filename": "/Engine2D/projectConfig/tsconfig/",
@@ -109,9 +103,21 @@
         "in_use": true
       },
       {
+        "filename": "/Engine2D/projectConfig/compileOrder/",
+        "text": "CompileOrder",
+        "des": "编译顺序说明",
+        "in_use": true
+      },
+      {
         "filename": "/Engine2D/projectConfig/webassembly/",
         "text": "Webassembly",
         "des": "webassembly 版本使用",
+        "in_use": true
+      },
+      {
+        "filename": "/Engine2D/projectConfig/extendRepSummary/",
+        "text": "ExtendRepSummary",
+        "des": "扩展库简介",
         "in_use": true
       },
       {
@@ -559,8 +565,8 @@
       },
       {
         "filename": "/Engine2D/multimedia/environment/",
-        "text": "environment",
-        "des": "environment",
+        "text": "Environment",
+        "des": "环境信息",
         "in_use": true
       }
     ],

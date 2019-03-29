@@ -1,0 +1,15 @@
+## Extended library description
+
+Depending on your project requirements, you can choose from a variety of extension libraries, and here's a look at the common ones
+
+* Res resource loading library: the res module is a full-fledged resource loading mechanism for developers. When developers write games, they don't need to care about the details of resource loading, they just need to specify the loaded resource and add the corresponding execution loading code in the corresponding logical location. See[here](http://developer.egret.com/cn/github/egret-docs/extension/RES/newres/index.html) for details ，api documents [here](http://developer.egret.com/cn/apidoc/index/name/RES.globalFunction) 。
+
+* Eui interface authoring library: eui is a UI extension library based on Egret's core display list, which encapsulates a large number of common UI components and can be designed to accommodate most interaction interface requirements. Even for more complex component requirements, you can compose or extend based on existing eui components to quickly implement your requirements. See [here](http://developer.egret.com/cn/github/egret-docs/extension/EUI/outline/introduction/index.html)  for details，api documents [here](http://developer.egret.com/cn/apidoc/index/name/eui.AddItems) 。
+
+* DragonBones animation library: DragonBones is a set of 2D skeleton animation library. When developers use animation files exported by DragonBones pro, they must use the DragonBones library to parse and control animation. see[here](http://developer.egret.com/cn/github/egret-docs/DB/dbLibs/createProject/index.html)  for details，api documents [here](http://developer.egret.com/cn/apidoc/index/name/dragonBones.Animation) 。
+
+* Game library: the game library mainly provides 1.   Use of Texture Merger to perform the parsing and control of the animation file, 2、 ScrollView is provided as a helper class for sliding by passing a display object into the constructor. Displays objects that exceed the specified size range. And can drag in this range.3、 The timing function was encapsulated in egret. See[here](http://developer.egret.com/cn/github/egret-docs/extension/game/movieClip/index.html) for details ，api documents [here](http://developer.egret.com/cn/apidoc/index/name/egret.MovieClip) 。
+
+* Socket library: WebSocket is based on the H5 specification. The WebSocket class is used to send and receive data. The WebSocket standard greatly simplifies the complex two-way network communication and connection management. See[here](http://developer.egret.com/cn/github/egret-docs/extension/WebSocket/WebSocket/index.html)  for details，api documents [here](http://developer.egret.com/cn/apidoc/index/name/egret.WebSocket) 。
+
+* Function library: for photo picker function, you can select the picture of your phone and display it. At present, egret only supports the Web.

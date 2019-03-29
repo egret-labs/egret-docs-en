@@ -1,65 +1,51 @@
-Egret Engine version is divided into two categories: "stable version" and "community experience version". The community experience version is released on a bi-weekly iterative basis.
-The following shows the installation and deployment process with Egret Engine v5.0.6.
+The Egret Engine version falls into two categories: "stable" and "community experience" versions, which are released in bi-week iterations.
+Let's illustrate the installation and deployment process with Egret Engine v5.0.6.
 
-## Install the engine library management tool (EgretLauncher)
+##  Install the Egret Launcher
 
-### 1. Download the installation package
+### 1.Download installation package
 
-Download the Egret one-click installation package corresponding to the operating system from the Egret website [Download Center] [https://egret.com/en/downloads/engine.html].
+From the Egret website[Downloads](http://egret.com/downloads/engine.html) to download the operating system corresponding to the Egret a key installation package.
 
-### 2. Install under Windows system
+### 2.Windows system installation
 
-EgretLauncher-v0.6.3 downloaded with double-click.
+Double-click the EgretLauncher you downloaded to -1.0.45.
 
-![](56023c0081c2b.png)
+![](icon.png)
 
-> If warning pops up, please allow it to run
+> Allow to run if a warning pops up
 
-The installation interface is shown below. Click the Next button.
+The installation screen is shown below. Select "I accept" to start the installation.
 
-![](560535512bd98.png)
+![](p1.png)
 
-Select "I agree with this agreement", then click the Next button, as shown below:
+Start installation.
 
-![](56023c0f40542.png)
+![](p2.png)
 
-Click the Next button as shown below:
+After the installation is complete, click the finish button.
 
-![](56023c13f1abb.png)
+![](p3.png)
 
-Click the Install button to start the installation, as shown below:
+### 3. Installation under system Mac OS X
 
-![](56053551f1854.png)
-
-EgretLauncher starts to install.
-
-![](56023c05e6b3e.png)
-
-After the EgretLauncher installation is completed, click the Finish button.
-
-![](20170829114124.png)
-
-### 3. Install under Mac OS X system
-
-Download directly after installation, as shown below
+Install directly after downloading, as shown in the figure below
 
 ![](Snip20170829_8.png)
 
 
 ## Install the engine and tools
 
-Open EgretLauncher, select the "Engine version" tab, as shown below.
+Open Egret Launcher and select "engine", as shown below.
 
-![](20170829122044.png)
+![](engine1.png)
 
-Select the 5.0.6 version of the engine, click Install, as shown below.
+Choose  `5.1.5`  version of the engine, click download, and the diagram below.![](engine2.png)
 
-![](20170829122221.png)
+Engine installation complete.
 
-The engine has been installed.
+![](engine3.png)
 
-![](20170829122414.png)
+Select "tools" to download and install the development tools, as shown below.
 
-Select the "Tools Management" tab to download and install the development tools, as shown below.
-
-![](20170829122629.png)
+![](download.png)

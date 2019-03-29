@@ -1,40 +1,50 @@
-﻿The entry file for the project is used to load the js file and set the configuration information.
+`index.html` is the entry of the project file, the following is  `body` TAB in the default configuration, you can be modified according to the project requirements.
 
-    Native does not need to be configured separately, and the engine will automatically read various configuration information used by the project from the index.html.
+```
+<div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="auto"
+         data-scale-mode="showAll"
+         data-frame-rate="30"
+         data-content-width="640"
+         data-content-height="1136"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+```
 
-## load the js file
-The path of all the javascript files required for the project is stored in the manifest.json file of the project root directory.
-The entry file loads the javascript file according to manifest.json.
+* data-entry-class：File class name.
+* data-orientation：Rotation mode.
+* data-scale-mode：Adaptive mode.
+* data-frame-rate：Frame frequency.
+* data-content-width：The width of the in-game stage.
+* data-content-height：The height of the in-game stage.
+* data-multi-fingered：Maximum quantity.
+* data-show-fps：Whether to display FPS frame rate information.
+* data-show-log：Display the output information of egret.log.
+* data-show-fps-style：fps panel style. Supports 5 properties,，x:0, y:0, size:30, textColor:0xffffff, bgAlpha:0.9
 
-	Here the script tags are automatically generated, do not modify.
 
-### 1. Library file
 
- Included is a list of library files, including the Egret core library and other extension libraries.
+In  `script`  tags, launch parameters of the project, as shown in the figure below
 
-### 2. Project code file
+```
+egret.runEgret({ renderMode: "webgl", audioType: 0, 
+calculateCanvasScaleFactor:function(context) {
+    var backingStore = context.backingStorePixelRatio ||
+        context.webkitBackingStorePixelRatio ||
+        context.mozBackingStorePixelRatio ||
+        context.msBackingStorePixelRatio ||
+        context.oBackingStorePixelRatio ||
+        context.backingStorePixelRatio || 1;
+    return (window.devicePixelRatio || 1) / backingStore;
+}});
+```
 
- Is the list of project code files.
+The parameter is an object, including the following three optional properties:
 
-## Run the configuration
+* "renderMode": engine renderMode, "canvas" or "webgl"
+* "audioType": the use of audio type, 0, the default, 2: web audio, 3: audio  [the difference between the two, you can refer to the document](https://www.cnblogs.com/martinl/p/6005424.html)
+* "calculateCanvasScaleFactor"：Screen physical pixel adaptation method, use the default
 
-* data-entry-class: file class name.
-* data-orientation: rotation mode
-* data-scale-mode: adaptation mode.
-* data-frame-rate: frame frequency.
-* data-content-width: the game stage width.
-* data-content-height: the game stage height.
-* data-show-pain-rect: whether to display the dirty rectangular area.
-* data-multi-fingered: refers to the maximum number.
-* data-show-fps: whether to display fps.
-* data-show-log: whether to display the output information of egret.log.
-* data-show-fps-style: fps panel style.Support five kinds of attributes, x: 0, y: 0, size: 30, textColor: 0xffffff, bgAlpha: 0.9
-
-## Startup project
-```egret.runEgret({ renderMode: "webgl", audioType: 0 })``` start the project.
-
-The parameter is an object that includes the following four optional attributes:
-* "renderMode": Engine rendering mode, "canvas" or "webgl" webgl
-* "audioType": The type of the used video, 0: default, 2: web audio, 3: audio
-* "antialias": Whether to open anti-aliasing in WebGL mode, true: on, false: off, the default is false
-* "retina": Whether the zooming canvas is based on devicePixelRatio
