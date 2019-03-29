@@ -558,22 +558,10 @@
         "in_use": false
       },
       {
-        "filename": "/Engine2D/multimedia/system/",
-        "text": "系统信息",
-        "des": "系统信息",
-        "in_use": false
-      },
-      {
-        "filename": "/Engine2D/multimedia/gyro/",
-        "text": "陀螺仪",
-        "des": "陀螺仪",
-        "in_use": false
-      },
-      {
-        "filename": "/Engine2D/multimedia/location/",
-        "text": "地理位置",
-        "des": "地理位置",
-        "in_use": false
+        "filename": "/Engine2D/multimedia/environment/",
+        "text": "environment",
+        "des": "environment",
+        "in_use": true
       }
     ],
     "isFolder": true,
