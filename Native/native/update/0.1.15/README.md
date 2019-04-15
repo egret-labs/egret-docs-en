@@ -1,0 +1,13 @@
+- **[new]** add performance.now()
+- **[new]** add getSystemInfo() to get device brand and model
+- **[new]** support atob(), btoa()
+- **[optimize]** textfield hittest when native render enabled
+- **[new]** Android: support Tls1.2 on Android 20-
+- **[fix]** Android: fix special file that is not mp3 identified as mp3 file format
+- **[optimize]** Android: auto memory trim will not affect fps
+- **[fix]** Android: fix view size on some model when hiding virtual keys
+- **[fix]** iOS: fix xhr headers
+- **[fix]** iOS: shadow offset when using special custom font
+- **[fix]** iOS: support webSocket address with charactors that needs to be encoded
+- **[fix]** iOS: prevent duplicate http download for same resource with etag or last-modified
+**【Release Date】：2019-3-4**

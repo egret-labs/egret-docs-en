@@ -1,4 +1,4 @@
-# Egret Engine 5.2.16 Release Notes
+# Egret Engine 5.2.17 Release Notes
 
 ===============================
 
