@@ -239,64 +239,58 @@
 		{
 			"children": [{
 					"filename": "/DB/dbPro/import/importZip/",
-					"text": "导入zip包项目",
+					"text": "ImportZip",
 					"des": "导入zip包项目",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/import/importFolder/",
-					"text": "导入项目文件夹",
+					"text": "ImportFolder",
 					"des": "导入项目文件夹",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/import/importPNG/",
-					"text": "导入集成数据PNG",
+					"text": "ImportPNG",
 					"des": "导入集成数据PNG",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/import/importPSD/",
-					"text": "导入PhotoShop设计图",
+					"text": "ImportPSD",
 					"des": "导入PhotoShop设计图",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/import/importCosos/",
-					"text": "导入Cocos、Spine项目",
+					"text": "ImportCosos",
 					"des": "导入Cocos、Spine项目",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/import/importCommandLine/",
-					"text": "命令行导入",
+					"text": "ImportCommandLine",
 					"des": "命令行导入",
 					"in_use": true
 				}
 			],
 			"isFolder": true,
-			"text": "导入",
+			"text": "Import",
 			"des": "DragonBones Pro导入",
-			"in_use": false
+			"in_use": true
 		},
 		{
 			"children": [{
 					"filename": "/DB/dbPro/export/exportAnimation/",
-					"text": "导出动画数据",
+					"text": "ExportAnimation",
 					"des": "导出动画数据",
 					"in_use": true
-				},
-				{
-					"filename": "/DB/dbPro/export/exportHTML/",
-					"text": "导出HTML网页",
-					"des": "导出HTML网页",
-					"in_use": false
 				}
 			],
 			"isFolder": true,
-			"text": "导出",
+			"text": "Export",
 			"des": "DragonBones Pro导出项目",
-			"in_use": false
+			"in_use": true
 		},
 		{
 			"children": [{
