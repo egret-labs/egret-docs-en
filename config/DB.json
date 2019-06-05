@@ -202,37 +202,37 @@
 		{
 			"children": [{
 					"filename": "/DB/dbPro/advancedFeatures/yangCongPi/",
-					"text": "洋葱皮",
+					"text": "OnionSkin",
 					"des": "洋葱皮",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/advancedFeatures/curveEditor/",
-					"text": "曲线编辑器",
+					"text": "CurveEditor",
 					"des": "曲线编辑器",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/advancedFeatures/IK/",
-					"text": "IK约束",
+					"text": "IK",
 					"des": "IK约束",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/advancedFeatures/grid/",
-					"text": "网格",
+					"text": "Grid",
 					"des": "网格",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/advancedFeatures/skinWeights/",
-					"text": "蒙皮权重",
+					"text": "SkinWeights",
 					"des": "蒙皮权重",
 					"in_use": true
 				}
 			],
 			"isFolder": true,
-			"text": "高级功能",
+			"text": "AdvancedFeatures",
 			"des": "DragonBones Pro高级功能",
 			"in_use": false
 		},
