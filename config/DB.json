@@ -234,7 +234,7 @@
 			"isFolder": true,
 			"text": "AdvancedFeatures",
 			"des": "DragonBones Pro高级功能",
-			"in_use": false
+			"in_use": true
 		},
 		{
 			"children": [{
