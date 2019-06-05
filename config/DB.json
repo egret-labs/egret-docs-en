@@ -122,39 +122,39 @@
 		{
 			"children": [{
 					"filename": "/DB/dbPro/basicConcept/framework/",
-					"text": "骨架",
+					"text": "Framework",
 					"des": "骨架",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/basicConcept/skeleton/",
-					"text": "骨骼",
+					"text": "Skeleton",
 					"des": "骨骼",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/basicConcept/slot/",
-					"text": "插槽",
+					"text": "Slot",
 					"des": "插槽",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/basicConcept/image/",
-					"text": "图片",
+					"text": "Image",
 					"des": "图片",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/basicConcept/inherit/",
-					"text": "继承",
+					"text": "Inherit",
 					"des": "继承",
 					"in_use": true
 				}
 			],
 			"isFolder": true,
-			"text": "基本概念",
+			"text": "BasicConcept",
 			"des": "DragonBones Pro基本概念",
-			"in_use": false
+			"in_use": true
 		},
 		{
 			"children": [{
