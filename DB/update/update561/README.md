@@ -1,15 +1,15 @@
-版本：5.6.1
+Version：5.6.1
 
-发布日期：2018-8-22
+Date：2018-8-22
 
-更新内容：
+Update the content：
 
-【新增】曲线预设功能。
+【Add】 curve preset functions.
 
-【新增】放大或缩小舞台快捷键。
+【Add】 enlarged or reduced stage shortcuts.
 
-【修复】从骨架项目动画模式切换到影片剪辑模式崩溃问题。
+【Fix】from the skeleton animation project repair collapse mode switch to the video clip.
 
-【修复】新创建项目未保存切换资源库路径报错。
+【Fix】 create project did not save switch the repository path error.
 
-【修复】补间动画无法复制粘贴关键帧的bug。
+【Fix】 between animation can't copy and paste keyframes bug.
