@@ -1,10 +1,90 @@
 [{
 	"children": [{
-		"filename": "/DB/update/update561/",
-		"text": "DragonBones 5.6.1",
-		"des": "DragonBones 5.6.1",
-		"in_use": true
-	}],
+			"filename": "/DB/update/update561/",
+			"text": "DragonBones 5.6.1",
+			"des": "DragonBones 5.6.1",
+			"in_use": true
+		},
+		{
+			"isFolder": true,
+			"text": "History",
+			"des": "历史更新",
+			"in_use": true,
+			"children": [{
+					"filename": "/DB/update/update481/",
+					"text": "DragonBones 4.8.1",
+					"des": "DragonBones 4.8.1",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update474/",
+					"text": "DragonBones 4.7.4",
+					"des": "DragonBones 4.7.4",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update473/",
+					"text": "DragonBones 4.7.3",
+					"des": "DragonBones 4.7.3",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update472/",
+					"text": "DragonBones 4.7.2",
+					"des": "DragonBones 4.7.2",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update471/",
+					"text": "DragonBones 4.7.1",
+					"des": "DragonBones 4.7.1",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update470/",
+					"text": "DragonBones 4.7.0",
+					"des": "DragonBones 4.7.0",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update461/",
+					"text": "DragonBones 4.6.1",
+					"des": "DragonBones 4.6.1",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update451/",
+					"text": "DragonBones 4.5.1",
+					"des": "DragonBones 4.5.1",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update432/",
+					"text": "DragonBones 4.3.2",
+					"des": "DragonBones 4.3.2",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update421/",
+					"text": "DragonBones 4.2.1",
+					"des": "DragonBones 4.2.1",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update411/",
+					"text": "DragonBones 4.1.1",
+					"des": "DragonBones 4.1.1",
+					"in_use": true
+				},
+				{
+					"filename": "/DB/update/update400/",
+					"text": "DragonBones 4.0.0",
+					"des": "DragonBones 4.0.0",
+					"in_use": true
+				}
+			]
+		}
+	],
 	"isFolder": true,
 	"text": "Update",
 	"des": "更新详情",
@@ -13,14 +93,14 @@
 	"children": [{
 			"children": [{
 				"filename": "/DB/dbPro/introduction/introduction/",
-				"text": "简介",
+				"text": "Introduction",
 				"des": "简介",
 				"in_use": true
 			}],
 			"isFolder": true,
-			"text": "简介",
+			"text": "Introduction",
 			"des": "DragonBones Pro简介",
-			"in_use": false
+			"in_use": true
 		},
 		{
 			"children": [{
@@ -110,14 +190,14 @@
 		{
 			"children": [{
 				"filename": "/DB/dbPro/hotkey/hotkey/",
-				"text": "快捷键",
+				"text": "Hotkey",
 				"des": "快捷键",
 				"in_use": true
 			}],
 			"isFolder": true,
-			"text": "快捷键",
+			"text": "Hotkey",
 			"des": "DragonBones Pro快捷键",
-			"in_use": false
+			"in_use": true
 		},
 		{
 			"children": [{
@@ -281,12 +361,11 @@
 		},
 		{
 			"children": [{
-					"filename": "/DB/dbPro/export/exportAnimation/",
-					"text": "ExportAnimation",
-					"des": "导出动画数据",
-					"in_use": true
-				}
-			],
+				"filename": "/DB/dbPro/export/exportAnimation/",
+				"text": "ExportAnimation",
+				"des": "导出动画数据",
+				"in_use": true
+			}],
 			"isFolder": true,
 			"text": "Export",
 			"des": "DragonBones Pro导出项目",
@@ -295,21 +374,21 @@
 		{
 			"children": [{
 					"filename": "/DB/dbPro/plugin/pluginManager/",
-					"text": "插件管理",
+					"text": "PluginManager",
 					"des": "插件管理",
 					"in_use": true
 				},
 				{
 					"filename": "/DB/dbPro/plugin/specification/",
-					"text": "插件开发规范",
+					"text": "Specification",
 					"des": "插件开发规范",
 					"in_use": true
 				}
 			],
 			"isFolder": true,
-			"text": "插件",
+			"text": "Plugin",
 			"des": "DragonBones Pro插件",
-			"in_use": false
+			"in_use": true
 		}
 	],
 	"isFolder": true,
