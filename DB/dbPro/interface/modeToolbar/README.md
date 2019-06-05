@@ -1,0 +1,1 @@
+<p><span style="font-size: 14px;">Editing mode switching tool</span></p><p><img alt="Mode switch.png" src="http://sedn.egret.com/ueditor/20150609/5576b75a1e9f9.png" title="Mode switch.png"/></p><p><span style="font-size: 14px;">Editing mode switch controls are used to switch skeleton assembly and animation production.</span></p>
