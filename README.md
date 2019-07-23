@@ -202,31 +202,19 @@
 
 * [截屏功能](Engine2D/bitmapTexture/screenshots/README.md)
 
-#### 混合模式
+#### 颜色效果
 
-* [NORMAL](Engine2D/blendMode/normal/README.md)
+* [混合模式](Engine2D/colorEffects/blendMode/README.md)
 
-* [ADD](Engine2D/blendMode/add/README.md)
+* [滤镜](Engine2D/colorEffects/filter/README.md)
 
-* [ERASE](Engine2D/blendMode/erase/README.md)
+* [自定义Shader](Engine2D/colorEffects/shader/README.md)
 
-#### 滤镜
-
-* [发光滤镜](Engine2D/filter/glowFilter/README.md)
-
-* [颜色矩阵滤镜](Engine2D/filter/colorMatrixFilter/README.md)
-
-* [模糊滤镜](Engine2D/filter/blurFilter/README.md)
-
-* [投影滤镜](Engine2D/filter/shadowFilter/README.md)
 
 #### 时间控制
 
 * [Timer 计时器](Engine2D/timeControl/timer/README.md)
 
-* [Ticker 心跳](Engine2D/timeControl/ticker/README.md)
-
-* [帧事件](Engine2D/timeControl/enterFrame/README.md)
 
 #### 多媒体
 
