@@ -28,41 +28,6 @@ Compile and run, with the effect as follows:
 The font name of the above code is set to "Impact". If the font you set does not exist in the browser/app, the browser/app will automatically call the default font instead.
 
 
-* Custom font
-
-You can add a custom with the `egret.registerFontMapping ()` method, which passes two parameters: the font name and the font file path.
-
-The sample code is as follows:
-
-```
-egret.registerFontMapping("font1", "fonts/font1.ttf");
-egret.registerFontMapping("font2", "fonts/font2.otf");
-egret.registerFontMapping("font3", "fonts/font3.TTF");
-
-let label1 = new egret.TextField();
-label1.text = "Default font";
-this.addChild(label1);
-
-let label2 = new egret.TextField();
-label2.text = "font1";
-label2.fontFamily = "font1";
-label2.y = 100;
-this.addChild(label2);
-
-let label3 = new egret.TextField();
-label3.text = "font2";
-label3.fontFamily = "font2";
-label3.y = 300;
-this.addChild(label3);
-
-let label4 = new egret.TextField();
-label4.text = "font3";
-label4.fontFamily = "font3";
-label4.y = 400;
-this.addChild(label4);
-```
-
-> Font files can not be used until they have been loaded through the resource .
 
 ## 2. font size
 
